@@ -18,14 +18,6 @@ lang: en
 url: "https://www.robots.ox.ac.uk"
 baseurl: "/~bgl"                        # asset links break if this is wrong
 
-# --- Publication highlighting ---
-# al-folio emboldens the lab's own authors in the publications list by
-# matching the names below against your BibTeX. Use the surname and initials
-# exactly as they appear in your .bib entries.
-scholar:
-  last_name: Osborne
-  first_name: [Maike, M.]   # variants so co-authored papers bold correctly across the record
-
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -335,7 +327,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Osborne]
-  first_name: [Maike, M.]
+  first_name: [Maike, M., Michael, Michael A.]
 
   style: apa
   locale: en

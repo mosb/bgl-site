@@ -1,0 +1,56 @@
+/* ───────────────────────────────────────────────────────────────────────
+   Bayesian Governance Lab — brand palette and publications styling.
+   Imported by the gem-seeded _sass/_themes.scss (see bin/setup-style.sh),
+   so edits here take effect on the next build.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/* BGL brand colours (reusable anywhere as var(--bgl-*)) */
+:root {
+  --bgl-purple: #8159a4;
+  --bgl-cyan:   #60c4bf;
+  --bgl-orange: #f19c39;
+  --bgl-red:    #cb5763;
+  --bgl-blue:   #6e8dd7;
+}
+
+/* Map brand colours onto al-folio's theme tokens */
+html[data-theme="light"] {
+  --global-theme-color: #8159a4;   /* purple: links / accents */
+  --global-hover-color: #6e8dd7;   /* blue: hover */
+  --global-text-color:  #4f424c;   /* warm near-black body text */
+}
+html[data-theme="dark"] {
+  --global-theme-color: #60c4bf;   /* cyan accent in dark mode */
+  --global-hover-color: #f19c39;   /* orange hover */
+}
+
+/* Justified body copy, as on the old site (cosmetic) */
+.post p,
+.profile p {
+  text-align: justify;
+}
+
+/* Publications: monospaced, compact BibTeX block and a bold venue label */
+.bibliography pre,
+.bibliography .bibtex {
+  font-family: "Source Code Pro", Menlo, Monaco, monospace;
+  font-size: 0.8rem;
+}
+.bibliography .abbr,
+.bibliography abbr {
+  font-weight: 700;
+}
+
+/* Optional — brand-coloured headings, scoped to article content so the
+   navbar and cards stay neutral. Uncomment to enable.
+.post h1 { color: var(--bgl-purple); }
+.post h2 { color: var(--bgl-orange); text-transform: uppercase; }
+.post h3 { color: var(--bgl-cyan);   text-transform: uppercase; }
+*/
+
+/* Optional — karmina (Typekit), only if kit flp8eda is authorised for the
+   robots.ox.ac.uk domain. Uncomment to enable.
+@import url("https://use.typekit.net/flp8eda.css");
+body { font-family: "karmina", Georgia, serif; }
+h1, h2, h3 { font-family: "karmina-sans", sans-serif; }
+*/

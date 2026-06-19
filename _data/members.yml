@@ -1,0 +1,35 @@
+# Bayesian Governance Lab – members
+# SINGLE SOURCE OF TRUTH. To add a person, copy one block and fill it in.
+# Nothing else to edit: the People page (/people/) renders this list as cards,
+# and list order is display order, so the director stays first.
+#
+# Fields:
+#   name   (required)  Full name, as it should display.
+#   role   (required)  Short label: Director, DPhil Student, Postdoc, etc.
+#   image              Filename in assets/img/ (a square photo crops best).
+#                      Omit for a neutral placeholder tile.
+#   blurb              1–3 sentences. Markdown (links, emphasis) is fine.
+#   links              Any of website / scholar / github / email. Omit unused.
+
+- name: Maike Osborne
+  role: Director
+  image: maike.jpg
+  blurb: >-
+    Professor of Machine Learning at Oxford and co-director of the Oxford Martin
+    AI Governance Initiative. Her work brings Bayesian machine learning and
+    probabilistic numerics to bear on making AI systems trustworthy and
+    governable.
+  links:
+    website: https://www.robots.ox.ac.uk/~mosb
+    scholar: https://scholar.google.com/citations?user=iTNcAakAAAAJ
+
+# --- copy from here for each new member -------------------------------------
+# - name: Ada Lovelace
+#   role: DPhil Student
+#   image: ada.jpg
+#   blurb: >-
+#     One or two sentences on what they work on in the lab.
+#   links:
+#     website: https://example.org
+#     github: adalovelace
+#     email: ada@eng.ox.ac.uk

@@ -58,3 +58,63 @@ html .profile p, html .profile .more-info, html .profile .address {
 .navbar .bgl-brand img { height: 30px; width: auto; }
 
 .bibliography .abbr, .bibliography abbr { font-weight: 700; }
+
+/* People page: modular member cards driven by _data/members.yml.
+   Replaces al-folio's full-width alternating profile blocks. */
+.bgl-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 360px));
+  justify-content: start;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.bgl-member-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.2rem;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.bgl-member-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--global-theme-color);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+.bgl-member-photo {
+  flex: 0 0 auto;
+  width: 84px; height: 84px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: var(--global-code-bg-color);
+}
+.bgl-member-photo--blank {
+  display: inline-block;
+  border: 1px dashed var(--global-divider-color);
+}
+.bgl-member-body { min-width: 0; }
+.bgl-member-name { margin: 0 0 .15rem; font-size: 1.12rem; line-height: 1.2; }
+.bgl-member-role {
+  margin: 0 0 .5rem;
+  color: var(--global-theme-color);
+  font-family: "karmina-sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: .03em; text-transform: uppercase;
+}
+.bgl-member-blurb { color: var(--global-text-color-light); font-size: 0.95rem; line-height: 1.55; }
+.bgl-member-blurb p { margin: 0 0 .4rem; }
+.bgl-member-blurb p:last-child { margin-bottom: 0; }
+.bgl-member-links {
+  margin: .6rem 0 0;
+  display: flex; flex-wrap: wrap; gap: .15rem .9rem;
+  font-family: "karmina-sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+.bgl-member-links a { color: var(--global-theme-color); }
+.bgl-member-links a:hover { color: var(--global-hover-color); }
+
+@media (max-width: 420px) {
+  .bgl-members { grid-template-columns: 1fr; }
+}

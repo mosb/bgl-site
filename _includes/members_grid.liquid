@@ -1,0 +1,26 @@
+<div class="bgl-members">
+  {% for m in site.data.members %}
+  <article class="bgl-member-card">
+    {% if m.image %}
+      <img class="bgl-member-photo"
+           src="{{ m.image | prepend: '/assets/img/' | relative_url }}"
+           alt="{{ m.name }}" loading="lazy" />
+    {% else %}
+      <span class="bgl-member-photo bgl-member-photo--blank" aria-hidden="true"></span>
+    {% endif %}
+    <div class="bgl-member-body">
+      <h3 class="bgl-member-name">{{ m.name }}</h3>
+      {% if m.role %}<p class="bgl-member-role">{{ m.role }}</p>{% endif %}
+      {% if m.blurb %}<div class="bgl-member-blurb">{{ m.blurb | markdownify }}</div>{% endif %}
+      {% if m.links %}
+        <p class="bgl-member-links">
+          {% if m.links.website %}<a href="{{ m.links.website }}">Website</a>{% endif %}
+          {% if m.links.scholar %}<a href="{{ m.links.scholar }}">Scholar</a>{% endif %}
+          {% if m.links.github %}<a href="https://github.com/{{ m.links.github }}">GitHub</a>{% endif %}
+          {% if m.links.email %}<a href="mailto:{{ m.links.email }}">Email</a>{% endif %}
+        </p>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

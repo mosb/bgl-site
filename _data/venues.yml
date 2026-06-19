@@ -1,9 +1,13 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Colours for publication "abbr" labels, drawn from the BGL brand palette.
+# Keys must match the abbr values in papers.bib.
+"TFSC":            { color: "#8159a4" }   # purple
+"BJWA":            { color: "#8159a4" }   # purple
+"NeurIPS":         { color: "#6e8dd7" }   # blue
+"Proc. R. Soc. A": { color: "#6e8dd7" }   # blue
+"AIES":            { color: "#60c4bf" }   # cyan
+"BMJ Open":        { color: "#60c4bf" }   # cyan
+"Entropy":         { color: "#cb5763" }   # red
+"arXiv":           { color: "#cb5763" }   # red
+"Citi GPS":        { color: "#f19c39" }   # orange
+"Oxford Martin":   { color: "#f19c39" }   # orange
+"Report":          { color: "#546e7a" }   # neutral slate

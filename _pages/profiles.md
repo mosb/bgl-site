@@ -2,27 +2,24 @@
 layout: profiles
 permalink: /people/
 title: people
-description: members of the lab or group
+description: Members of the Bayesian Governance Lab.
 nav: true
-nav_order: 7
-
+nav_order: 2
 profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
   - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
+    image: maike.jpg              # photo in assets/img/
+    content: about_maike.md       # bio file in _pages/
+    image_circular: false
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
-  - align: left
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+      <p>Professor of Machine Learning</p>
+      <p>Department of Engineering Science</p>
+      <p>University of Oxford</p>
+  # To add a member: copy the block above, alternate `align` between right and
+  # left, drop the photo in assets/img/, and add a bio file in _pages/.
+  # - align: left
+  #   image: ada.jpg
+  #   content: about_ada.md
+  #   image_circular: false
+  #   more_info: >
+  #     <p>DPhil student</p>
 ---

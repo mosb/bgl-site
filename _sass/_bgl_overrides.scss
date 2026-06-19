@@ -1,0 +1,60 @@
+/* Bayesian Governance Lab — modern, natural, humanistic theme. */
+
+:root {
+  --bgl-purple: #8159a4; --bgl-cyan: #60c4bf; --bgl-orange: #f19c39;
+  --bgl-red: #cb5763; --bgl-blue: #6e8dd7;
+}
+
+html[data-theme="light"] {
+  --global-bg-color:          #f5f1ea;
+  --global-card-bg-color:     #fffdf9;
+  --global-code-bg-color:     #ece4d8;
+  --global-text-color:        #322f39;
+  --global-text-color-light:  #6b6573;
+  --global-theme-color:       #8159a4;
+  --global-hover-color:       #6e8dd7;
+  --global-divider-color:     rgba(50,47,57,0.10);
+  --global-footer-bg-color:   #2b2530;
+  --global-footer-text-color: #d9d3dd;
+}
+html[data-theme="dark"] {
+  --global-bg-color:          #1c1920;
+  --global-card-bg-color:     #25212b;
+  --global-code-bg-color:     #2a2531;
+  --global-text-color:        #e9e3ee;
+  --global-text-color-light:  #b1a8bd;
+  --global-theme-color:       #60c4bf;
+  --global-hover-color:       #f19c39;
+  --global-divider-color:     rgba(233,227,238,0.12);
+  --global-footer-bg-color:   #141118;
+}
+
+/* Type: humanist serif body, humanist sans headings */
+html body {
+  font-family: "karmina", Georgia, "Times New Roman", serif;
+  font-size: 1.05rem; line-height: 1.72; -webkit-font-smoothing: antialiased;
+}
+html h1, html h2, html h3, html h4, html h5, html h6,
+html .navbar-brand, html .post .post-title {
+  font-family: "karmina-sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600; letter-spacing: -0.012em;
+}
+
+/* Monospace only where it earns its place: code + BibTeX → Essential PragmataPro */
+html code, html pre, html kbd,
+.bibliography pre, .bibliography .bibtex {
+  font-family: "Essential PragmataPro", "PragmataPro", "Source Code Pro", "SF Mono", Menlo, monospace;
+  font-size: 0.85rem;
+}
+
+/* Belt-and-braces: keep the profile contact block in the body font, not mono */
+html .profile p, html .profile .more-info, html .profile .address {
+  font-family: "karmina", Georgia, "Times New Roman", serif;
+}
+
+/* Logo in the navbar: hide the text-name brand, show the mark on every page */
+#navbar a.navbar-brand.title { display: none; }
+.navbar .bgl-brand { display: inline-flex; align-items: center; padding: 0; }
+.navbar .bgl-brand img { height: 30px; width: auto; }
+
+.bibliography .abbr, .bibliography abbr { font-weight: 700; }

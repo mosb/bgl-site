@@ -1,17 +1,13 @@
 # -----------------------------------------------------------------------------
 # Identity
 # -----------------------------------------------------------------------------
-
-# --- Site identity ---
-title: Bayesian Governance Lab     # ~line 5; navbar brand + tab title
-first_name:                        # ~line 6; blank the person-name fields
 middle_name:
 last_name:                         # ~line 8
 description: >                     # ~line 11
   Bayesian Governance Lab, University of Oxford. Probabilistic machine
   learning for the assurance, monitoring, and governance of AI systems.
 keywords: bayesian machine learning, ai governance, uncertainty, oxford  # ~line 17
-icon: ⚖️                            # emoji favicon (kills the favicon 404s); optional
+icon:                             # emoji favicon (kills the favicon 404s); optional
 lang: en
 
 # --- Served location: www.robots.ox.ac.uk/~bgl ---
@@ -324,10 +320,6 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
-
-scholar:
-  last_name: [Osborne]
-  first_name: [Maike, M., Michael, Michael A.]
 
   style: apa
   locale: en

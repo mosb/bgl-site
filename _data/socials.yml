@@ -1,9 +1,9 @@
 # Social links shown on the about page (rendered by the jekyll-socials plugin).
 # Displayed in the order defined here. Remove any you don't want.
-email: bgl@robots.ox.ac.uk
-scholar_userid: iTNcAakAAAAJ        # Maike Osborne's Google Scholar ID
+# email: bgl@robots.ox.ac.uk
+# scholar_userid: iTNcAakAAAAJ        # Maike Osborne's Google Scholar ID
 # orcid_id:                          # add if you want an ORCID icon
-linkedin_username: michael-a-osborne # update if your LinkedIn vanity URL changes
-bluesky_url: https://bsky.app/profile/maosbot.bsky.social
-rss_icon: true
+# linkedin_username: maike-osborne # update if your LinkedIn vanity URL changes
+# bluesky_url: https://bsky.app/profile/maosbot.bsky.social
+# rss_icon: true
 # cv_pdf: /assets/pdf/cv.pdf          # uncomment once you add a lab CV

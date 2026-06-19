@@ -118,3 +118,8 @@ html .profile p, html .profile .more-info, html .profile .address {
 @media (max-width: 420px) {
   .bgl-members { grid-template-columns: 1fr; }
 }
+
+/* Publication venue badges: black text on the pastel backgrounds. */
+.abbr abbr,
+.abbr abbr a,
+.abbr abbr div { color: #000 !important; }

@@ -1,154 +1,217 @@
 % ─────────────────────────────────────────────────────────────────────────
-% Bayesian Governance Lab — publications relevant to AI governance.
-% Curated from the group's record. Author of record is "Michael A. Osborne";
-% the scholar.first_name list in _config.yml emboldens both that and "Maike".
-% al-folio fields used: abbr, selected, abstract, bibtex_show.
+% Bayesian Governance Lab: governance-adjacent publications.
+% Full abstracts; full-text links (arXiv/DOI/HTML); all given names initialised.
 % ─────────────────────────────────────────────────────────────────────────
 
-@article{frey_future_2017,
-  abbr={TFSC},
-  title={The future of employment: How susceptible are jobs to computerisation?},
-  author={Frey, Carl Benedikt and Osborne, Michael A.},
-  journal={Technological Forecasting and Social Change},
-  volume={114},
-  pages={254--280},
-  year={2017},
-  doi={10.1016/j.techfore.2016.08.019},
-  url={https://www.sciencedirect.com/science/article/pii/S0040162516302244},
-  selected={true},
-  bibtex_show={true},
-  abstract={Estimates that around 47% of US employment is at high risk of automation and ranks occupations by their susceptibility to computerisation.}
-}
-
-@misc{heim_governing_2024,
-  abbr={arXiv},
-  title={Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation},
-  author={Heim, Lennart and Fist, Tim and Egan, Janet and Huang, Sihao and Zekany, Stephen and Trager, Robert and Osborne, Michael A. and Zilberman, Noa},
-  year={2024},
-  publisher={arXiv},
-  doi={10.48550/arXiv.2403.08501},
-  url={https://arxiv.org/abs/2403.08501},
-  selected={true},
-  bibtex_show={true},
-  abstract={Argues that compute providers occupy a natural intermediary point for AI governance and examines the regulatory roles they could play.}
+@inproceedings{fujisawa_scalable_2025,
+  abbr = {NeurIPS},
+  author = {Fujisawa, M. and Adachi, M. and Osborne, M. A.},
+  title = {Scalable Valuation of Human Feedback through Provably Robust Model Alignment},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume = {38},
+  pages = {134187--134235},
+  year = {2025},
+  arxiv = {2505.17859},
+  url = {https://doi.org/10.48550/arXiv.2505.17859},
+  code = {https://github.com/ma921/HolderDPO},
+  selected = {true},
+  abstract = {Despite the importance of aligning language models with human preferences, crowd-sourced human feedback is often noisy—for example, preferring less desirable responses—posing a fundamental challenge to alignment. A truly robust alignment objective should yield identical model parameters even under severe label noise, a property known as redescending. We prove that no existing alignment methods satisfy this property. To address this, we propose Hölder-DPO, the first principled alignment loss with a provable redescending property, enabling estimation of the clean data distribution from noisy feedback. The aligned model estimates the likelihood of clean data, providing a theoretically grounded metric for dataset valuation that identifies the location and fraction of mislabels. This metric is gradient-free, enabling scalable and automated human feedback valuation without costly manual verification or clean validation dataset. Hölder-DPO achieves state-of-the-art robust alignment performance while accurately detecting mislabels in controlled datasets.},
+  bibtex_show = {true},
 }
 
 @article{frey_generative_2024,
-  abbr={BJWA},
-  title={Generative AI and the future of work: a reappraisal},
-  author={Frey, Carl Benedikt and Osborne, Michael A.},
-  journal={Brown Journal of World Affairs},
-  volume={30},
-  year={2024},
-  url={https://bjwa.brown.edu/30-1/generative-ai-and-the-future-of-work-a-reappraisal},
-  selected={true},
-  bibtex_show={true},
-  abstract={Revisits earlier forecasts on automation and employment in light of generative AI.}
+  abbr = {BJWA},
+  author = {Frey, C. B. and Osborne, M. A.},
+  title = {Generative AI and the future of work: a reappraisal},
+  journal = {Brown Journal of World Affairs},
+  volume = {30},
+  year = {2024},
+  url = {https://bjwa.brown.edu/30-1/generative-ai-and-the-future-of-work-a-reappraisal},
+  html = {https://bjwa.brown.edu/30-1/generative-ai-and-the-future-of-work-a-reappraisal},
+  selected = {true},
+  abstract = {The early 2010s, like now, was a time of excitement about new technological wonders. In the early 2010s, the world had bounced back from the worst financial crisis since the Great Depression. But despite financial malaise, America seemed to be at the cusp of a productivity boom.3 Artificial intelligence (AI), long regarded as an academic backwater, was finally showing signs of bearing fruit. In 2011, IBM Watson had just beaten the world champion in Jeopardy! And machine learning—a subfield of AI—was expanding the premises of what computers could do. In 2012, a machine learning team from Google trained a deep neural network that, without ever being told what a cat was, proved independently capable of recognising cat videos on YouTube.
+Gone were the days when a computer programmer needed to write down explicit rules to guide the actions of a machine in every contingency. Computers could now infer rules themselves, by tapping into the data trails more and more humans were leaving behind online. No programmer could be expected to foresee every situation a human driver might encounter in city traffic; even less, capture these in a sequence of If-Then-Do commands. Instead, progress in autonomous vehicles was being made by collecting vast amounts of data on drivers’ actions in city traffic to predict what a human would have done in any given situation.
+It was around that time—in 2013, to be precise—that we published a working paper estimating that 47\% of jobs are exposed to the recent advances in machine learning and advanced robotics.4 Ian Goodfellow’s and co-authors’ paper on “Generative Adversarial Networks” had not yet been published.5 But there were glimpses of the age of Generative AI in our estimates: fashion models, we found, were among the jobs at risk. And a few years later, digital models were being generated en masse. Overall, however, we firmly believed that in the absence of major leaps, tasks requiring creativity and social intelligence, as well as unstructured manual work, would remain safe havens for human workers. The jobs of journalists, scientists, software engineers, art directors, and architects, we documented, were all at low risk of being automated.},
+  bibtex_show = {true},
 }
 
-@inproceedings{fujisawa_scalable_2025,
-  abbr={NeurIPS},
-  title={Scalable Valuation of Human Feedback through Provably Robust Model Alignment},
-  author={Fujisawa, Masahiro and Adachi, Masaki and Osborne, Michael A.},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-  volume={38},
-  pages={134187--134235},
-  year={2025},
-  doi={10.48550/arXiv.2505.17859},
-  url={https://arxiv.org/abs/2505.17859},
-  selected={true},
-  bibtex_show={true},
-  abstract={Introduces a provably robust method for valuing human feedback, aimed at more reliable model alignment.}
+@misc{heim_governing_2024,
+  abbr = {arXiv},
+  author = {Heim, L. and Fist, T. and Egan, J. and Huang, S. and Zekany, S. and Trager, R. and Osborne, M. A. and Zilberman, N.},
+  title = {Governing Through the Cloud: The Intermediary Role of Compute Providers in AI Regulation},
+  publisher = {arXiv},
+  year = {2024},
+  arxiv = {2403.08501},
+  url = {https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation},
+  html = {https://www.oxfordmartin.ox.ac.uk/publications/governing-through-the-cloud-the-intermediary-role-of-compute-providers-in-ai-regulation},
+  selected = {true},
+  abstract = {As jurisdictions begin regulating the most capable AI systems (the EU AI Act, US Executive Order 14110), there is a growing need for enforcement mechanisms that can verify compliance and respond to violations. The paper argues that compute providers should carry legal and ethical responsibilities in AI development and deployment, both providing secure infrastructure and acting as intermediaries for regulation. It sets out four governance capacities for providers (securing systems, keeping records, verifying customer activity, and enforcing rules), and assesses the technical feasibility of each in a privacy-conscious way, showing how largely non-confidential information already available to providers can reveal a workload's type and the compute it consumed. Using EO 14110 as a case study, it outlines a path toward a comprehensive, internationalised compute-oversight scheme and the confidentiality challenges that raises.},
+  bibtex_show = {true},
 }
 
 @techreport{weil_insuring_2024,
-  abbr={Oxford Martin},
-  title={Insuring Emerging Risks From AI},
-  author={Weil, Gabriel and Pistillo, Matteo and Van Arsdale, Suzanne and Ikegami, Junichi and Onuma, Kensuke and Okawa, Megumi and Osborne, Michael A.},
-  institution={Oxford Martin School, University of Oxford},
-  year={2024},
-  bibtex_show={true},
-  url={https://www.oxfordmartin.ox.ac.uk/publications/insuring-emerging-risks-from-ai}
+  abbr = {Oxford Martin},
+  author = {Weil, G. and Pistillo, M. and Van Arsdale, S. and Ikegami, J. and Onuma, K. and Okawa, M. and Osborne, M. A.},
+  title = {Insuring Emerging Risks From AI},
+  institution = {Oxford Martin School, University of Oxford},
+  year = {2024},
+  url = {https://www.oxfordmartin.ox.ac.uk/publications/insuring-emerging-risks-from-ai},
+  html = {https://www.oxfordmartin.ox.ac.uk/publications/insuring-emerging-risks-from-ai},
+  abstract = {This report examines the implications of recent progress in artificial intelligence (AI) for liability regimes and insurance markets within the United States. We argue that the insurance industry faces both a potential decline in traditional markets like auto insurance and emerging growth opportunities in AI agent and cybersecurity coverage. The report advocates for targeted reforms in liability laws, proposing a nuanced approach that may ease regulations for demonstrably-safer technologies, such as future autonomous vehicles, whilst strengthening oversight for AI agents and cyber risks. Key recommendations include implementing strict liability regimes for a subset of AI harms, mandating insurance coverage for certain AI applications, and expanding punitive damages to address catastrophic, uninsurable risks. These proposed changes would significantly impact the insurance sector, necessitating the development of new actuarial methodologies to quantify complex AI-related risks and to potentially underwrite a broader range of liabilities. We conclude that the insurance industry has a pivotal role to play in managing AI-related risks, fostering responsible innovation, and ensuring that the benefits of AI are broadly shared across society.},
+  bibtex_show = {true},
 }
 
-@inproceedings{duckworth_inferring_2019,
-  abbr={AIES},
-  title={Inferring Work Task Automatability from AI Expert Evidence},
-  author={Duckworth, Paul and Graham, Logan and Osborne, Michael},
-  booktitle={Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society (AIES)},
-  pages={485--491},
-  year={2019},
-  publisher={Association for Computing Machinery},
-  doi={10.1145/3306618.3314247},
-  bibtex_show={true},
-  url={https://doi.org/10.1145/3306618.3314247}
-}
-
-@article{fitzsimons_general_2019,
-  abbr={Entropy},
-  title={A General Framework for Fair Regression},
-  author={Fitzsimons, Jack and Al Ali, AbdulRahman and Osborne, Michael and Roberts, Stephen},
-  journal={Entropy},
-  volume={21},
-  pages={741},
-  year={2019},
-  doi={10.3390/e21080741},
-  bibtex_show={true},
-  url={https://www.mdpi.com/1099-4300/21/8/741}
+@article{cohen_advanced_2022,
+  abbr = {AI Mag},
+  author = {Cohen, M. and Hutter, M. and Osborne, M.},
+  title = {Advanced {Artificial} {Agents} {Intervene} in the {Provision} of {Reward}},
+  journal = {AI Magazine},
+  volume = {43},
+  number = {3},
+  pages = {282--293},
+  year = {2022},
+  month = {August},
+  doi = {10.1002/aaai.12064},
+  url = {https://doi.org/10.1002/aaai.12064},
+  abstract = {To analyze the expected behavior of advanced artificial agents, we consider a formal idealized agent that makes observations that inform it about its goal, and we find that it can never disambiguate the message from the referent. When we provide, for example, a large reward to indicate that something about the world is satisfactory to us, and leave the agent to determine what that is, it may conclude that what satisfied us was the sending of the reward itself; no observation can refute that. This conclusion incents the agent to intervene in the provision of its own reward (sometimes called wireheading), decoupling the reward from its intended referent. We discuss recent approaches to avoiding this problem—myopia, imitation learning, quantilization, risk aversion, and inverse reinforcement learning—and our biggest concerns with them.},
+  bibtex_show = {true},
 }
 
 @article{willis_qualitative_2020,
-  abbr={BMJ Open},
-  title={Qualitative and quantitative approach to assess the potential for automating administrative tasks in general practice},
-  author={Willis, Matthew and Duckworth, Paul and Coulter, Angela and Meyer, Eric T. and Osborne, Michael},
-  journal={BMJ Open},
-  volume={10},
-  pages={e032412},
-  year={2020},
-  doi={10.1136/bmjopen-2019-032412},
-  bibtex_show={true},
-  url={https://bmjopen.bmj.com/content/10/6/e032412}
+  abbr = {BMJ Open},
+  author = {Willis, M. and Duckworth, P. and Coulter, A. and Meyer, E. T. and Osborne, M.},
+  title = {Qualitative and quantitative approach to assess the potential for automating administrative tasks in general practice},
+  journal = {BMJ Open},
+  volume = {10},
+  pages = {e032412},
+  year = {2020},
+  doi = {10.1136/bmjopen-2019-032412},
+  url = {https://bmjopen.bmj.com/content/10/6/e032412},
+  html = {https://bmjopen.bmj.com/content/10/6/e032412},
+  abstract = {Objective To identify the extent to which administrative tasks carried out by primary care staff in general practice could be automated.
+Design A mixed-method design including ethnographic case studies, focus groups, interviews and an online survey of automation experts.
+Setting Three urban and three rural general practice health centres in England selected for differences in list size and organisational characteristics.
+Participants Observation and interviews with 65 primary care staff in the following job roles: administrator, manager, general practitioner, healthcare assistant, nurse practitioner, pharmacy technician, phlebotomist, practice nurse, pharmacist, prescription clerk, receptionist, scanning clerk, secretary and medical summariser; together with a survey of 156 experts in automation technologies.
+Methods 330 hours of ethnographic observation and documentation of administrative tasks carried out by staff in each of the above job roles, followed by coding and classification; semistructured interviews with 10 general practitioners and 6 staff focus groups. The online survey of machine learning, artificial intelligence and robotics experts was analysed using an ordinal Gaussian process prediction model to estimate the automatability of the observed tasks.
+Results The model predicted that roughly 44\% of administrative tasks carried out by staff in general practice are ‘mostly’ or ‘completely’ automatable using currently available technology. Discussions with practice staff underlined the need for a cautious approach to implementation.
+Conclusions There is considerable potential to extend the use of automation in primary care, but this will require careful implementation and ongoing evaluation.},
+  bibtex_show = {true},
+}
+
+@inproceedings{duckworth_inferring_2019,
+  abbr = {AIES},
+  author = {Duckworth, P. and Graham, L. and Osborne, M.},
+  title = {Inferring Work Task Automatability from AI Expert Evidence},
+  booktitle = {Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society (AIES)},
+  publisher = {Association for Computing Machinery},
+  pages = {485--491},
+  year = {2019},
+  doi = {10.1145/3306618.3314247},
+  url = {https://doi.org/10.1145/3306618.3314247},
+  abstract = {Despite growing alarm about machine learning technologies automating jobs, there is little good evidence on what activities can be automated using such technologies. We contribute the first dataset of its kind by surveying over 150 top academics and industry experts in machine learning, robotics and AI, receiving over 4,500 ratings of how automatable specific tasks are today. We present a probabilistic machine learning model to learn the patterns connecting expert estimates of task automatability and the skills, knowledge and abilities required to perform those tasks. Our model infers the automatability of over 2,000 work activities, and we show how automation differs across types of activities and types of occupations. Sensitivity analysis identifies the specific skills, knowledge and abilities of activities that drive higher or lower automatability. We provide quantitative evidence of what is perceived to be automatable using the state-of-the-art in machine learning technology. We consider the societal impacts of these results and of task-level approaches.},
+  bibtex_show = {true},
+}
+
+@article{fitzsimons_general_2019,
+  abbr = {Entropy},
+  author = {Fitzsimons, J. and Al Ali, A. and Osborne, M. and Roberts, S.},
+  title = {A General Framework for Fair Regression},
+  journal = {Entropy},
+  volume = {21},
+  pages = {741},
+  year = {2019},
+  doi = {10.3390/e21080741},
+  url = {https://www.mdpi.com/1099-4300/21/8/741},
+  html = {https://www.mdpi.com/1099-4300/21/8/741},
+  abstract = {Fairness, through its many forms and definitions, has become an important issue facing the machine learning community. In this work, we consider how to incorporate group fairness constraints into kernel regression methods, applicable to Gaussian processes, support vector machines, neural network regression and decision tree regression. Further, we focus on examining the effect of incorporating these constraints in decision tree regression, with direct applications to random forests and boosted trees amongst other widespread popular inference techniques. We show that the order of complexity of memory and computation is preserved for such models and tightly binds the expected perturbations to the model in terms of the number of leaves of the trees. Importantly, the approach works on trained models and hence can be easily applied to models in current use and group labels are only required on training data.},
+  bibtex_show = {true},
 }
 
 @techreport{bakhshi_future_2017,
-  abbr={Report},
-  title={The future of skills: employment in 2030},
-  author={Bakhshi, Hasan and Downing, Jonathan M. and Osborne, Michael A. and Schneider, Philippe},
-  institution={Pearson and Nesta},
-  year={2017},
-  bibtex_show={true},
-  url={https://futureskills.pearson.com}
+  abbr = {Report},
+  author = {Bakhshi, H. and Downing, J. M. and Osborne, M. A. and Schneider, P.},
+  title = {The future of skills: employment in 2030},
+  institution = {Pearson and Nesta},
+  year = {2017},
+  url = {https://futureskills.pearson.com},
+  html = {https://futureskills.pearson.com},
+  abstract = {Recent debates about the future of jobs have mainly focused on whether or not they are at risk of automation. Studies have generally minimised the potential effects of automation on job creation, and have tended to ignore other relevant trends, including globalisation, population ageing, urbanisation, and the rise of the green economy. This study uses a novel and comprehensive method to map out how employment is likely to change, and the implications for skills. --Executive summary.},
+  bibtex_show = {true},
 }
 
-@techreport{frey_technology_2015,
-  abbr={Citi GPS},
-  title={Technology at Work: The Future of Innovation and Employment},
-  author={Frey, Carl Benedikt and Osborne, Michael A.},
-  institution={Citi GPS and Oxford Martin School},
-  year={2015},
-  bibtex_show={true},
-  url={https://www.oxfordmartin.ox.ac.uk/publications/view/1883}
+@article{frey_future_2017,
+  abbr = {TFSC},
+  author = {Frey, C. B. and Osborne, M. A.},
+  title = {The future of employment: How susceptible are jobs to computerisation?},
+  journal = {Technological Forecasting and Social Change},
+  volume = {114},
+  pages = {254--280},
+  year = {2017},
+  doi = {10.1016/j.techfore.2016.08.019},
+  url = {http://www.sciencedirect.com/science/article/pii/S0040162516302244},
+  html = {http://www.sciencedirect.com/science/article/pii/S0040162516302244},
+  selected = {true},
+  abstract = {We examine how susceptible jobs are to computerisation. To assess this, we begin by implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier. Based on these estimates, we examine expected impacts of future computerisation on US labour market outcomes, with the primary objective of analysing the number of jobs at risk and the relationship between an occupations probability of computerisation, wages and educational attainment.},
+  bibtex_show = {true},
 }
 
 @techreport{frey_technology_2016,
-  abbr={Citi GPS},
-  title={Technology at Work v2.0: The Future Is Not What It Used to Be},
-  author={Frey, Carl Benedikt and Osborne, Michael A.},
-  institution={Citi GPS and Oxford Martin School},
-  year={2016},
-  bibtex_show={true},
-  url={https://www.oxfordmartin.ox.ac.uk/publications/view/2092}
+  abbr = {Citi GPS},
+  author = {Frey, C. B. and Osborne, M. A.},
+  title = {Technology at Work v2.0: The Future Is Not What It Used to Be},
+  institution = {Citi GPS and Oxford Martin School},
+  year = {2016},
+  url = {http://www.oxfordmartin.ox.ac.uk/publications/view/2092},
+  html = {http://www.oxfordmartin.ox.ac.uk/publications/view/2092},
+  abstract = {Technology at Work v2.0: The Future Is Not What It Used to Be, produced by the Oxford Martin School and Citi, provides in-depth analysis of the vulnerabilities of countries and cities to job automation, explores what automation will mean for traditional models of economic growth, and considers how governments can prepare for the potentially disruptive impacts of job automation on society.
+
+It builds on 2013 research by Carl Benedikt Frey and M. A. Osborne which found that 47 per cent of US jobs were at risk of automation over the next two decades, and on the first Technology at Work Citi GPS report, published in 2015.
+
+As well as collaborating on the Citi GPS series of reports, the School has partnered with Citi to create a new programme of research, the Oxford Martin Programme on Technology and Employment, to investigate the implications of a rapidly changing technological landscape for economies and societies.},
+  bibtex_show = {true},
 }
 
-@article{hennig_probabilistic_2015,
-  abbr={Proc. R. Soc. A},
-  title={Probabilistic Numerics and Uncertainty in Computations},
-  author={Hennig, Philipp and Osborne, Michael A. and Girolami, Mark A.},
-  journal={Proceedings of the Royal Society A},
-  volume={471},
-  pages={20150142},
-  year={2015},
-  doi={10.1098/rspa.2015.0142},
-  bibtex_show={true},
-  url={https://royalsocietypublishing.org/doi/10.1098/rspa.2015.0142}
+@techreport{bakhshi_creativity_2015,
+  abbr = {Nesta},
+  author = {Bakhshi, H. and Frey, C. B. and Osborne, M. A.},
+  title = {Creativity {Vs} {Robots}},
+  institution = {Nesta},
+  year = {2015},
+  url = {http://www.nesta.org.uk/publications/creativity-vs-robots},
+  html = {http://www.nesta.org.uk/publications/creativity-vs-robots},
+  abstract = {This report explores future automation and creativity in the UK and US workforces. We find that creative jobs will be much more resistant to automation than most other jobs.},
+  bibtex_show = {true},
+}
+
+@techreport{frey_technology_2015,
+  abbr = {Citi GPS},
+  author = {Frey, C. B. and Osborne, M. A.},
+  title = {Technology at Work: The Future of Innovation and Employment},
+  institution = {Citi GPS and Oxford Martin School},
+  year = {2015},
+  url = {http://www.oxfordmartin.ox.ac.uk/publications/view/1883},
+  html = {http://www.oxfordmartin.ox.ac.uk/publications/view/1883},
+  abstract = {Technology at Work: The Future of Innovation and Employment, is the latest Citi GPS report from the Oxford Martin School and Citi. It explores trends in automation and points to sluggish job creation caused partly by increasing automation, and argues that secular stagnation in the digital age can only be avoided by a shift towards inclusive growth.
+
+The authors highlight the key challenges, explore some of the new technology brought on by the digital age and set out an agenda for change, calling for long term thinking to mitigate the negative effects of an ever more automated and digital economy.
+
+Technology at Work marks the start of a new programme of research supported by Citi, the Oxford Martin Programme on Technology and Employment.},
+  bibtex_show = {true},
+}
+
+@techreport{frey_agiletown_2014,
+  abbr = {Deloitte},
+  author = {Frey, C. B. and Osborne, M. A.},
+  title = {Agiletown : the relentless march of technology and {London}’s response},
+  institution = {Deloitte},
+  year = {2014},
+  month = {November},
+  url = {http://www.deloitte.com/view/en_GB/uk/market-insights/uk-futures/london-futures/index.htm},
+  html = {http://www.deloitte.com/view/en_GB/uk/market-insights/uk-futures/london-futures/index.htm},
+  abstract = {Our London Futures insights series focuses on the London economy and what it needs to do to maintain and reinforce its position as a leading global business hub. Our latest report in the programme, Agiletown: the relentless march of technology and London’s response, focuses on the challenges and opportunities that technology presents to London.
+
+The findings indicate that a significant shift is occurring in the labour market. Jobs that do not need to be done in London, or can be fully replaced by technology, will continue to leave the city. However, the job losses will be outweighed by new jobs requiring skills that involve creativity, complex problem-solving and high technical content.
+
+The report brings together research from Oxford Martin School academics Carl Benedikt Frey and M. A. Osborne on the potential impact of automation on jobs in the UK and London over the next two decades, and a Deloitte survey of 100 London based organisations, exploring the new jobs that will be created, the skills that will be needed, and the implications for current working practices.},
+  bibtex_show = {true},
 }

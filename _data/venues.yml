@@ -1,13 +1,18 @@
-# Colours for publication "abbr" labels, drawn from the BGL brand palette.
-# Keys must match the abbr values in papers.bib.
-"TFSC":            { color: "#8159a4" }   # purple
-"BJWA":            { color: "#8159a4" }   # purple
-"NeurIPS":         { color: "#6e8dd7" }   # blue
-"Proc. R. Soc. A": { color: "#6e8dd7" }   # blue
-"AIES":            { color: "#60c4bf" }   # cyan
-"BMJ Open":        { color: "#60c4bf" }   # cyan
-"Entropy":         { color: "#cb5763" }   # red
-"arXiv":           { color: "#cb5763" }   # red
-"Citi GPS":        { color: "#f19c39" }   # orange
-"Oxford Martin":   { color: "#f19c39" }   # orange
-"Report":          { color: "#546e7a" }   # neutral slate
+# Colours for publication "abbr" labels. Five-colour palette; badge text is
+# black (set in _sass/_bgl_overrides.scss). Non-peer-reviewed venues (preprints
+# and reports) share gold. Keys must match abbr in papers.bib.
+
+"TFSC":            { color: "#c69fe7" }   # journal
+"BJWA":            { color: "#c69fe7" }   # journal
+"NeurIPS":         { color: "#96d267" }   # conference
+"Proc. R. Soc. A": { color: "#96d267" }   # journal
+"AIES":            { color: "#67d9bf" }   # conference
+"BMJ Open":        { color: "#67d9bf" }   # journal
+"AI Mag":          { color: "#67d9bf" }   # magazine
+"Entropy":         { color: "#f28b93" }   # journal
+"arXiv":           { color: "#deb35a" }   # not peer-reviewed
+"Oxford Martin":   { color: "#deb35a" }   # not peer-reviewed
+"Citi GPS":        { color: "#deb35a" }   # not peer-reviewed
+"Nesta":           { color: "#deb35a" }   # not peer-reviewed
+"Deloitte":        { color: "#deb35a" }   # not peer-reviewed
+"Report":          { color: "#deb35a" }   # not peer-reviewed

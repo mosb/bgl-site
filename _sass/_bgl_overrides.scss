@@ -1,5 +1,18 @@
 /* Bayesian Governance Lab — modern, natural, humanistic theme. */
 
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/source-code-pro-400.woff2") format("woff2"),
+       url("../fonts/source-code-pro-400.woff")  format("woff");
+}
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/source-code-pro-700.woff2") format("woff2"),
+       url("../fonts/source-code-pro-700.woff")  format("woff");
+}
+
 :root {
   --bgl-purple: #8159a4; --bgl-cyan: #60c4bf; --bgl-orange: #f19c39;
   --bgl-red: #cb5763; --bgl-blue: #6e8dd7;
@@ -40,10 +53,10 @@ html .navbar-brand, html .post .post-title {
   font-weight: 600; letter-spacing: -0.012em;
 }
 
-/* Monospace only where it earns its place: code + BibTeX → Essential PragmataPro */
+/* Monospace only where it earns its place: code + BibTeX → Source Code Pro (self-hosted) */
 html code, html pre, html kbd,
 .bibliography pre, .bibliography .bibtex {
-  font-family: "Essential PragmataPro", "PragmataPro", "Source Code Pro", "SF Mono", Menlo, monospace;
+  font-family: "Source Code Pro", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.85rem;
 }
 

@@ -8,9 +8,9 @@ subtitle: >
 
 profile:
   align: right
-  more_info: >
-    <p>Department of Engineering Science</p>
-    <p>Parks Road, Oxford OX1 3PJ</p>
+  image: layers-silhouette.jpg
+  image_circular: false
+  more_info: 
 
 selected_papers: true
 social: true

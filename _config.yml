@@ -14,9 +14,9 @@ keywords: bayesian machine learning, ai governance, uncertainty, oxford  # ~line
 icon: ⚖️                            # emoji favicon (kills the favicon 404s); optional
 lang: en
 
-# --- Served location: www.robots.ox.ac.uk/~bgl ---
+# --- Served location: www.robots.ox.ac.uk/~mosb/bgl ---
 url: "https://www.robots.ox.ac.uk"
-baseurl: "/~bgl"                        # asset links break if this is wrong
+baseurl: "/~mosb/bgl"                        # asset links break if this is wrong
 
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR

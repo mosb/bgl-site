@@ -20,9 +20,8 @@ latest_posts:
 ---
 
 The **Bayesian Governance Lab** develops probabilistic machine learning for the
-assurance, monitoring, and governance of AI systems. We work where a principled
-treatment of uncertainty meets the practical demands of deploying autonomous and
-data-driven systems in high-stakes settings.
+assurance, monitoring, and governance of AI systems. We work on applying a principled
+treatment of uncertainty to the practical demands of deploying AI in high-stakes settings.
 
 Our methods draw on Bayesian inference, Gaussian processes, probabilistic
 numerics, and Bayesian optimisation, applied to how AI systems can be made
@@ -33,4 +32,4 @@ and collaborates across engineering, the social sciences, and policy.
 See our [research]({{ '/research/' | relative_url }}),
 [people]({{ '/people/' | relative_url }}), and
 [publications]({{ '/publications/' | relative_url }}), or
-[get in touch](mailto:bgl@robots.ox.ac.uk).
+[get in touch](mailto:mosb@robots.ox.ac.uk).

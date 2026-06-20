@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# Build the Bayesian Governance Lab site and deploy to www.robots.ox.ac.uk/~bgl
+# Build the Bayesian Governance Lab site and deploy to www.robots.ox.ac.uk/~mosb/bgl
 # Mirrors your ~mosb publish function: Homebrew rsync into the WWW directory.
 set -euo pipefail
 
-# ── Settings: confirm these against the ~bgl account ──────────────────────
+# ── Settings: confirm these against the ~mosb account ──────────────────────
 RSYNC="/opt/homebrew/bin/rsync"          # Homebrew rsync (system macOS rsync
                                          # is too old for --iconv / --chmod)
-REMOTE_USER="bgl"
+REMOTE_USER="mosb"
 REMOTE_HOST="login.robots.ox.ac.uk"
-REMOTE_DIR="WWW"
+REMOTE_DIR="WWW/bgl"
 # ──────────────────────────────────────────────────────────────────────────
 
 echo "Building site (production)…"
@@ -38,4 +38,4 @@ if [[ "${ok}" != "y" && "${ok}" != "Y" ]]; then
 fi
 
 "${RSYNC}" "${RSYNC_FLAGS[@]}" _site/ "${TARGET}"
-echo "Done → https://www.robots.ox.ac.uk/~bgl/"
+echo "Done → https://www.robots.ox.ac.uk/~mosb/bgl/"

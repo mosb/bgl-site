@@ -13,8 +13,8 @@ and the governance of AI.
 
 There are no formally advertised vacancies at present. If you would like to
 discuss possibilities, please write to
-[bgl@robots.ox.ac.uk](mailto:bgl@robots.ox.ac.uk) with a short note on your
-interests and a CV.
+[maike.osborne@eng.ox.ac.uk](mailto:maike.osborne@eng.ox.ac.uk) with a short note on how your
+interests intersect with ours and a CV.
 
 **Prospective DPhil students** should also consult the
 [AIMS Centre for Doctoral Training](https://aims.robots.ox.ac.uk) and the

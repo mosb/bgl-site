@@ -1,6 +1,7 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
+      {% include bgl_affiliations.liquid %}
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.middle_name }}
@@ -21,6 +22,7 @@
     {% endif %}
 
     <div class="container">
+      {% include bgl_affiliations.liquid %}
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.middle_name }}

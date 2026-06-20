@@ -64,6 +64,7 @@ html[data-theme="dark"] {
   --global-hover-color:       #f19c39;
   --global-divider-color:     rgba(233,227,238,0.12);
   --global-footer-bg-color:   #141118;
+  --global-footer-text-color: #cfc9d6;
 }
 
 /* Type: humanist serif body, humanist sans headings */
@@ -171,36 +172,44 @@ html .profile p, html .profile .more-info, html .profile .address {
   color: var(--global-text-color);
 }
 
-/* -------------------------------------------------------------------------- */
-/* Footer affiliations (AIGI / Oxford Martin / University of Oxford lockup +   */
-/* MLRG text link). Light/dark logo swap keyed on the theme attribute.        */
-/* -------------------------------------------------------------------------- */
+
+
+
+
+/* BGL-AFFIL-START */
 .bgl-affiliations {
   margin: 0 0 0.85rem;
   text-align: center;
 }
-.bgl-affiliation-mark {
-  display: inline-block;
-  line-height: 0;
-}
-.bgl-affiliation-logo {
-  width: auto;
-  height: auto;
-  max-height: 60px;
-  max-width: 100%;
-  opacity: 0.92;
+.bgl-affiliations .bgl-affiliation-mark { display: inline-block; line-height: 0; }
+
+.bgl-affiliations img.bgl-affiliation-logo {
+  width: auto !important;
+  height: auto !important;
+  max-height: 52px !important;
+  max-width: 100% !important;
+  opacity: 0.95;
   transition: opacity 0.15s ease-in-out;
 }
-.bgl-affiliation-mark:hover .bgl-affiliation-logo { opacity: 1; }
+.bgl-affiliations .bgl-affiliation-mark:hover img.bgl-affiliation-logo { opacity: 1; }
 
-.bgl-affiliation-logo--dark { display: none; }
-html[data-theme="dark"] .bgl-affiliation-logo--light { display: none; }
-html[data-theme="dark"] .bgl-affiliation-logo--dark { display: inline; }
+.bgl-affiliations img.bgl-affiliation-logo--light { display: none !important; }
+.bgl-affiliations img.bgl-affiliation-logo--dark  { display: inline !important; }
 
 .bgl-affiliation-text {
   margin: 0.5rem auto 0;
   max-width: 46rem;
-  font-size: 0.78rem;
-  line-height: 1.4;
-  color: var(--global-text-color-light);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--global-footer-text-color);
 }
+.bgl-affiliations .bgl-affiliation-text a,
+.bgl-affiliations .bgl-affiliation-text a:visited {
+  color: var(--global-footer-text-color) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.bgl-affiliations .bgl-affiliation-text a:hover {
+  color: var(--global-theme-color) !important;
+}
+/* BGL-AFFIL-END */

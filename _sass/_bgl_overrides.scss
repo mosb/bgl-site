@@ -176,40 +176,43 @@ html .profile p, html .profile .more-info, html .profile .address {
 
 
 
-/* BGL-AFFIL-START */
-.bgl-affiliations {
-  margin: 0 0 0.85rem;
-  text-align: center;
-}
-.bgl-affiliations .bgl-affiliation-mark { display: inline-block; line-height: 0; }
 
+
+
+/* BGL-AFFIL-START */
+/* Hidden until the include's script lifts it into the page header. */
+.bgl-affiliations { display: none; }
+
+.post-header.bgl-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+.post-header.bgl-header-flex .bgl-header-text { flex: 1 1 22rem; min-width: 0; }
+.post-header.bgl-header-flex .bgl-header-text .post-title { margin-bottom: 0.3rem; }
+
+.post-header.bgl-header-flex .bgl-affiliations,
+.bgl-affiliations.bgl-affil-fallback {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0;
+}
+.bgl-affiliations.bgl-affil-fallback { margin: 1.25rem 0; text-align: center; }
+
+.bgl-affiliations .bgl-affiliation-mark { display: inline-block; line-height: 0; }
 .bgl-affiliations img.bgl-affiliation-logo {
   width: auto !important;
   height: auto !important;
-  max-height: 52px !important;
+  max-height: 44px !important;
   max-width: 100% !important;
   opacity: 0.95;
   transition: opacity 0.15s ease-in-out;
 }
 .bgl-affiliations .bgl-affiliation-mark:hover img.bgl-affiliation-logo { opacity: 1; }
 
-.bgl-affiliations img.bgl-affiliation-logo--light { display: none !important; }
-.bgl-affiliations img.bgl-affiliation-logo--dark  { display: inline !important; }
-
-.bgl-affiliation-text {
-  margin: 0.5rem auto 0;
-  max-width: 46rem;
-  font-size: 0.8rem;
-  line-height: 1.45;
-  color: var(--global-footer-text-color);
-}
-.bgl-affiliations .bgl-affiliation-text a,
-.bgl-affiliations .bgl-affiliation-text a:visited {
-  color: var(--global-footer-text-color) !important;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.bgl-affiliations .bgl-affiliation-text a:hover {
-  color: var(--global-theme-color) !important;
-}
+.bgl-affiliations img.bgl-affiliation-logo--dark { display: none !important; }
+html[data-theme="dark"] .bgl-affiliations img.bgl-affiliation-logo--light { display: none !important; }
+html[data-theme="dark"] .bgl-affiliations img.bgl-affiliation-logo--dark { display: inline !important; }
 /* BGL-AFFIL-END */

@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: >
-  University of Oxford · part of the
+  <a href="https://www.ox.ac.uk">University of Oxford</a> · part of the
   <a href='https://www.oxfordmartin.ox.ac.uk/ai-governance'>Oxford Martin AI Governance Initiative</a>
 
 profile:

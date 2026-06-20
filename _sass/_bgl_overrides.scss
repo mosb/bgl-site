@@ -1,16 +1,40 @@
 /* Bayesian Governance Lab — modern, natural, humanistic theme. */
 
 @font-face {
+  font-family: "Literata";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/literata-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Literata";
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/literata-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Literata";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/literata-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/fira-sans-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/fira-sans-700.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "Source Code Pro";
   font-style: normal; font-weight: 400; font-display: swap;
-  src: url("../fonts/source-code-pro-400.woff2") format("woff2"),
-       url("../fonts/source-code-pro-400.woff")  format("woff");
+  src: url("../fonts/source-code-pro-400.woff2") format("woff2");
 }
 @font-face {
   font-family: "Source Code Pro";
   font-style: normal; font-weight: 700; font-display: swap;
-  src: url("../fonts/source-code-pro-700.woff2") format("woff2"),
-       url("../fonts/source-code-pro-700.woff")  format("woff");
+  src: url("../fonts/source-code-pro-700.woff2") format("woff2");
 }
 
 :root {
@@ -44,25 +68,24 @@ html[data-theme="dark"] {
 
 /* Type: humanist serif body, humanist sans headings */
 html body {
-  font-family: "karmina", Georgia, "Times New Roman", serif;
+  font-family: "Literata", Georgia, "Times New Roman", serif;
   font-size: 1.05rem; line-height: 1.72; -webkit-font-smoothing: antialiased;
 }
 html h1, html h2, html h3, html h4, html h5, html h6,
 html .navbar-brand, html .post .post-title {
-  font-family: "karmina-sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: 600; letter-spacing: -0.012em;
 }
 
 /* Monospace only where it earns its place: code + BibTeX → Source Code Pro (self-hosted) */
-html code, html pre, html kbd,
-.bibliography pre, .bibliography .bibtex {
+html code, html pre, html kbd {
   font-family: "Source Code Pro", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.85rem;
 }
 
 /* Belt-and-braces: keep the profile contact block in the body font, not mono */
 html .profile p, html .profile .more-info, html .profile .address {
-  font-family: "karmina", Georgia, "Times New Roman", serif;
+  font-family: "Literata", Georgia, "Times New Roman", serif;
 }
 
 /* Logo in the navbar: hide the text-name brand, show the mark on every page */
@@ -112,7 +135,7 @@ html .profile p, html .profile .more-info, html .profile .address {
 .bgl-member-role {
   margin: 0 0 .5rem;
   color: var(--global-theme-color);
-  font-family: "karmina-sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.78rem; font-weight: 600;
   letter-spacing: .03em; text-transform: uppercase;
 }
@@ -122,7 +145,7 @@ html .profile p, html .profile .more-info, html .profile .address {
 .bgl-member-links {
   margin: .6rem 0 0;
   display: flex; flex-wrap: wrap; gap: .15rem .9rem;
-  font-family: "karmina-sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.8rem;
 }
 .bgl-member-links a { color: var(--global-theme-color); }
@@ -136,3 +159,14 @@ html .profile p, html .profile .more-info, html .profile .address {
 .abbr abbr,
 .abbr abbr a,
 .abbr abbr div { color: #000 !important; }
+
+/* Wordmark beside the navbar logo */
+.navbar .bgl-brand .bgl-wordmark {
+  margin-left: 0.5rem;
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--global-text-color);
+}

@@ -28,11 +28,15 @@ numerics, and Bayesian optimisation, applied to how AI systems can be made
 trustworthy, auditable, and accountable. The lab sits within the
 [Oxford Martin AI Governance Initiative](https://www.oxfordmartin.ox.ac.uk/ai-governance)
 and collaborates across engineering, the social sciences, and policy.
-That policy engagement reaches into Parliament: in evidence to the House of Commons
+That policy engagement reaches into Parliament and government. The lab's lead has
+given oral evidence to the House of Commons
 [Science, Innovation and Technology Committee](https://committees.parliament.uk/work/6986/governance-of-artificial-intelligence-ai/)
-for its inquiry into the governance of AI, the lab's lead set out the assurance
-and oversight problems that AI now poses, feeding into the Committee's interim
-report on the twelve challenges that AI governance must meet.
+for its inquiry into the governance of AI, setting out the assurance and
+oversight problems that AI now poses and feeding into the Committee's interim
+report on the twelve challenges that AI governance must meet. This sits within
+a wider record of advising on the societal effects of AI and automation, from
+briefings to the Cabinet Office and HM Treasury through to contributions to
+European policy forums.
 
 See our [research]({{ '/research/' | relative_url }}),
 [people]({{ '/people/' | relative_url }}), and

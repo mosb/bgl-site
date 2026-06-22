@@ -16,22 +16,28 @@
 (function () {
   function place() {
     var mark = document.querySelector('.bgl-affiliations');
-    if (!mark) return;
     var header = document.querySelector('.post-header');
     var title = header && header.querySelector('.post-title');
-    if (header && title && !header.contains(mark)) {
-      var col = document.createElement('div');
-      col.className = 'bgl-header-text';
-      header.insertBefore(col, title);
-      col.appendChild(title);
+
+    if (mark && header && title && !header.contains(mark)) {
       var desc = header.querySelector('.desc, .post-description') ||
                  header.querySelector(':scope > p');
-      if (desc) col.appendChild(desc);
-      header.appendChild(mark);
+      var row = document.createElement('div');
+      row.className = 'bgl-subrow';
+      title.parentNode.insertBefore(row, title.nextSibling);
+      if (desc) row.appendChild(desc);
+      row.appendChild(mark);
       header.classList.add('bgl-header-flex');
-    } else {
+    } else if (mark && !document.querySelector('.post-header .bgl-affiliations')) {
       mark.classList.add('bgl-affil-fallback');
     }
+
+    var post = document.querySelector('.post') || document.body;
+    var bodyP = Array.prototype.find.call(
+      post.querySelectorAll('p'),
+      function (p) { return !p.closest('.post-header'); }
+    );
+    if (bodyP && bodyP.parentNode) bodyP.parentNode.classList.add('bgl-prose');
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', place);

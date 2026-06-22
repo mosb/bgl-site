@@ -179,19 +179,30 @@ html .profile p, html .profile .more-info, html .profile .address {
 
 
 
+
+
+
+
 /* BGL-AFFIL-START */
-/* Hidden until the include's script lifts it into the page header. */
 .bgl-affiliations { display: none; }
 
-.post-header.bgl-header-flex {
+.post-header.bgl-header-flex .post-title { margin-bottom: 0.55rem; }
+
+.post-header.bgl-header-flex .bgl-subrow {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
+  gap: 0.75rem 2rem;
+  margin-bottom: 1.6rem;
 }
-.post-header.bgl-header-flex .bgl-header-text { flex: 1 1 22rem; min-width: 0; }
-.post-header.bgl-header-flex .bgl-header-text .post-title { margin-bottom: 0.3rem; }
+.post-header.bgl-header-flex .bgl-subrow .desc,
+.post-header.bgl-header-flex .bgl-subrow .post-description {
+  flex: 1 1 22rem;
+  min-width: 0;
+  margin: 0;
+  font-style: italic;
+}
 
 .post-header.bgl-header-flex .bgl-affiliations,
 .bgl-affiliations.bgl-affil-fallback {
@@ -204,9 +215,9 @@ html .profile p, html .profile .more-info, html .profile .address {
 .bgl-affiliations .bgl-affiliation-mark { display: inline-block; line-height: 0; }
 .bgl-affiliations img.bgl-affiliation-logo {
   width: auto !important;
-  height: auto !important;
-  max-height: 44px !important;
+  height: 44px !important;
   max-width: 100% !important;
+  object-fit: contain;
   opacity: 0.95;
   transition: opacity 0.15s ease-in-out;
 }
@@ -215,4 +226,22 @@ html .profile p, html .profile .more-info, html .profile .address {
 .bgl-affiliations img.bgl-affiliation-logo--dark { display: none !important; }
 html[data-theme="dark"] .bgl-affiliations img.bgl-affiliation-logo--light { display: none !important; }
 html[data-theme="dark"] .bgl-affiliations img.bgl-affiliation-logo--dark { display: inline !important; }
+
+/* Book-style body prose, site-wide. Matches the content article in either the */
+/* post layout (article.post-content) or the page layout (bare article), while  */
+/* the subtitle sits in .post-header and is excluded.                           */
+.post :is(.post-content, article) > p,
+.bgl-prose > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-indent: 1.6em;
+}
+.post :is(.post-content, article) > p:first-of-type,
+.bgl-prose > p:first-of-type { text-indent: 0; }
+.post :is(.post-content, article) > :is(h1,h2,h3,h4,h5,h6) + p,
+.bgl-prose > :is(h1,h2,h3,h4,h5,h6) + p { text-indent: 0; }
+
+/* Break before the home-page section headers (news, selected publications), */
+/* scoped to the home page via its flagged header so other pages are spared.  */
+.post:has(.post-header.bgl-header-flex) > article h2 { margin-top: 3rem; }
 /* BGL-AFFIL-END */

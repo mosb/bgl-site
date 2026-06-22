@@ -28,7 +28,7 @@ The trajectory of AI is among the most consequential open questions of our momen
 where they are heading, and how they ought to be governed. 
 We treat that disagreement as a problem of uncertainty, and uncertainty as something to be measured and reasoned about rather than asserted.
 
-To that end we develop probabilistic machine learning for the assurance, monitoring, and governance of AI systems, giving claims about their behaviour the calibrated confidence that high-stakes decisions demand. 
+To that end, we develop rigorous probabilistic machine learning for the assurance, monitoring, and governance of AI systems, giving claims about their behaviour the calibrated confidence that high-stakes decisions demand. 
 Our methods draw on Bayesian inference, Gaussian processes, probabilistic numerics, and Bayesian optimisation, applied to the problem of making AI systems trustworthy, auditable, and accountable.
 
 The lab is small by intention. 

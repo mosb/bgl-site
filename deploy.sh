@@ -30,7 +30,10 @@ RSYNC_FLAGS=(
 
 echo
 echo "Dry run — these changes WOULD be made (nothing written yet):"
-"${RSYNC}" "${RSYNC_FLAGS[@]}" --dry-run _site/ "${TARGET}"
+# rsync exit 23 (e.g. an undeletable excluded dir) must not abort before the
+# prompt under set -e
+"${RSYNC}" "${RSYNC_FLAGS[@]}" --dry-run _site/ "${TARGET}" ||
+  echo "WARNING: dry run reported errors (see above); review before proceeding."
 
 echo
 read -r -p "Proceed with deploy to ${TARGET}? [y/N] " ok
@@ -39,5 +42,6 @@ if [[ "${ok}" != "y" && "${ok}" != "Y" ]]; then
   exit 1
 fi
 
-"${RSYNC}" "${RSYNC_FLAGS[@]}" _site/ "${TARGET}"
+"${RSYNC}" "${RSYNC_FLAGS[@]}" _site/ "${TARGET}" ||
+  echo "WARNING: rsync reported errors; the deploy may be incomplete."
 echo "Done → https://www.robots.ox.ac.uk/~mosb/bgl/"

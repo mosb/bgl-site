@@ -198,6 +198,8 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - assets/img/*.HEIC
+  - assets/img/_orig/
   - test/
   - .agents
   - .claude

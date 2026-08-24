@@ -7,7 +7,7 @@ subtitle: >
 
 profile:
   align: right
-  image: layers-silhouette.jpg
+  image: group_lunch.jpg
   image_circular: false
   more_info: 
 

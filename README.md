@@ -10,7 +10,7 @@ Lab members appear on the [people page](https://www.robots.ox.ac.uk/~mosb/bgl/pe
 
 1. **Edit [`_data/members.yml`](_data/members.yml).** Copy the commented template block at the bottom and fill it in. The fields (`name`, `role`, `image`, `blurb`, `links`) are documented at the top of the file. List order is display order.
 2. **Add a photo to [`assets/img/`](assets/img/).** A square JPEG or PNG crops best; around 600×600 px is plenty. Browsers cannot display HEIC, so export from Apple Photos as JPEG first. Set the `image` field to the bare filename. If you omit it, you get a neutral placeholder tile.
-3. **Open a pull request** with both changes. Before submitting, check the base repository is `mosb/bgl-site`: this repository began as a fork of the al-folio theme, and GitHub defaults pull requests to the upstream `alshedivat/al-folio` instead. Maike will review, merge, and deploy.
+3. **Open a pull request** with both changes. Maike will review, merge, and deploy.
 
 Note that deployment is manual (see below), so your profile appears on the live site the next time Maike deploys, not the moment the PR is merged.
 

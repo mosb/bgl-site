@@ -20,6 +20,8 @@ TARGET="${REMOTE_USER}@${REMOTE_HOST}:~/${REMOTE_DIR}"
 # set sane web permissions, skip macOS cruft and large video, fix HFS encoding.
 RSYNC_FLAGS=(
   -rtvz
+  --delete                               # remote mirrors _site exactly; review
+                                         # the dry run before confirming
   --chmod=D755,F644
   --exclude='.DS_Store' --exclude='._*'
   --exclude='*.mp4' --exclude='*.mov' --exclude='*.m4v'

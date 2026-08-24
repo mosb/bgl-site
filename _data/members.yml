@@ -24,8 +24,6 @@
     scholar: https://scholar.google.com/citations?user=iTNcAakAAAAJ
     email: maike.osborne@eng.ox.ac.uk
 
-# --- copy from here for each new member -------------------------------------
-
 - name: Rivka MacLaine Mitchell
   role: Postdoctoral Researcher
   image: rivka.jpg
@@ -41,6 +39,8 @@
     scholar: https://scholar.google.com/citations?user=NCFdDyUAAAAJ
     email: rivka.mitchell@oxfordmartin.ox.ac.uk
 
+
+# --- copy from here for each new member -------------------------------------
 
 # - name: Ada Lovelace
 #   role: DPhil Student

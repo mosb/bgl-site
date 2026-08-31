@@ -128,8 +128,14 @@ html .profile p, html .profile .more-info, html .profile .address {
   background: var(--global-code-bg-color);
 }
 .bgl-member-photo--blank {
-  display: inline-block;
-  border: 1px dashed var(--global-divider-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--global-divider-color);
+  color: var(--global-text-color-light);
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.5rem; font-weight: 600; letter-spacing: .02em;
+  user-select: none;
 }
 .bgl-member-body { min-width: 0; }
 .bgl-member-name { margin: 0 0 .15rem; font-size: 1.12rem; line-height: 1.2; }

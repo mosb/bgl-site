@@ -52,6 +52,7 @@
 - name: Juliusz Ziomek
   role: 2023 entry
   group: Research students
+  image: juliusz-ziomek.jpg
   blurb: >-
     Works on Bayesian optimisation, and in particular on what to do when the
     structure of the objective or the kernel hyperparameters are not known in
@@ -78,6 +79,7 @@
 
 - name: Benjamin Bucknall
   role: 2024 entry
+  image: benjamin-bucknall.jpg
   blurb: >-
     Studies what access to AI systems external researchers and evaluators
     need in order to do their work, and how technical expertise can be brought
@@ -88,6 +90,7 @@
 
 - name: Clarisse Wibault
   role: 2024 entry
+  image: clarisse-wibault.jpg
   blurb: >-
     Works on offline reinforcement learning: drawing useful policies out of
     large fixed datasets, and using what those policies reveal to guide which
@@ -105,6 +108,7 @@
 
 - name: Timothy Fist
   role: 2024 entry
+  image: timothy-fist.jpg
   blurb: >-
     Researches the security of AI chips, and how compute serves as a lever for
     governing AI development. Director of Emerging Technology Policy at the
@@ -114,6 +118,7 @@
 
 - name: Avi Semler
   role: 2025 entry
+  image: avi-semler.jpg
   blurb: >-
     Works on whether a model's stated chain of thought reflects the computation
     that produced its answer, and on verifying what a training set actually
@@ -123,6 +128,7 @@
 
 - name: Lucas Irwin
   role: 2025 entry
+  image: lucas-irwin.jpg
   blurb: >-
     Works on AI governance and on how far safety training in language models
     generalises, including to prompts that are semantically close to those it
@@ -132,6 +138,7 @@
 
 - name: Mauricio Baker
   role: 2025 entry
+  image: mauricio-baker.jpg
   blurb: >-
     Works on how AI-specialised hardware could be overseen, so that states can
     verify each other's compliance with agreements on AI development. A
@@ -141,6 +148,7 @@
 
 - name: Michael Chen
   role: 2025 entry
+  image: michael-chen.jpg
   blurb: >-
     Works on frontier safety policies and the evaluations they rest on. On the
     policy team at METR, advising AI companies and commenting on emerging
@@ -160,6 +168,7 @@
 - name: Akash Agrawal
   role: 2026 entry
   group: Joining in October
+  image: akash-agrawal.jpg
   blurb: >-
     Works on multi-agent security: how deception and coordination arise
     between AI agents, and what protocols make their interactions safe. Holds
@@ -177,6 +186,7 @@
 
 - name: Patricia Paskov
   role: 2026 entry
+  image: patricia-paskov.jpg
   blurb: >-
     Works on the science of frontier AI evaluations: what makes an evaluation
     rigorous enough to carry the claims made from it. Director of Standards at
@@ -186,6 +196,7 @@
 
 - name: Tung-Yu Wu
   role: 2026 entry
+  image: tung-yu-wu.jpg
   blurb: >-
     Works on interpretability, including methods that produce natural-language
     explanations of what individual neurons in a network respond to.

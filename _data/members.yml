@@ -158,6 +158,7 @@
 
 - name: Tom Bush
   role: 2025 entry
+  image: tom-bush.jpg
   blurb: >-
     Works on interpretability, and on what reinforcement learning agents come
     to do internally, including the first mechanistic evidence that a

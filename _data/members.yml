@@ -1,7 +1,17 @@
 # Bayesian Governance Lab – members
-# SINGLE SOURCE OF TRUTH. To add a person, copy one block and fill it in.
-# Nothing else to edit: the People page (/people/) renders this list as cards,
-# and list order is display order, so the director stays first.
+# To add a person, copy one block and fill it in. Nothing else to edit: the
+# People page (/people/) renders this list as cards, and list order is display
+# order, so the director stays first.
+#
+# This file is the source of truth for how the site PRESENTS people: blurbs,
+# photos, links, ordering. It is NOT the source of truth for the facts of
+# enrolment. Mode of study, remote working and Oxford email addresses come
+# from the student record:
+#
+#     ~/Documents/AIGI_BGL/members/students_current.csv
+#
+# So set `status` and `links.email` to match that sheet, and correct the sheet
+# first when they disagree.
 #
 # Fields:
 #   name   (required)  Full name, as it should display.

@@ -77,6 +77,7 @@
 
 - name: Aidan O'Gara
   role: 2024 entry
+  status: Part-time, remote
   blurb: >-
     Works on the technical side of AI governance, most recently on
     hardware-enabled mechanisms: AI chips designed to enforce rules on their
@@ -84,6 +85,7 @@
     language models and gaps in export controls.
   links:
     website: https://aigi.ox.ac.uk/people/aidan-ogara/
+    email: aidan.ogara@stcatz.ox.ac.uk
 
 - name: Benjamin Bucknall
   role: 2024 entry
@@ -120,6 +122,7 @@
 
 - name: Timothy Fist
   role: 2024 entry
+  status: Part-time, remote
   image: timothy-fist.jpg
   blurb: >-
     Researches the security of AI chips, and how compute serves as a lever for
@@ -153,6 +156,7 @@
 
 - name: Mauricio Baker
   role: 2025 entry
+  status: Remote
   image: mauricio-baker.jpg
   blurb: >-
     Works on how AI-specialised hardware could be overseen, so that states can
@@ -164,6 +168,7 @@
 
 - name: Michael Chen
   role: 2025 entry
+  status: Part-time, remote
   image: michael-chen.jpg
   blurb: >-
     Works on frontier safety policies and the evaluations they rest on. On the
@@ -216,6 +221,7 @@
 
 - name: Patricia Paskov
   role: 2026 entry
+  status: Part-time
   image: patricia-paskov.jpg
   blurb: >-
     Works on the science of frontier AI evaluations: what makes an evaluation
@@ -233,6 +239,7 @@
     explanations of what individual neurons in a network respond to.
   links:
     scholar: https://scholar.google.com/citations?user=Zx1YxFgAAAAJ
+    email: tung-yu.wu@gtc.ox.ac.uk
 
 # --- copy from here for each new member -------------------------------------
 

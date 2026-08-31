@@ -1,0 +1,15 @@
+<h2 class="bgl-member-group">{{ include.heading }}</h2>
+<ul class="bgl-alumni">
+  {% for a in include.people %}
+  <li class="bgl-alumnus">
+    {% if a.website %}
+      <a class="bgl-alumnus-name" href="{{ a.website }}">{{ a.name }}</a>
+    {% else %}
+      <span class="bgl-alumnus-name">{{ a.name }}</span>
+    {% endif %}
+    <span class="bgl-alumnus-meta">
+      {{ a.role }}{% if a.start %}{% if a.end %}, {{ a.start }}–{{ a.end }}{% else %}, from {{ a.start }}{% endif %}{% endif %}
+    </span>
+  </li>
+  {% endfor %}
+</ul>

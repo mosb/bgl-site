@@ -8,3 +8,7 @@ nav_order: 2
 ---
 
 {% include members_grid.liquid %}
+
+{% include people_list.liquid heading="Alumni" people=site.data.alumni %}
+
+{% include people_list.liquid heading="Former postdocs" people=site.data.postdocs %}

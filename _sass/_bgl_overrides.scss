@@ -169,6 +169,29 @@ html .profile p, html .profile .more-info, html .profile .address {
 }
 .bgl-member-group + .bgl-members { margin-top: 1.25rem; }
 
+/* Alumni and former postdocs: too many for cards, so a compact list. */
+.bgl-alumni {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+  columns: 3 220px;
+  column-gap: 2rem;
+}
+.bgl-alumnus {
+  break-inside: avoid;
+  margin: 0 0 .7rem;
+  line-height: 1.35;
+}
+.bgl-alumnus-name { display: block; }
+a.bgl-alumnus-name { color: var(--global-theme-color); }
+a.bgl-alumnus-name:hover { color: var(--global-hover-color); }
+.bgl-alumnus-meta {
+  display: block;
+  color: var(--global-text-color-light);
+  font-family: "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+}
+
 @media (max-width: 420px) {
   .bgl-members { grid-template-columns: 1fr; }
 }

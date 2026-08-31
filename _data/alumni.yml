@@ -1,0 +1,199 @@
+# Bayesian Governance Lab – alumni
+# Rendered as a compact list at the foot of the People page (/people/).
+# Ordered by year of arrival, as in members/students_former.csv.
+#
+# Fields:
+#   name    (required)  Full name, as it should display.
+#   role    (required)  DPhil or MSc(Res).
+#   start              Year they joined the lab.
+#   end                Year they left. Omit if we have no leaving year:
+#                      the entry then reads "from 2012" rather than a range.
+#   website            One link, and only if it has been checked recently.
+#                      A dead link is worse than none.
+
+- name: Jan-Peter Calliess
+  role: DPhil
+  start: 2011
+  end: 2014
+  website: https://www.robots.ox.ac.uk/~jan/
+
+- name: Ahsan Alvi
+  role: DPhil
+  start: 2012
+  end: 2019
+
+- name: Jia Tsing Ng
+  role: DPhil
+  start: 2012
+  end: 2015
+
+- name: Justin Bewsher
+  role: DPhil
+  start: 2012
+  end: 2018
+
+- name: Tom Gunter
+  role: DPhil
+  start: 2012
+  end: 2017
+
+- name: Tom Nickson
+  role: DPhil
+  start: 2012
+  end: 2018
+
+- name: Favour Nyikosa
+  role: DPhil
+  start: 2013
+  end: 2018
+  website: https://www.robots.ox.ac.uk/~favour/
+
+- name: Mark McLeod
+  role: DPhil
+  start: 2013
+  end: 2018
+
+- name: Nabeel Gillani
+  role: MSc(Res)
+  start: 2013
+  end: 2015
+  website: https://www.nabeelgillani.com/
+
+- name: Arnold Salas
+  role: DPhil
+  start: 2014
+  end: 2021
+
+- name: Jack Fitzsimons
+  role: DPhil
+  start: 2014
+  end: 2019
+  website: https://jkfitzsimons.github.io/
+
+- name: Jonny Downing
+  role: DPhil
+  start: 2014
+  end: 2020
+
+- name: Tom Rainforth
+  role: DPhil
+  start: 2014
+  end: 2017
+  website: https://www.robots.ox.ac.uk/~twgr/
+
+- name: Logan Graham
+  role: DPhil
+  start: 2015
+  end: 2020
+  website: https://logangraham.xyz/
+
+- name: Gab Abbati
+  role: DPhil
+  start: 2016
+  end: 2020
+  website: https://scholar.google.com/citations?user=FBRLkq4AAAAJ
+
+- name: Neil Dhir
+  role: DPhil
+  start: 2016
+  end: 2017
+
+- name: Nikitas Rontsis
+  role: DPhil
+  start: 2016
+  end: 2020
+
+- name: Seb Schulze
+  role: DPhil
+  start: 2016
+  end: 2021
+  website: https://www.robots.ox.ac.uk/~sschulze/
+
+- name: Sylvestre Rebuffi
+  role: DPhil
+  start: 2016
+  end: 2020
+
+- name: Arno Blaas
+  role: DPhil
+  start: 2017
+  end: 2021
+
+- name: Binxin Ru
+  role: DPhil
+  start: 2017
+  end: 2022
+  website: https://rubinxin.github.io/
+
+- name: Ed Wagstaff
+  role: DPhil
+  start: 2017
+  end: 2021
+  website: https://edwag.github.io/
+
+- name: Tom Pretty
+  role: DPhil
+  start: 2018
+  end: 2022
+
+- name: Adam Goliński
+  role: DPhil
+  start: 2019
+  end: 2023
+  website: http://adamgol.me/
+
+- name: Cong Lu
+  role: DPhil
+  start: 2019
+  end: 2023
+  website: https://conglu.co.uk/
+
+- name: Michael Cohen
+  role: DPhil
+  start: 2019
+  end: 2023
+  website: https://www.michael-k-cohen.com/
+
+- name: Philip Ball
+  role: DPhil
+  start: 2019
+  end: 2024
+  website: https://philipjball.github.io/
+
+- name: Saad Hamid
+  role: DPhil
+  start: 2019
+  end: 2023
+
+- name: Xingchen Wan
+  role: DPhil
+  start: 2019
+  end: 2023
+  website: https://xingchen.one/
+
+- name: Masaki Adachi
+  role: DPhil
+  start: 2021
+  end: 2025
+  website: https://www.masaki-adachi.com/
+
+- name: Ondřej Bajgar
+  role: DPhil
+  start: 2021
+  end: 2025
+  website: http://www.bajgar.org/
+
+- name: Sam Daulton
+  role: DPhil
+  start: 2021
+  end: 2023
+  website: https://sdaulton.github.io/
+
+- name: Rong Gu
+  role: MSc(Res)
+  start: 2023
+  end: 2025
+
+- name: Richard Everett
+  role: DPhil
+  website: https://scholar.google.com/citations?user=IIlnyWQAAAAJ

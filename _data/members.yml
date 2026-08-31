@@ -17,7 +17,7 @@
 
 - name: Maike Osborne
   role: Lab Lead
-  group: Senior researchers
+  group: Research staff
   image: maike.jpg
   blurb: >-
     Professor of Machine Learning at Oxford and co-director of the Oxford Martin
@@ -51,7 +51,7 @@
 
 - name: Juliusz Ziomek
   role: 2023 entry
-  group: DPhil students
+  group: Research students
   blurb: >-
     Works on Bayesian optimisation, and in particular on what to do when the
     structure of the objective or the kernel hyperparameters are not known in

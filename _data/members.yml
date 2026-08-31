@@ -5,7 +5,11 @@
 #
 # Fields:
 #   name   (required)  Full name, as it should display.
-#   role   (required)  Short label: Director, DPhil Student, Postdoc, etc.
+#   role   (required)  Short label: Lab Lead, Postdoctoral Researcher, or the
+#                      year of entry for a student.
+#   group              Section heading to open before this person. Repeat the
+#                      same string on consecutive people to keep them in one
+#                      section; omit it to stay in the section above.
 #   image              Filename in assets/img/ (a square photo crops best).
 #                      Omit for a neutral placeholder tile.
 #   blurb              1–3 sentences. Markdown (links, emphasis) is fine.
@@ -26,6 +30,7 @@
 
 - name: Rivka MacLaine Mitchell
   role: Postdoctoral Researcher
+  group: Postdocs
   image: rivka.jpg
   blurb: >-
     Postdoctoral researcher bringing probability theory to the assurance and
@@ -39,6 +44,153 @@
     scholar: https://scholar.google.com/citations?user=NCFdDyUAAAAJ
     email: rivka.mitchell@oxfordmartin.ox.ac.uk
 
+
+# The student blurbs below were drafted from public sources, and deliberately
+# use no pronouns. Each student should be given the chance to correct or
+# replace their own.
+
+- name: Juliusz Ziomek
+  role: 2023 entry
+  group: DPhil students
+  blurb: >-
+    Works on Bayesian optimisation, and in particular on what to do when the
+    structure of the objective or the kernel hyperparameters are not known in
+    advance. Came to Oxford from Huawei's London research lab.
+  links:
+    website: https://juliuszziomek.github.io/
+
+- name: Lucas Schorling
+  role: 2023 entry
+  blurb: >-
+    Applies machine learning to the characterisation and tuning of quantum
+    devices, where the number of parameters puts manual tuning out of reach.
+    Also works on optimisers for training deep networks.
+
+- name: Aidan O'Gara
+  role: 2024 entry
+  blurb: >-
+    Works on the technical side of AI governance, most recently on
+    hardware-enabled mechanisms: AI chips designed to enforce rules on their
+    own use and to resist tampering. Earlier work covered deception in
+    language models and gaps in export controls.
+  links:
+    website: https://aigi.ox.ac.uk/people/aidan-ogara/
+
+- name: Benjamin Bucknall
+  role: 2024 entry
+  blurb: >-
+    Studies what access to AI systems external researchers and evaluators
+    need in order to do their work, and how technical expertise can be brought
+    into policy-making. Co-author of *Open Problems in Technical AI
+    Governance*, and an adviser to the UK government on AI risk management.
+  links:
+    website: https://www.robots.ox.ac.uk/~bucknall/
+
+- name: Clarisse Wibault
+  role: 2024 entry
+  blurb: >-
+    Works on offline reinforcement learning: drawing useful policies out of
+    large fixed datasets, and using what those policies reveal to guide which
+    data to collect next. Co-supervised by Jakob Foerster.
+  links:
+    website: https://clarisse-wibault.github.io/clarissewibault/
+
+- name: George Whittle
+  role: 2024 entry
+  blurb: >-
+    Works on approximate inference in deep learning, and applies it to the
+    control and measurement of quantum devices.
+  links:
+    scholar: https://scholar.google.com/citations?user=cTqFrdgAAAAJ
+
+- name: Timothy Fist
+  role: 2024 entry
+  blurb: >-
+    Researches the security of AI chips, and how compute serves as a lever for
+    governing AI development. Director of Emerging Technology Policy at the
+    Institute for Progress.
+  links:
+    website: https://aigi.ox.ac.uk/people/tim-fist/
+
+- name: Avi Semler
+  role: 2025 entry
+  blurb: >-
+    Works on whether a model's stated chain of thought reflects the computation
+    that produced its answer, and on verifying what a training set actually
+    contains. Part of the AIMS CDT.
+  links:
+    website: https://avisemler.github.io/
+
+- name: Lucas Irwin
+  role: 2025 entry
+  blurb: >-
+    Works on AI governance and on how far safety training in language models
+    generalises, including to prompts that are semantically close to those it
+    was trained against.
+  links:
+    website: https://aigi.ox.ac.uk/people/lucas-irwin/
+
+- name: Mauricio Baker
+  role: 2025 entry
+  blurb: >-
+    Works on how AI-specialised hardware could be overseen, so that states can
+    verify each other's compliance with agreements on AI development. A
+    Technology and Security Policy Fellow at RAND.
+  links:
+    website: https://aigi.ox.ac.uk/people/mauricio-baker/
+
+- name: Michael Chen
+  role: 2025 entry
+  blurb: >-
+    Works on frontier safety policies and the evaluations they rest on. On the
+    policy team at METR, advising AI companies and commenting on emerging
+    regulation in the US and EU.
+  links:
+    website: https://miclchen.com/
+
+- name: Tom Bush
+  role: 2025 entry
+  blurb: >-
+    Works on interpretability, and on what reinforcement learning agents come
+    to do internally, including the first mechanistic evidence that a
+    model-free agent can learn to plan.
+  links:
+    website: https://tuphs28.github.io/
+
+- name: Akash Agrawal
+  role: 2026 entry
+  group: Joining in October
+  blurb: >-
+    Works on multi-agent security: how deception and coordination arise
+    between AI agents, and what protocols make their interactions safe. Holds
+    a Cooperative AI PhD Fellowship.
+  links:
+    scholar: https://scholar.google.com/citations?user=YiD9MwQAAAAJ
+
+- name: Alexandre Duplessis
+  role: 2026 entry
+  blurb: >-
+    Works on interpretability and on the robustness and geometry of neural
+    networks. Joins the lab from the ENS in Paris.
+  links:
+    scholar: https://scholar.google.com/citations?user=A6U6ZM4AAAAJ
+
+- name: Patricia Paskov
+  role: 2026 entry
+  blurb: >-
+    Works on the science of frontier AI evaluations: what makes an evaluation
+    rigorous enough to carry the claims made from it. Director of Standards at
+    AVERI and an adjunct researcher at RAND.
+  links:
+    website: https://www.prpaskov.com/
+
+- name: Tung-Yu Wu
+  role: 2026 entry
+  blurb: >-
+    Works on interpretability, including methods that produce natural-language
+    explanations of what individual neurons in a network respond to.
+  links:
+    scholar: https://scholar.google.com/citations?user=Zx1YxFgAAAAJ
 
 # --- copy from here for each new member -------------------------------------
 

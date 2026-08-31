@@ -1,6 +1,20 @@
+{%- comment -%}
+Compact list of past members. Sorted by surname here rather than in the data
+file, so alumni.yml can stay in the order people arrived and nobody has to
+re-sort it by hand. The surname is taken as the last word of the name.
+{%- endcomment -%}
+{%- assign keyed = "" -%}
+{%- for a in include.people -%}
+{%- assign surname = a.name | split: " " | last -%}
+{%- assign keyed = keyed | append: surname | append: "~" | append: forloop.index0 | append: "," -%}
+{%- endfor -%}
+{%- assign pairs = keyed | split: "," | sort_natural -%}
 <h2 class="bgl-member-group">{{ include.heading }}</h2>
 <ul class="bgl-alumni">
-  {% for a in include.people %}
+{%- for pair in pairs -%}
+{%- assign bits = pair | split: "~" -%}
+{%- assign idx = bits[1] | plus: 0 -%}
+{%- assign a = include.people[idx] %}
   <li class="bgl-alumnus">
     {% if a.website %}
       <a class="bgl-alumnus-name" href="{{ a.website }}">{{ a.name }}</a>
@@ -11,5 +25,5 @@
       {{ a.role }}{% if a.start %}{% if a.end %}, {{ a.start }}–{{ a.end }}{% else %}, from {{ a.start }}{% endif %}{% endif %}
     </span>
   </li>
-  {% endfor %}
+{%- endfor %}
 </ul>

@@ -1,10 +1,11 @@
 # Bayesian Governance Lab – alumni
 # Rendered as a compact list at the foot of the People page (/people/).
-# Ordered by year of arrival, as in members/students_former.csv.
+# Former students and former postdocs together, ordered by year of arrival.
+# Sources: members/students_former.csv and members/postdocs_former.csv.
 #
 # Fields:
 #   name    (required)  Full name, as it should display.
-#   role    (required)  DPhil or MSc(Res).
+#   role    (required)  DPhil, MSc(Res) or Postdoc.
 #   start              Year they joined the lab.
 #   end                Year they left. Omit if we have no leaving year:
 #                      the entry then reads "from 2012" rather than a range.
@@ -171,6 +172,12 @@
   end: 2023
   website: https://xingchen.one/
 
+- name: Vu Nguyen
+  role: Postdoc
+  start: 2019
+  end: 2020
+  website: https://www.robots.ox.ac.uk/~vu/
+
 - name: Masaki Adachi
   role: DPhil
   start: 2021
@@ -197,3 +204,14 @@
 - name: Richard Everett
   role: DPhil
   website: https://scholar.google.com/citations?user=IIlnyWQAAAAJ
+
+- name: Hyungil Moon
+  role: Postdoc
+
+- name: Alessandra Tosi
+  role: Postdoc
+  website: https://www.robots.ox.ac.uk/~atosi/
+
+- name: Martin Jørgensen
+  role: Postdoc
+  website: https://jorgensenmart.github.io/

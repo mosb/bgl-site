@@ -59,6 +59,7 @@
     advance. Came to Oxford from Huawei's London research lab.
   links:
     website: https://juliuszziomek.github.io/
+    email: juliusz.ziomek@univ.ox.ac.uk
 
 - name: Lucas Schorling
   role: 2023 entry
@@ -66,6 +67,8 @@
     Applies machine learning to the characterisation and tuning of quantum
     devices, where the number of parameters puts manual tuning out of reach.
     Also works on optimisers for training deep networks.
+  links:
+    email: lucas.schorling@stcatz.ox.ac.uk
 
 - name: Aidan O'Gara
   role: 2024 entry
@@ -87,6 +90,7 @@
     Governance*, and an adviser to the UK government on AI risk management.
   links:
     website: https://www.robots.ox.ac.uk/~bucknall/
+    email: benjamin.bucknall@new.ox.ac.uk
 
 - name: Clarisse Wibault
   role: 2024 entry
@@ -97,6 +101,7 @@
     data to collect next. Co-supervised by Jakob Foerster.
   links:
     website: https://clarisse-wibault.github.io/clarissewibault/
+    email: clarisse.wibault@magd.ox.ac.uk
 
 - name: George Whittle
   role: 2024 entry
@@ -106,6 +111,7 @@
     Ares.
   links:
     scholar: https://scholar.google.com/citations?user=cTqFrdgAAAAJ
+    email: george.whittle@reuben.ox.ac.uk
 
 - name: Timothy Fist
   role: 2024 entry
@@ -116,6 +122,7 @@
     Institute for Progress.
   links:
     website: https://aigi.ox.ac.uk/people/tim-fist/
+    email: timothy.fist@stcatz.ox.ac.uk
 
 - name: Avi Semler
   role: 2025 entry
@@ -126,6 +133,7 @@
     contains. Part of the AIMS CDT.
   links:
     website: https://avisemler.github.io/
+    email: avi.semler@worc.ox.ac.uk
 
 - name: Lucas Irwin
   role: 2025 entry
@@ -136,6 +144,7 @@
     was trained against.
   links:
     website: https://aigi.ox.ac.uk/people/lucas-irwin/
+    email: lucas.irwin@stcatz.ox.ac.uk
 
 - name: Mauricio Baker
   role: 2025 entry
@@ -146,6 +155,7 @@
     Technology and Security Policy Fellow at RAND.
   links:
     website: https://aigi.ox.ac.uk/people/mauricio-baker/
+    email: mauricio.baker@exeter.ox.ac.uk
 
 - name: Michael Chen
   role: 2025 entry
@@ -156,6 +166,7 @@
     regulation in the US and EU.
   links:
     website: https://miclchen.com/
+    email: michael.chen@linacre.ox.ac.uk
 
 - name: Mike Wharton
   role: 2025 entry
@@ -178,6 +189,7 @@
     model-free agent can learn to plan. Part of the AIMS CDT.
   links:
     website: https://tuphs28.github.io/
+    email: thomas.bush@linacre.ox.ac.uk
 
 - name: Akash Agrawal
   role: 2026 entry
@@ -206,6 +218,7 @@
     AVERI and an adjunct researcher at RAND.
   links:
     website: https://www.prpaskov.com/
+    email: patricia.paskov@st-hildas.ox.ac.uk
 
 - name: Tung-Yu Wu
   role: 2026 entry

@@ -1,29 +1,37 @@
+{% assign current_group = "" %}
+{% for m in site.data.members %}
+{% if m.group and m.group != current_group %}
+{% unless forloop.first %}</div>{% endunless %}
+<h2 class="bgl-member-group">{{ m.group }}</h2>
+{% assign current_group = m.group %}
 <div class="bgl-members">
-  {% for m in site.data.members %}
-  <article class="bgl-member-card">
-    {% if m.image %}
-      <img class="bgl-member-photo"
-           src="{{ m.image | prepend: '/assets/img/' | relative_url }}"
-           alt="{{ m.name }}" loading="lazy" />
-    {% else %}
-      {% assign name_parts = m.name | split: " " %}
-      {% assign first_initial = name_parts.first | slice: 0 %}
-      {% assign last_initial = name_parts.last | slice: 0 %}
-      <span class="bgl-member-photo bgl-member-photo--blank" aria-hidden="true">{{ first_initial }}{{ last_initial }}</span>
+{% elsif forloop.first %}
+<div class="bgl-members">
+{% endif %}
+<article class="bgl-member-card">
+  {% if m.image %}
+    <img class="bgl-member-photo"
+         src="{{ m.image | prepend: '/assets/img/' | relative_url }}"
+         alt="{{ m.name }}" loading="lazy" />
+  {% else %}
+    {% assign name_parts = m.name | split: " " %}
+    {% assign first_initial = name_parts.first | slice: 0 %}
+    {% assign last_initial = name_parts.last | slice: 0 %}
+    <span class="bgl-member-photo bgl-member-photo--blank" aria-hidden="true">{{ first_initial }}{{ last_initial }}</span>
+  {% endif %}
+  <div class="bgl-member-body">
+    <h3 class="bgl-member-name">{{ m.name }}</h3>
+    {% if m.role %}<p class="bgl-member-role">{{ m.role }}</p>{% endif %}
+    {% if m.blurb %}<div class="bgl-member-blurb">{{ m.blurb | markdownify }}</div>{% endif %}
+    {% if m.links %}
+      <p class="bgl-member-links">
+        {% if m.links.website %}<a href="{{ m.links.website }}">Website</a>{% endif %}
+        {% if m.links.scholar %}<a href="{{ m.links.scholar }}">Scholar</a>{% endif %}
+        {% if m.links.github %}<a href="https://github.com/{{ m.links.github }}">GitHub</a>{% endif %}
+        {% if m.links.email %}<a href="mailto:{{ m.links.email }}">Email</a>{% endif %}
+      </p>
     {% endif %}
-    <div class="bgl-member-body">
-      <h3 class="bgl-member-name">{{ m.name }}</h3>
-      {% if m.role %}<p class="bgl-member-role">{{ m.role }}</p>{% endif %}
-      {% if m.blurb %}<div class="bgl-member-blurb">{{ m.blurb | markdownify }}</div>{% endif %}
-      {% if m.links %}
-        <p class="bgl-member-links">
-          {% if m.links.website %}<a href="{{ m.links.website }}">Website</a>{% endif %}
-          {% if m.links.scholar %}<a href="{{ m.links.scholar }}">Scholar</a>{% endif %}
-          {% if m.links.github %}<a href="https://github.com/{{ m.links.github }}">GitHub</a>{% endif %}
-          {% if m.links.email %}<a href="mailto:{{ m.links.email }}">Email</a>{% endif %}
-        </p>
-      {% endif %}
-    </div>
-  </article>
-  {% endfor %}
-</div>
+  </div>
+</article>
+{% if forloop.last %}</div>{% endif %}
+{% endfor %}

@@ -158,6 +158,17 @@ html .profile p, html .profile .more-info, html .profile .address {
 .bgl-member-links a { color: var(--global-theme-color); }
 .bgl-member-links a:hover { color: var(--global-hover-color); }
 
+/* Section heading between member grids, e.g. "DPhil students" */
+.bgl-member-group {
+  margin: 2.5rem 0 0;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  font-size: 1.05rem; font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+.bgl-member-group + .bgl-members { margin-top: 1.25rem; }
+
 @media (max-width: 420px) {
   .bgl-members { grid-template-columns: 1fr; }
 }

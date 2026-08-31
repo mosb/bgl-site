@@ -21,7 +21,12 @@
   {% endif %}
   <div class="bgl-member-body">
     <h3 class="bgl-member-name">{{ m.name }}</h3>
-    {% if m.role %}<p class="bgl-member-role">{{ m.role }}</p>{% endif %}
+    {% if m.role or m.status %}
+      <p class="bgl-member-role">
+        {%- if m.role %}{{ m.role }}{% endif -%}
+        {%- if m.status %} <span class="bgl-member-status">{{ m.status }}</span>{% endif -%}
+      </p>
+    {% endif %}
     {% if m.blurb %}<div class="bgl-member-blurb">{{ m.blurb | markdownify }}</div>{% endif %}
     {% if m.links %}
       <p class="bgl-member-links">

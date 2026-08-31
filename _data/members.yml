@@ -7,6 +7,11 @@
 #   name   (required)  Full name, as it should display.
 #   role   (required)  Short label: Lab Lead, Postdoctoral Researcher, or the
 #                      year of entry for a student.
+#   status             Optional tag shown beside the role, for anyone whose
+#                      mode of study differs from the default: "Part-time",
+#                      "Remote", or "Part-time, remote". Omit for full-time
+#                      in-Oxford students; the tag only means something if
+#                      it is the exception.
 #   group              Section heading to open before this person. Repeat the
 #                      same string on consecutive people to keep them in one
 #                      section; omit it to stay in the section above.
@@ -233,6 +238,7 @@
 
 # - name: Ada Lovelace
 #   role: DPhil Student
+#   status: Part-time, remote
 #   image: ada.jpg
 #   blurb: >-
 #     One or two sentences on what they work on in the lab.

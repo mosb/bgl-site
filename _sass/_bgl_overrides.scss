@@ -146,6 +146,18 @@ html .profile p, html .profile .more-info, html .profile .address {
   font-size: 0.78rem; font-weight: 600;
   letter-spacing: .03em; text-transform: uppercase;
 }
+.bgl-member-status {
+  display: inline-block;
+  margin-left: .3rem;
+  padding: .05rem .45rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-code-bg-color);
+  color: var(--global-text-color-light);
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0; text-transform: none;
+  vertical-align: baseline;
+}
 .bgl-member-blurb { color: var(--global-text-color-light); font-size: 0.95rem; line-height: 1.55; }
 .bgl-member-blurb p { margin: 0 0 .4rem; }
 .bgl-member-blurb p:last-child { margin-bottom: 0; }

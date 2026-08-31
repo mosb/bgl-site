@@ -17,14 +17,19 @@
 #   name   (required)  Full name, as it should display.
 #   role   (required)  Short label: Lab Lead, Postdoctoral Researcher, or the
 #                      year of entry for a student.
-#   status             Optional tag shown beside the role, for anyone whose
-#                      mode of study differs from the default: "Part-time",
-#                      "Remote", or "Part-time, remote". Omit for full-time
-#                      in-Oxford students; the tag only means something if
-#                      it is the exception.
+#   status             Optional tag shown beside the role. Set it to "Remote"
+#                      for anyone not normally in Oxford; omit it otherwise.
+#                      Part-time study is NOT recorded here, because it is
+#                      carried by the "Part-time research students" section
+#                      heading instead. Both facts come from the student
+#                      record (Mode and Remote columns).
 #   group              Section heading to open before this person. Repeat the
 #                      same string on consecutive people to keep them in one
-#                      section; omit it to stay in the section above.
+#                      section; omit it to stay in the section above. Current
+#                      sections, in order: Research staff, Research students,
+#                      Part-time research students. Part-time students sit in
+#                      their own section so that their output is not read
+#                      against a full-time timetable.
 #   image              Filename in assets/img/ (a square photo crops best).
 #                      Omit for a neutral placeholder tile.
 #   blurb              1–3 sentences. Markdown (links, emphasis) is fine.
@@ -85,18 +90,6 @@
   links:
     email: lucas.schorling@stcatz.ox.ac.uk
 
-- name: Aidan O'Gara
-  role: 2024 entry
-  status: Part-time, remote
-  blurb: >-
-    Works on the technical side of AI governance, most recently on
-    hardware-enabled mechanisms: AI chips designed to enforce rules on their
-    own use and to resist tampering. Earlier work covered deception in
-    language models and gaps in export controls.
-  links:
-    website: https://aigi.ox.ac.uk/people/aidan-ogara/
-    email: aidan.ogara@stcatz.ox.ac.uk
-
 - name: Benjamin Bucknall
   role: 2024 entry
   image: benjamin-bucknall.jpg
@@ -129,18 +122,6 @@
   links:
     scholar: https://scholar.google.com/citations?user=cTqFrdgAAAAJ
     email: george.whittle@reuben.ox.ac.uk
-
-- name: Timothy Fist
-  role: 2024 entry
-  status: Part-time, remote
-  image: timothy-fist.jpg
-  blurb: >-
-    Researches the security of AI chips, and how compute serves as a lever for
-    governing AI development. Director of Emerging Technology Policy at the
-    Institute for Progress.
-  links:
-    website: https://aigi.ox.ac.uk/people/tim-fist/
-    email: timothy.fist@stcatz.ox.ac.uk
 
 - name: Avi Semler
   role: 2025 entry
@@ -175,18 +156,6 @@
   links:
     website: https://aigi.ox.ac.uk/people/mauricio-baker/
     email: mauricio.baker@exeter.ox.ac.uk
-
-- name: Michael Chen
-  role: 2025 entry
-  status: Part-time, remote
-  image: michael-chen.jpg
-  blurb: >-
-    Works on frontier safety policies and the evaluations they rest on. On the
-    policy team at METR, advising AI companies and commenting on emerging
-    regulation in the US and EU.
-  links:
-    website: https://miclchen.com/
-    email: michael.chen@linacre.ox.ac.uk
 
 - name: Mike Wharton
   role: 2025 entry
@@ -229,18 +198,6 @@
   links:
     scholar: https://scholar.google.com/citations?user=A6U6ZM4AAAAJ
 
-- name: Patricia Paskov
-  role: 2026 entry
-  status: Part-time, remote
-  image: patricia-paskov.jpg
-  blurb: >-
-    Works on the science of frontier AI evaluations: what makes an evaluation
-    rigorous enough to carry the claims made from it. Director of Standards at
-    AVERI and an adjunct researcher at RAND.
-  links:
-    website: https://www.prpaskov.com/
-    email: patricia.paskov@st-hildas.ox.ac.uk
-
 - name: Tung-Yu Wu
   role: 2026 entry
   image: tung-yu-wu.jpg
@@ -250,12 +207,61 @@
   links:
     scholar: https://scholar.google.com/citations?user=Zx1YxFgAAAAJ
     email: tung-yu.wu@gtc.ox.ac.uk
+- name: Aidan O'Gara
+  role: 2024 entry
+  group: Part-time research students
+  status: Remote
+  blurb: >-
+    Works on the technical side of AI governance, most recently on
+    hardware-enabled mechanisms: AI chips designed to enforce rules on their
+    own use and to resist tampering. Earlier work covered deception in
+    language models and gaps in export controls.
+  links:
+    website: https://aigi.ox.ac.uk/people/aidan-ogara/
+    email: aidan.ogara@stcatz.ox.ac.uk
+
+- name: Timothy Fist
+  role: 2024 entry
+  status: Remote
+  image: timothy-fist.jpg
+  blurb: >-
+    Researches the security of AI chips, and how compute serves as a lever for
+    governing AI development. Director of Emerging Technology Policy at the
+    Institute for Progress.
+  links:
+    website: https://aigi.ox.ac.uk/people/tim-fist/
+    email: timothy.fist@stcatz.ox.ac.uk
+
+- name: Michael Chen
+  role: 2025 entry
+  status: Remote
+  image: michael-chen.jpg
+  blurb: >-
+    Works on frontier safety policies and the evaluations they rest on. On the
+    policy team at METR, advising AI companies and commenting on emerging
+    regulation in the US and EU.
+  links:
+    website: https://miclchen.com/
+    email: michael.chen@linacre.ox.ac.uk
+
+- name: Patricia Paskov
+  role: 2026 entry
+  status: Remote
+  image: patricia-paskov.jpg
+  blurb: >-
+    Works on the science of frontier AI evaluations: what makes an evaluation
+    rigorous enough to carry the claims made from it. Director of Standards at
+    AVERI and an adjunct researcher at RAND.
+  links:
+    website: https://www.prpaskov.com/
+    email: patricia.paskov@st-hildas.ox.ac.uk
+
 
 # --- copy from here for each new member -------------------------------------
 
 # - name: Ada Lovelace
 #   role: DPhil Student
-#   status: Part-time, remote
+#   status: Remote
 #   image: ada.jpg
 #   blurb: >-
 #     One or two sentences on what they work on in the lab.

@@ -17,6 +17,7 @@
 
 - name: Maike Osborne
   role: Lab Lead
+  group: Senior researchers
   image: maike.jpg
   blurb: >-
     Professor of Machine Learning at Oxford and co-director of the Oxford Martin
@@ -30,7 +31,6 @@
 
 - name: Rivka MacLaine Mitchell
   role: Postdoctoral Researcher
-  group: Postdocs
   image: rivka.jpg
   blurb: >-
     Postdoctoral researcher bringing probability theory to the assurance and

@@ -66,23 +66,23 @@
     email: rivka.mitchell@oxfordmartin.ox.ac.uk
 
 
-# The student blurbs below were drafted from public sources, and deliberately
-# use no pronouns. Each student should be given the chance to correct or
-# replace their own.
-
 - name: Peter Tisnikar
   role: Postdoctoral Researcher
   image: peter-tisnikar.jpg
   blurb: >-
     Works on inferring latent aspects of human behaviour from behavioural and
     multimodal data, including identifying moral preferences and values from
-    large-scale survey data. Joined from King's College London, and works with
-    Stephen Roberts as well as Maike.
+    large-scale survey data. Joined from King's College London, and works
+    jointly with Stephen Roberts.
   links:
     website: https://ptisni.github.io
     scholar: https://scholar.google.com/citations?user=pyxEsbcAAAAJ
     github: Ptisni
     email: peter.tisnikar@eng.ox.ac.uk
+
+# The student blurbs below were drafted from public sources, and deliberately
+# use no pronouns. Each student should be given the chance to correct or
+# replace their own.
 
 - name: Juliusz Ziomek
   role: 2023 entry
@@ -260,6 +260,7 @@
   links:
     website: https://www.prpaskov.com/
     email: patricia.paskov@st-hildas.ox.ac.uk
+
 - name: Tung-Yu Wu
   role: 2026 entry
   image: tung-yu-wu.jpg

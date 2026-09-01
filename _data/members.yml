@@ -271,6 +271,17 @@
     scholar: https://scholar.google.com/citations?user=Zx1YxFgAAAAJ
     email: tung-yu.wu@gtc.ox.ac.uk
 
+- name: Yawen Duan
+  role: 2026 entry
+  image: yawen-duan.jpg
+  blurb: >-
+    Works on frontier AI safety and its governance, including the AI Agent
+    Index, which documents the technical and safety features of deployed
+    agentic systems. Joins the lab from Concordia AI in Beijing, supported by
+    the Future of Life Institute, and co-supervised by Fazl Barez.
+  links:
+    github: yawen-d
+
 
 # --- copy from here for each new member -------------------------------------
 

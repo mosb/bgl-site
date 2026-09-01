@@ -204,6 +204,14 @@ a.bgl-alumnus-name:hover { color: var(--global-hover-color); }
   font-size: 0.78rem;
 }
 
+/* Print (and the PDFs we make from the page): fixed chrome repeats on
+   every printed page in Chromium and stamps itself over the text, so drop
+   the navbar and the pinned footer entirely. */
+@media print {
+  footer.fixed-bottom, #navbar, .navbar { display: none !important; }
+  html body { padding-bottom: 0 !important; padding-top: 0 !important; }
+}
+
 @media (max-width: 420px) {
   .bgl-members { grid-template-columns: 1fr; }
 }

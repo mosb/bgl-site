@@ -2,6 +2,8 @@
 # Rendered as a compact list at the foot of the People page (/people/).
 # Former students and former postdocs together, ordered by year of arrival.
 # Sources: members/students_former.csv and members/postdocs_former.csv.
+# The page sorts them by surname when it renders, so this order is only for
+# reading the file.
 #
 # Fields:
 #   name    (required)  Full name, as it should display.

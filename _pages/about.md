@@ -37,6 +37,7 @@ We sit within the [Oxford Martin AI Governance Initiative](https://www.oxfordmar
 
 That policy engagement reaches into Parliament and government. 
 The lab's lead has given oral evidence to the House of Commons [Science, Innovation and Technology Committee](https://committees.parliament.uk/work/6986/governance-of-artificial-intelligence-ai/) for its inquiry into the governance of AI, setting out the assurance and oversight problems that AI now poses.
+It fed into the Committee's [interim report](https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/1769/report.html), which set out the twelve challenges that the governance of AI must meet.
 This evidence sits within a wider record of advising on the societal effects of AI and automation, from briefings to the Cabinet Office and HM Treasury through to contributions to European policy forums.
 
 See our [research]({{ '/research/' | relative_url }}),

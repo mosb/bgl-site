@@ -259,12 +259,12 @@
     website: https://www.prpaskov.com/
     email: patricia.paskov@st-hildas.ox.ac.uk
 
-- name: Tung-Yu Wu
+- name: Tung-Yu (Tony) Wu
   role: 2026 entry
   image: tung-yu-wu.jpg
   blurb: >-
-    Works on interpretability, including methods that produce natural-language
-    explanations of what individual neurons in a network respond to.
+    Works on AI safety and interpretability, with a focus on explaining model
+    decisions and the faithfulness of those explanations.
   links:
     scholar: https://scholar.google.com/citations?user=Zx1YxFgAAAAJ
     email: tung-yu.wu@gtc.ox.ac.uk

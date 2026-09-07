@@ -70,10 +70,12 @@
   role: Postdoctoral Researcher
   image: peter-tisnikar.jpg
   blurb: >-
-    Works with Maike and Stephen Roberts on inferring human moral preferences from large-scale survey data. 
-    He obtained his PhD at King's College London, where he worked on adaptation in human--robot teamwork. 
-    He is interested in developing Bayesian methods for learning from demonstrations and observations, 
-    and integrating them in decisionmaking processes of interactive intelligent agents.
+    Works with Maike Osborne and Stephen Roberts on inferring human moral
+    preferences from large-scale survey data. He obtained his PhD at King's
+    College London, where he worked on adaptation in human–robot teamwork. He
+    is interested in developing Bayesian methods for learning from
+    demonstrations and observations, and in integrating them into the
+    decision-making processes of interactive intelligent agents.
   links:
     website: https://ptisni.github.io
     scholar: https://scholar.google.com/citations?user=pyxEsbcAAAAJ

@@ -59,12 +59,10 @@
     Markov chain Monte Carlo, developed through a DPhil in Mathematics at
     Oxford, and now directed towards modelling the causal structure and
     behaviour of AI systems.
-
   links:
     website: https://rivkamitchell.github.io/
     scholar: https://scholar.google.com/citations?user=NCFdDyUAAAAJ
     email: rivka.mitchell@oxfordmartin.ox.ac.uk
-
 
 - name: Peter Tisnikar
   role: Postdoctoral Researcher
@@ -282,8 +280,7 @@
     the Future of Life Institute, and co-supervised by Fazl Barez.
   links:
     github: yawen-d
-
-
+#
 # --- copy from here for each new member -------------------------------------
 
 # - name: Ada Lovelace

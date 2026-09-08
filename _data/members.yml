@@ -235,9 +235,10 @@
   role: 2026 entry
   image: akash-agrawal.jpg
   blurb: >-
-    Works on multi-agent security: how deception and coordination arise
-    between AI agents, and what protocols make their interactions safe. Holds
-    a Cooperative AI PhD Fellowship.
+    Works on multi-agent AI safety: failure modes that appear only when
+    multiple AI systems interact. Uses game theory and mechanism design to
+    study when safety properties fail to compose, and how modifying a game can
+    prevent that. Holds a Cooperative AI PhD Fellowship.
   links:
     scholar: https://scholar.google.com/citations?user=YiD9MwQAAAAJ
 

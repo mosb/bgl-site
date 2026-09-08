@@ -224,9 +224,9 @@
   role: 2025 entry
   image: tom-bush.jpg
   blurb: >-
-    Works on interpretability, and on what reinforcement learning agents come
-    to do internally, including the first mechanistic evidence that a
-    model-free agent can learn to plan. Part of the AIMS CDT.
+    Interested in evaluating AI systems, in aligning AI systems to complex
+    ends, and in understanding interactions between AI and humans. Part of the
+    AIMS CDT.
   links:
     website: https://tuphs28.github.io/
     email: thomas.bush@linacre.ox.ac.uk

@@ -100,12 +100,13 @@
 
 - name: Lucas Schorling
   role: 2023 entry
+  image: lucas-schorling.jpg
   blurb: >-
-    Applies machine learning to the characterisation and tuning of quantum
-    devices, where the number of parameters puts manual tuning out of reach.
-    Also works on optimisers for training deep networks.
+    Works at the intersection of machine learning and quantum systems. Several
+    projects make progress towards an AI Scientist for quantum systems, and
+    cover methods from Optimisation, Meta Learning, and Algorithm Discovery.
   links:
-    email: lucas.schorling@stcatz.ox.ac.uk
+    scholar: https://scholar.google.com/citations?user=_QbT53cAAAAJ
 
 - name: Aidan O'Gara
   role: 2024 entry

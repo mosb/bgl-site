@@ -256,15 +256,11 @@
   status: Part-time, remote
   image: patricia-paskov.jpg
   blurb: >-
-    Works on the science of frontier AI evaluation and auditing: what makes
-    evaluations rigorous, what access third-party auditors need to verify
-    developers' safety and security claims, and how audits can be automated and
-    extended to multi-agent systems. Director of Standards at the AI
-    Verification Research Institute (AVERI). Co-supervised by Robert Trager and
-    Christian Schroeder de Witt.
+    Works on the frontier AI auditing, multi-agent risk, and the science of evaluations. Director of Standards at the AI
+    Verification Research Institute (AVERI). 
   links:
     website: https://www.prpaskov.com/
-    email: patricia.paskov@st-hildas.ox.ac.uk
+    email: patricia.paskov@eng.ox.ac.uk
 
 - name: Tung-Yu (Tony) Wu
   role: 2026 entry

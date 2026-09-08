@@ -246,8 +246,7 @@
 - name: Alexandre Duplessis
   role: 2026 entry
   blurb: >-
-    Works on interpretability and on the robustness and geometry of neural
-    networks. Joins the lab from the ENS in Paris.
+    Works on interpretability and generalization of large (language) models.
   links:
     scholar: https://scholar.google.com/citations?user=A6U6ZM4AAAAJ
 

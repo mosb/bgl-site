@@ -55,7 +55,7 @@ Do not reintroduce plugin-owned runtime assets into starter paths unless intenti
 npm ci
 npm run lint:prettier
 npm run lint:style-contract
-bundle exec jekyll build --baseurl /al-folio
+JEKYLL_ENV=production bundle exec jekyll build
 bash test/integration_plugin_toggles.sh
 bash test/integration_bootstrap_compat.sh
 bash test/integration_upgrade_cli.sh
@@ -64,20 +64,12 @@ npm run test:visual
 bundle exec al-folio upgrade audit
 bundle exec al-folio upgrade overrides audit
 bundle exec al-folio upgrade report
-docker compose up -d
-curl -fsS http://127.0.0.1:8080/al-folio/ >/dev/null
-docker compose logs --tail=80
-docker compose down
+./deploy.sh
 ```
 
 ## CI Expectations
 
-Keep these workflows aligned when changing starter behavior:
-
-- `unit-tests.yml`
-- `visual-regression.yml`
-- `upgrade-check.yml`
-- `deploy.yml`
+None. This fork has no `.github/workflows`, so nothing runs on push and nothing deploys on merge; `./deploy.sh` is the only path to the live site. The upstream workflows (`unit-tests.yml`, `visual-regression.yml`, `upgrade-check.yml`, `deploy.yml`) are not present here, and Docker is broken because `bin/` was deleted in `78cae42`. See `CLAUDE.md`.
 
 ## Editing Guidance
 

@@ -69,7 +69,11 @@ bundle exec al-folio upgrade report
 
 ## CI Expectations
 
-None. This fork has no `.github/workflows`, so nothing runs on push and nothing deploys on merge; `./deploy.sh` is the only path to the live site. The upstream workflows (`unit-tests.yml`, `visual-regression.yml`, `upgrade-check.yml`, `deploy.yml`) are not present here. The Docker files were deleted, as they depended on `bin/entry_point.sh`, gone in the same commit. See `CLAUDE.md`.
+None.
+This fork has no `.github/workflows`, so nothing runs on push and nothing deploys on merge; `./deploy.sh` is the only path to the live site.
+The upstream workflows (`unit-tests.yml`, `visual-regression.yml`, `upgrade-check.yml`, `deploy.yml`) are not present here.
+The Docker files were deleted, as they depended on `bin/entry_point.sh`, gone in the same commit.
+See `CLAUDE.md`.
 
 ## Editing Guidance
 

@@ -34,7 +34,8 @@ chore: Update Jekyll dependencies with bundle update --all
 
 ## Staging Changes
 
-**Always `git add` files explicitly.** Do not stage everything with `git add .` unless you are certain of what's being committed. Check `git status` first to review your changes.
+**Always `git add` files explicitly.** Do not stage everything with `git add .` unless you are certain of what's being committed.
+Check `git status` first to review your changes.
 
 ## What NOT to Commit
 

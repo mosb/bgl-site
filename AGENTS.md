@@ -45,11 +45,17 @@ curl -fsS https://www.robots.ox.ac.uk/~mosb/bgl/ >/dev/null
 
 Notes for this fork:
 
-- **No CI.** There are no `.github/workflows`; a push to `origin` publishes nothing and runs no checks. Anything above that matters must be run by hand, and `./deploy.sh` is the only thing that changes the live site.
-- **`baseurl` is `/~mosb/bgl`**, set in `_config.yml`. Never override it on the command line; upstream's `--baseurl /al-folio` breaks every asset link.
-- **`lint:style-contract` fails by design**, because this site deliberately owns `_includes` and `_sass` (see `.al-folio-overrides.yml`). Read the report; do not "fix" it by deleting the overrides.
-- **There is no Docker path.** The `Dockerfile` and both compose files were deleted; they depended on `bin/entry_point.sh`, gone in `78cae42`. Use `bundle exec jekyll serve`. See `CLAUDE.md`.
-- **Two integration scripts were deleted.** `test/integration_comments.sh` and `test/integration_distill.sh` asserted on the al-folio demo posts (`blog/2022/giscus-comments`, `blog/2021/distill`), which went with the demo collections in `78cae42`; with `_posts` empty they could only ever fail on a missing page. If comments or distill are ever used here, write the tests against real content rather than restoring those two.
+- **No CI.** There are no `.github/workflows`; a push to `origin` publishes nothing and runs no checks.
+  Anything above that matters must be run by hand, and `./deploy.sh` is the only thing that changes the live site.
+- **`baseurl` is `/~mosb/bgl`**, set in `_config.yml`.
+  Never override it on the command line; upstream's `--baseurl /al-folio` breaks every asset link.
+- **`lint:style-contract` fails by design**, because this site deliberately owns `_includes` and `_sass` (see `.al-folio-overrides.yml`).
+  Read the report; do not "fix" it by deleting the overrides.
+- **There is no Docker path.** The `Dockerfile` and both compose files were deleted; they depended on `bin/entry_point.sh`, gone in `78cae42`.
+  Use `bundle exec jekyll serve`.
+  See `CLAUDE.md`.
+- **Two integration scripts were deleted.** `test/integration_comments.sh` and `test/integration_distill.sh` asserted on the al-folio demo posts (`blog/2022/giscus-comments`, `blog/2021/distill`), which went with the demo collections in `78cae42`; with `_posts` empty they could only ever fail on a missing page.
+  If comments or distill are ever used here, write the tests against real content rather than restoring those two.
 
 The command set above was last run in full on 9 September 2026: everything listed passes, `lint:style-contract` excepted as noted.
 

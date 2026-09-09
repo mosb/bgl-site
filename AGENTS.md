@@ -49,7 +49,7 @@ Notes for this fork:
 - **`baseurl` is `/~mosb/bgl`**, set in `_config.yml`. Never override it on the command line; upstream's `--baseurl /al-folio` breaks every asset link.
 - **`lint:style-contract` fails by design**, because this site deliberately owns `_includes` and `_sass` (see `.al-folio-overrides.yml`). Read the report; do not "fix" it by deleting the overrides.
 - **Docker does not work here.** `bin/` was deleted in `78cae42`, so both the `Dockerfile` build and the compose `command` depend on a missing `bin/entry_point.sh`. See `CLAUDE.md`.
-- **Two integration scripts are dead** and are left out of the list above. `test/integration_comments.sh` and `test/integration_distill.sh` assert on the al-folio demo posts (`blog/2022/giscus-comments`, `blog/2021/distill`), which went with the demo collections in `78cae42`; `_posts` is empty, so they fail on a missing page rather than on anything real. Delete them or point them at a fixture before trusting either.
+- **Two integration scripts were deleted.** `test/integration_comments.sh` and `test/integration_distill.sh` asserted on the al-folio demo posts (`blog/2022/giscus-comments`, `blog/2021/distill`), which went with the demo collections in `78cae42`; with `_posts` empty they could only ever fail on a missing page. If comments or distill are ever used here, write the tests against real content rather than restoring those two.
 
 The command set above was last run in full on 9 September 2026: everything listed passes, `lint:style-contract` excepted as noted.
 

@@ -40,7 +40,8 @@ Currently implemented in al-folio:
 
 ## Google Analytics
 
-Google Analytics is free and widely used. It provides detailed insights into visitor behavior.
+Google Analytics is free and widely used.
+It provides detailed insights into visitor behavior.
 
 ### Setup Steps
 

@@ -55,9 +55,12 @@ What it does, in order:
 Some details that matter:
 
 - It uses Homebrew's `/opt/homebrew/bin/rsync`, since the system rsync on macOS is too old for `--iconv`.
-- `--delete` means the remote mirrors `_site/` exactly. Read the dry run before confirming.
+- `--delete` means the remote mirrors `_site/` exactly.
+  Read the dry run before confirming.
 - SSH access to `login.robots.ox.ac.uk` is assumed to be set up already, with a key or an agent.
-- The confirmation prompt needs a terminal. Running the script non-interactively fails at the prompt rather than deploying, which is deliberate. An agent should run the same rsync twice instead, once with `--dry-run` to review the file list, then for real.
+- The confirmation prompt needs a terminal.
+  Running the script non-interactively fails at the prompt rather than deploying, which is deliberate.
+  An agent should run the same rsync twice instead, once with `--dry-run` to review the file list, then for real.
 
 Nothing else publishes.
 There are no GitHub Actions workflows in this repository, so pushing to `origin` stores the commits and leaves the live site untouched.

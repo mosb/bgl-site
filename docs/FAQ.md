@@ -35,7 +35,8 @@ The bare root is empty by design.
 ### Why does `npm run lint:style-contract` fail on a clean checkout?
 
 Because this site owns `_includes` and `_sass` locally, which the upstream starter contract forbids.
-That is a deliberate customisation, recorded in `.al-folio-overrides.yml`. Do not "fix" it by deleting the local files.
+That is a deliberate customisation, recorded in `.al-folio-overrides.yml`.
+Do not "fix" it by deleting the local files.
 
 ### Where do blog posts go?
 
@@ -78,7 +79,8 @@ Build and look at the site before deploying, since nothing else will check it.
 ### Why is there no `npm run build:css`?
 
 Tailwind and runtime asset builds belong to the gems, chiefly `al_folio_core`.
-The starter keeps only visual-regression and cross-gem integration checks. See [BOUNDARIES.md](BOUNDARIES.md).
+The starter keeps only visual-regression and cross-gem integration checks.
+See [BOUNDARIES.md](BOUNDARIES.md).
 
 ### A feature is configured but renders nothing. Why?
 

@@ -33,14 +33,19 @@ Upstream documentation says to build with `--baseurl /al-folio`, which is right 
 
 ## `deploy.sh` reports rsync errors, or hangs
 
-- **It stops without writing anything.** That is the confirmation prompt. It needs a terminal, so it cannot be answered from a script or an agent. Run the rsync directly in that case, `--dry-run` first.
+- **It stops without writing anything.** That is the confirmation prompt.
+  It needs a terminal, so it cannot be answered from a script or an agent.
+  Run the rsync directly in that case, `--dry-run` first.
 - **SSH refuses.** Access to `login.robots.ox.ac.uk` needs a working key or agent. `ssh -o BatchMode=yes mosb@login.robots.ox.ac.uk true` tells you whether that part works, without involving rsync.
-- **The dry run lists far more files than you changed.** Normal. Jekyll rewrites every file on each build, so mtimes change and rsync re-sends. What matters in the dry run is the `deleting` lines, since `--delete` makes the remote mirror `_site/` exactly.
+- **The dry run lists far more files than you changed.** Normal.
+  Jekyll rewrites every file on each build, so mtimes change and rsync re-sends.
+  What matters in the dry run is the `deleting` lines, since `--delete` makes the remote mirror `_site/` exactly.
 
 ## A member photo does not appear
 
 - The file must be in `assets/img/`, and `image:` in `_data/members.yml` must be the bare filename.
-- HEIC will not render in any browser. Export as JPEG.
+- HEIC will not render in any browser.
+  Export as JPEG.
 - Filenames are case-sensitive on the server even when they are not on macOS.
 - Omitting `image:` is a supported choice, not a failure: the card falls back to a tile with the member's initials.
 
@@ -55,12 +60,14 @@ Expected, and not something to fix:
 - Starter must not own core component path `_sass`
 ```
 
-This site owns both deliberately. See [INSTALL.md § Tracking local overrides](INSTALL.md#tracking-local-overrides).
+This site owns both deliberately.
+See [INSTALL.md § Tracking local overrides](INSTALL.md#tracking-local-overrides).
 A third violation, or a different one, is worth reading properly.
 
 ## `npm run lint:prettier` fails on `_config.yml`
 
-Also expected. The comments in that file are hand-aligned, and prettier wants them collapsed to a single space.
+Also expected.
+The comments in that file are hand-aligned, and prettier wants them collapsed to a single space.
 Do not run `prettier --write` over it unless you are content to lose the alignment.
 
 ## Publications not showing

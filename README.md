@@ -2,15 +2,23 @@
 
 Source for the website of the [Bayesian Governance Lab](https://www.robots.ox.ac.uk/~mosb/bgl/) at the University of Oxford: probabilistic machine learning for the assurance, monitoring, and governance of AI systems.
 
-The site is built with [Jekyll](https://jekyllrb.com/) on the [al-folio](https://github.com/alshedivat/al-folio) theme (v1, with the theme's layouts and styling supplied by the `al_folio_*` gems). Almost everything you might want to change is plain content in this repository; you should not need to touch the theme.
+The site is built with [Jekyll](https://jekyllrb.com/) on the [al-folio](https://github.com/alshedivat/al-folio) theme (v1, with the theme's layouts and styling supplied by the `al_folio_*` gems).
+Almost everything you might want to change is plain content in this repository; you should not need to touch the theme.
 
 ## Adding your profile
 
-Lab members appear on the [people page](https://www.robots.ox.ac.uk/~mosb/bgl/people/), which is rendered from a single data file. To add yourself:
+Lab members appear on the [people page](https://www.robots.ox.ac.uk/~mosb/bgl/people/), which is rendered from a single data file.
+To add yourself:
 
-1. **Edit [`_data/members.yml`](_data/members.yml).** Copy the commented template block at the bottom and fill it in. The fields (`name`, `role`, `image`, `blurb`, `links`) are documented at the top of the file. List order is display order.
-2. **Add a photo to [`assets/img/`](assets/img/).** A square JPEG or PNG crops best; around 600×600 px is plenty. Browsers cannot display HEIC, so export from Apple Photos as JPEG first. Set the `image` field to the bare filename. If you omit it, you get a neutral placeholder tile.
-3. **Open a pull request** with both changes. Maike will review, merge, and deploy.
+1. **Edit [`_data/members.yml`](_data/members.yml).** Copy the commented template block at the bottom and fill it in.
+   The fields (`name`, `role`, `image`, `blurb`, `links`) are documented at the top of the file.
+   List order is display order.
+2. **Add a photo to [`assets/img/`](assets/img/).** A square JPEG or PNG crops best; around 600×600 px is plenty.
+   Browsers cannot display HEIC, so export from Apple Photos as JPEG first.
+   Set the `image` field to the bare filename.
+   If you omit it, you get a neutral placeholder tile.
+3. **Open a pull request** with both changes.
+   Maike will review, merge, and deploy.
 
 Note that deployment is manual (see below), so your profile appears on the live site the next time Maike deploys, not the moment the PR is merged.
 
@@ -39,7 +47,8 @@ A local preview is nice but not required for a profile PR; the YAML file is forg
 
 ## Deployment
 
-The live site is served from `www.robots.ox.ac.uk/~mosb/bgl` and deployed by `deploy.sh`, which builds the site and rsyncs `_site/` to the Oxford web space. Only Maike can run it; merged changes reach the live site on the next deploy.
+The live site is served from `www.robots.ox.ac.uk/~mosb/bgl` and deployed by `deploy.sh`, which builds the site and rsyncs `_site/` to the Oxford web space.
+Only Maike can run it; merged changes reach the live site on the next deploy.
 
 ## Theme
 

@@ -8,7 +8,8 @@ Most contributions are content: a member profile, a publication, a news item.
 Open a pull request against `main`.
 Maike reviews, merges, and deploys; nothing reaches the live site until `./deploy.sh` runs.
 
-- **Your own profile.** Edit `_data/members.yml` and add a photo to `assets/img/`. See [QUICKSTART.md](QUICKSTART.md).
+- **Your own profile.** Edit `_data/members.yml` and add a photo to `assets/img/`.
+  See [QUICKSTART.md](QUICKSTART.md).
 - **Publications.** Add to `_bibliography/papers.bib`, following the style of the entries already there: initialised given names, an abstract, and `arxiv`, `doi` or `url` links where they exist.
 - **News.** A short markdown file in `_news/`.
 - **Pages.** `_pages/`, for the about and join pages.
@@ -35,7 +36,8 @@ npm run test:visual
 
 Two expected failures, neither of which should be "fixed":
 
-- `lint:style-contract` reports that the starter must not own `_includes` or `_sass`. It owns both deliberately.
+- `lint:style-contract` reports that the starter must not own `_includes` or `_sass`.
+  It owns both deliberately.
 - `lint:prettier` fails on `_config.yml`, whose comments are hand-aligned.
 
 ## Theme changes

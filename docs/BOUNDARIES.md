@@ -1,6 +1,7 @@
 # Ownership Boundaries (v1.x)
 
-`al-folio` is a starter kit. Runtime/component ownership lives in gems.
+`al-folio` is a starter kit.
+Runtime/component ownership lives in gems.
 
 ## Runtime ownership
 
@@ -35,11 +36,15 @@ Use this table before opening or reviewing a PR:
 | Chart runtime integration                                                                                             | `al-org-dev/al-charts` / `al_charts`                                 |
 | Newsletter form integration                                                                                           | `al-org-dev/al-newsletter` / `al_newsletter`                         |
 
-Local site overrides are still valid. A starter site may define `_layouts/<name>.liquid`, `_includes/<path>.liquid`, `_sass/*.scss`, or site-specific plugins when the customization is only for that site. Shared runtime fixes should be ported to the owning plugin instead.
+Local site overrides are still valid.
+A starter site may define `_layouts/<name>.liquid`, `_includes/<path>.liquid`, `_sass/*.scss`, or site-specific plugins when the customization is only for that site.
+Shared runtime fixes should be ported to the owning plugin instead.
 
-When a site keeps local overrides of plugin-owned files, run `bundle exec al-folio upgrade overrides audit`. Commit `.al-folio-overrides.yml` after review so future plugin gem updates can flag upstream changes to shadowed files.
+When a site keeps local overrides of plugin-owned files, run `bundle exec al-folio upgrade overrides audit`.
+Commit `.al-folio-overrides.yml` after review so future plugin gem updates can flag upstream changes to shadowed files.
 
-Plugin releases are versioned and published independently on RubyGems. A plugin patch release does not require a new starter release unless the starter wiring, dependency pins, lockfile/image metadata, docs, or test fixtures need to change.
+Plugin releases are versioned and published independently on RubyGems.
+A plugin patch release does not require a new starter release unless the starter wiring, dependency pins, lockfile/image metadata, docs, or test fixtures need to change.
 
 ## Plugin naming convention
 

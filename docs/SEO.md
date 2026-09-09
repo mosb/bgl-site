@@ -37,7 +37,8 @@ This guide helps you optimize your al-folio website for search engines so your r
 
 ## Overview
 
-SEO (Search Engine Optimization) makes your website discoverable on Google, Bing, and other search engines. For academics, this means:
+SEO (Search Engine Optimization) makes your website discoverable on Google, Bing, and other search engines.
+For academics, this means:
 
 - Your research becomes discoverable when people search for your work
 - Your CV/bio appears in search results
@@ -52,7 +53,8 @@ al-folio includes SEO basics, but you can optimize further.
 
 ### Sitemap and Robots
 
-al-folio auto-generates a `sitemap.xml` and `robots.txt` for you. These tell search engines what pages exist.
+al-folio auto-generates a `sitemap.xml` and `robots.txt` for you.
+These tell search engines what pages exist.
 
 **Verify they exist:**
 
@@ -109,7 +111,8 @@ When someone shares your page on Twitter, Facebook, LinkedIn, etc., Open Graph c
 
 ### Enable in al-folio
 
-Open Graph is disabled by default. To enable:
+Open Graph is disabled by default.
+To enable:
 
 1. **Edit `_config.yml`:**
 
@@ -243,7 +246,8 @@ Similar to Google Search Console but for Bing search:
    bing_site_verification: YOUR_BING_CODE
    ```
 
-**Note:** Bing commands are optional but recommended. Check both console dashboards regularly.
+**Note:** Bing commands are optional but recommended.
+Check both console dashboards regularly.
 
 ---
 
@@ -327,7 +331,8 @@ If you have preprints:
 
 ### Page Titles and Descriptions
 
-Every page needs a title and description. These show in search results.
+Every page needs a title and description.
+These show in search results.
 
 **In `_config.yml`:**
 

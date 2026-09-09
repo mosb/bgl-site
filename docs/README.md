@@ -26,4 +26,5 @@ Worth knowing before following any theme documentation:
 - **Nothing deploys automatically.** There are no GitHub Actions workflows in this repository; `./deploy.sh` is the only thing that changes the live site.
 - **There is no Docker path.** The `Dockerfile`, compose files and devcontainer were removed, along with the `bin/` scripts they depended on.
 - **`_posts` is empty.** The site has no blog; news items live in `_news/`.
-- **The starter style contract fails by design**, because this site owns `_includes` and `_sass` locally. See `.al-folio-overrides.yml`.
+- **The starter style contract fails by design**, because this site owns `_includes` and `_sass` locally.
+  See `.al-folio-overrides.yml`.

@@ -2,11 +2,16 @@
 
 Upstream al-folio's customisation guide, kept for its feature reference and lightly corrected where it contradicts this fork.
 
-> **This site is not a stock al-folio install.** It is served from Oxford web space rather than GitHub Pages, has no Actions workflows, and has no Docker path. Wherever this guide describes deployment, CI, `gh-pages` or containers, [INSTALL.md](INSTALL.md) is the accurate account. Work on `main`, and remember that nothing is live until `./deploy.sh` runs.
+> **This site is not a stock al-folio install.** It is served from Oxford web space rather than GitHub Pages, has no Actions workflows, and has no Docker path.
+> Wherever this guide describes deployment, CI, `gh-pages` or containers, [INSTALL.md](INSTALL.md) is the accurate account.
+> Work on `main`, and remember that nothing is live until `./deploy.sh` runs.
 
-> It also documents features this site does not use, among them the CV page, projects, books, repositories and the blog. Links here to `_data/cv.yml`, `_projects/`, `_pages/blog.md` and their like point at demo content the fork does not carry, so they will not resolve.
+> It also documents features this site does not use, among them the CV page, projects, books, repositories and the blog.
+> Links here to `_data/cv.yml`, `_projects/`, `_pages/blog.md` and their like point at demo content the fork does not carry, so they will not resolve.
 
-> **Note for users without coding experience:** You do **not** need to understand the technology stack or have any coding background to create and customize your own website with al-folio. This template was specifically designed to be accessible to academics and researchers from all backgrounds. You can create a fully functional website by simply editing configuration files and adding content in Markdown, no coding required.
+> **Note for users without coding experience:** You do **not** need to understand the technology stack or have any coding background to create and customize your own website with al-folio.
+> This template was specifically designed to be accessible to academics and researchers from all backgrounds.
+> You can create a fully functional website by simply editing configuration files and adding content in Markdown, no coding required.
 
 <!--ts-->
 
@@ -127,11 +132,13 @@ The project is structured as follows, focusing on the main components that you w
 └── 📂 test/: starter integration + visual regression checks
 ```
 
-In `v1.x`, the starter is intentionally thin. Theme internals (layouts/includes/style pipeline/runtime assets) are owned by gems such as `al_folio_core` and `al_folio_distill`.
+In `v1.x`, the starter is intentionally thin.
+Theme internals (layouts/includes/style pipeline/runtime assets) are owned by gems such as `al_folio_core` and `al_folio_distill`.
 
 ### Where common files moved in `v1.x`
 
-Most customizations still live in your site repo. The difference is that default implementations now come from gems, so local files with the same path act as overrides.
+Most customizations still live in your site repo.
+The difference is that default implementations now come from gems, so local files with the same path act as overrides.
 
 | Pre-v1 path or feature                                                                                 | v1 owner                           | Customize locally when...                                  |
 | ------------------------------------------------------------------------------------------------------ | ---------------------------------- | ---------------------------------------------------------- |
@@ -146,19 +153,25 @@ Most customizations still live in your site repo. The difference is that default
 | Math, TikZ, charts, diagrams                                                                           | `al_math` and `al_charts`          | your site has custom rendering snippets                    |
 | Repository cards                                                                                       | `al_folio_core`                    | you need custom links, badges, or card markup              |
 
-When migrating an older customized fork, remove old local copies of files that you did not intentionally customize. In the `dfuchss/fuchss.org` rehearsal, deleting old local `_includes/head.liquid`, `_includes/scripts.liquid`, citation helper plugins, external-post helper plugins, `assets/js/distillpub/**`, and `assets/js/search/**` turned the upgrade audit from 4 blocking findings to 0 blocking findings.
+When migrating an older customized fork, remove old local copies of files that you did not intentionally customize.
+In the `dfuchss/fuchss.org` rehearsal, deleting old local `_includes/head.liquid`, `_includes/scripts.liquid`, citation helper plugins, external-post helper plugins, `assets/js/distillpub/**`, and `assets/js/search/**` turned the upgrade audit from 4 blocking findings to 0 blocking findings.
 
-When you intentionally keep a local override of a plugin-owned file, run `bundle exec al-folio upgrade overrides audit` after dependency updates. Review stale overrides with `bundle exec al-folio upgrade overrides diff PATH`, then acknowledge reviewed files with `bundle exec al-folio upgrade overrides accept PATH`.
+When you intentionally keep a local override of a plugin-owned file, run `bundle exec al-folio upgrade overrides audit` after dependency updates.
+Review stale overrides with `bundle exec al-folio upgrade overrides diff PATH`, then acknowledge reviewed files with `bundle exec al-folio upgrade overrides accept PATH`.
 
 ## Configuration
 
-The configuration file [\_config.yml](../_config.yml) contains the main configuration of the website. Most of the settings is self-explanatory and we also tried to add as much comments as possible. If you have any questions, please check if it was not already answered in the [FAQ](FAQ.md).
+The configuration file [\_config.yml](../_config.yml) contains the main configuration of the website.
+Most of the settings is self-explanatory and we also tried to add as much comments as possible.
+If you have any questions, please check if it was not already answered in the [FAQ](FAQ.md).
 
 > Note that the `url` and `baseurl` settings are used to generate the links of the website, as explained in the [install instructions](INSTALL.md).
 
-All changes made to this file are only visible after you rebuild the website, so restart `bundle exec jekyll serve`. All other changes are visible immediately, you only need to refresh the page.
+All changes made to this file are only visible after you rebuild the website, so restart `bundle exec jekyll serve`.
+All other changes are visible immediately, you only need to refresh the page.
 
-For `v1.x` starter sites, no local npm style build is required. Core CSS/runtime assets are shipped by the owning gems.
+For `v1.x` starter sites, no local npm style build is required.
+Core CSS/runtime assets are shipped by the owning gems.
 
 If changes don't appear after refreshing, try:
 
@@ -172,7 +185,8 @@ If changes don't appear after refreshing, try:
 
 ## GitHub Copilot Customization Agent
 
-This repository includes a specialized GitHub Copilot agent (`.github/agents/customize.agent.md`) designed to help you customize your al-folio website. The agent acts as an expert assistant that can:
+This repository includes a specialized GitHub Copilot agent (`.github/agents/customize.agent.md`) designed to help you customize your al-folio website.
+The agent acts as an expert assistant that can:
 
 - Guide you through common customization tasks step-by-step
 - Modify configuration files, add content, and update your website
@@ -200,7 +214,8 @@ To use the customization agent:
 
 1. Ensure you have a [GitHub Copilot](https://github.com/features/copilot) subscription
 2. Open your repository in an editor with GitHub Copilot support (such as VS Code with the GitHub Copilot extension)
-3. Interact with GitHub Copilot and ask questions or request changes. For more information, check [Using custom agents in your IDE](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents#using-custom-agents-in-your-ide)
+3. Interact with GitHub Copilot and ask questions or request changes.
+   For more information, check [Using custom agents in your IDE](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents#using-custom-agents-in-your-ide)
 4. The agent will guide you through the customization process and can make changes directly to your files
 
 For example, you can ask:
@@ -218,7 +233,8 @@ The agent is designed to be patient and helpful, explaining each step clearly so
 
 - **Review all changes** – Before applying any modifications, carefully read what the agent suggests and ensure it makes sense for your needs
 - **Test locally first** – Before opening a pull request, build and serve the site locally (see the [Installation instructions](INSTALL.md))
-- **Check syntax** – Make sure any YAML, Markdown, or BibTeX files have correct syntax. Incorrect syntax can break your website
+- **Check syntax** – Make sure any YAML, Markdown, or BibTeX files have correct syntax.
+  Incorrect syntax can break your website
 - **Verify configuration** – If the agent modifies `_config.yml` or other configuration files, check that the changes align with your intentions
 - **Preview on your site** – Run your site locally and navigate through it to ensure everything displays correctly and works as expected
 - **Don't blindly apply changes** – Understand what's being changed and why before committing to your repository
@@ -230,7 +246,8 @@ The agent is designed to be patient and helpful, explaining each step clearly so
 - If the agent creates a new blog post or page, verify the frontmatter (the metadata at the top) is correct
 - If the agent suggests changes to theme colors or styling, preview your site locally to ensure the changes look as intended
 
-> **Note:** The customization agent requires GitHub Copilot to be enabled. For more information about GitHub Copilot and its features, see the [GitHub Copilot documentation](https://docs.github.com/en/copilot).
+> **Note:** The customization agent requires GitHub Copilot to be enabled.
+> For more information about GitHub Copilot and its features, see the [GitHub Copilot documentation](https://docs.github.com/en/copilot).
 
 ## Understanding the Codebase with Code Wiki and DeepWiki
 
@@ -240,9 +257,11 @@ If you're interested in learning more about how al-folio works under the hood, o
 
 **Code Wiki** and **DeepWiki** are AI-powered tools that help you explore and understand GitHub repositories through interactive documentation:
 
-- **Code Wiki** (powered by Google Gemini) generates interactive documentation from the repository code. You can browse the project structure, search for specific functions or modules, view architecture diagrams, and understand how different components interact.
+- **Code Wiki** (powered by Google Gemini) generates interactive documentation from the repository code.
+  You can browse the project structure, search for specific functions or modules, view architecture diagrams, and understand how different components interact.
 
-- **DeepWiki** provides an AI chat interface where you can ask natural language questions about the codebase, similar to having an engineer available 24/7. You can ask how features work, search for code patterns, or get explanations of complex logic.
+- **DeepWiki** provides an AI chat interface where you can ask natural language questions about the codebase, similar to having an engineer available 24/7.
+  You can ask how features work, search for code patterns, or get explanations of complex logic.
 
 ### When to use them
 
@@ -267,14 +286,18 @@ These tools are best used for:
 
 ## Technology Stack
 
-Understanding al-folio's technology stack will help you better customize and extend the theme. This section provides an overview of the key technologies and frameworks used in the project.
+Understanding al-folio's technology stack will help you better customize and extend the theme.
+This section provides an overview of the key technologies and frameworks used in the project.
 
 ### Frontend
 
-- **Markdown**: Content is written in Markdown format for pages, blog posts, and collections. This makes it easy to create and maintain content without worrying about HTML.
-- **Liquid templating**: [Liquid](https://shopify.github.io/liquid/) is used for dynamic template generation. In `v1.x`, canonical templates are gem-owned; local `_layouts/` and `_includes/` are overrides when you need project-specific customization.
+- **Markdown**: Content is written in Markdown format for pages, blog posts, and collections.
+  This makes it easy to create and maintain content without worrying about HTML.
+- **Liquid templating**: [Liquid](https://shopify.github.io/liquid/) is used for dynamic template generation.
+  In `v1.x`, canonical templates are gem-owned; local `_layouts/` and `_includes/` are overrides when you need project-specific customization.
 - **HTML & CSS**: The theme uses semantic HTML5 and modern CSS for styling and layout.
-- **Tailwind CSS (v1.x core)**: al-folio `v1.x` is Tailwind-first. Core layout/styling is generated from Tailwind with a small set of theme primitives.
+- **Tailwind CSS (v1.x core)**: al-folio `v1.x` is Tailwind-first.
+  Core layout/styling is generated from Tailwind with a small set of theme primitives.
 - **SCSS token bridge**: Theme tokens and dark/light palettes remain in `_sass/` and are bridged into Tailwind-based output.
 - **Bootstrap compatibility mode (optional)**: Legacy Bootstrap-marked content can be supported temporarily through `al_folio.compat.bootstrap.enabled`.
 - **JavaScript**: Minimal JavaScript is used for interactive features like the dark mode toggle, search functionality, and dynamic content rendering.
@@ -284,7 +307,8 @@ Understanding al-folio's technology stack will help you better customize and ext
 
 ### Backend
 
-- **Jekyll 4.x**: [Jekyll](https://jekyllrb.com/) is a static site generator written in Ruby that transforms your Markdown files and templates into a static website. Jekyll is used to:
+- **Jekyll 4.x**: [Jekyll](https://jekyllrb.com/) is a static site generator written in Ruby that transforms your Markdown files and templates into a static website.
+  Jekyll is used to:
   - Convert Markdown files to HTML
   - Process Liquid templates
   - Manage collections (posts, projects, news, books, etc.)
@@ -308,8 +332,10 @@ Understanding al-folio's technology stack will help you better customize and ext
 
 ### Build and Deployment
 
-- **`./deploy.sh`**: The only thing that publishes. It builds with `JEKYLL_ENV=production` and rsyncs `_site/` to the Oxford web space, after a dry run you confirm by hand.
-- **No GitHub Actions**: This fork has no `.github/workflows`, so nothing builds, tests, checks links, or deploys on push. Upstream's workflow features (link checking, Axe, Lighthouse, scheduled posts, RenderCV PDF generation, automatic citation updates) are all unavailable here; anything you want run, run locally.
+- **`./deploy.sh`**: The only thing that publishes.
+  It builds with `JEKYLL_ENV=production` and rsyncs `_site/` to the Oxford web space, after a dry run you confirm by hand.
+- **No GitHub Actions**: This fork has no `.github/workflows`, so nothing builds, tests, checks links, or deploys on push.
+  Upstream's workflow features (link checking, Axe, Lighthouse, scheduled posts, RenderCV PDF generation, automatic citation updates) are all unavailable here; anything you want run, run locally.
 - **Prettier**: Code formatter for Markdown, YAML, and Liquid files to maintain consistent formatting
 
 ### Key Integration Points
@@ -325,11 +351,13 @@ Understanding how these technologies work together will help you customize al-fo
 
 ## Modifying the CV information
 
-Your CV can be created using one of two formats. Choose the format that works best for you, or use both simultaneously by switching between them:
+Your CV can be created using one of two formats.
+Choose the format that works best for you, or use both simultaneously by switching between them:
 
 ### RenderCV Format (Recommended)
 
-`_data/cv.yml` uses the [RenderCV](https://rendercv.com/) YAML format, which is human-readable and designed specifically for generating professional resumes. This format also enables optional automatic PDF generation via GitHub Actions.
+`_data/cv.yml` uses the [RenderCV](https://rendercv.com/) YAML format, which is human-readable and designed specifically for generating professional resumes.
+This format also enables optional automatic PDF generation via GitHub Actions.
 
 **If you choose this format:**
 
@@ -366,7 +394,8 @@ Change `rendercv` to `jsonresume` to display the JSONResume format instead.
 
 > Not available in this fork: it needs a GitHub Actions workflow, and there are none here.
 
-If you use the RenderCV format, a GitHub Actions workflow can automatically generate a PDF version of your CV whenever you push changes to `_data/cv.yml`. The PDF is saved to `assets/rendercv/rendercv_output/`.
+If you use the RenderCV format, a GitHub Actions workflow can automatically generate a PDF version of your CV whenever you push changes to `_data/cv.yml`.
+The PDF is saved to `assets/rendercv/rendercv_output/`.
 
 **To link the auto-generated PDF to your CV page:**
 
@@ -380,7 +409,8 @@ cv_format: rendercv
 ---
 ```
 
-This will add a download button on your CV page that links to the PDF. (The exact filename depends on your RenderCV settings—check the output directory after the first workflow run to see the generated PDF name.)
+This will add a download button on your CV page that links to the PDF.
+(The exact filename depends on your RenderCV settings—check the output directory after the first workflow run to see the generated PDF name.)
 
 **To disable automatic PDF generation:**
 
@@ -388,16 +418,20 @@ Delete or comment out the `.github/workflows/render-cv.yml` workflow file.
 
 ## Modifying the user and repository information
 
-The user and repository information is defined in `_data/repositories.yml`. You can add as many users and repositories as you want. Both informations are used in the `repositories` section.
+The user and repository information is defined in `_data/repositories.yml`.
+You can add as many users and repositories as you want.
+Both informations are used in the `repositories` section.
 
 ### Configuring external service URLs
 
-The repository page uses external services to display GitHub statistics and trophies. By default, these are:
+The repository page uses external services to display GitHub statistics and trophies.
+By default, these are:
 
 - `github-readme-stats.vercel.app` for user stats and repository cards
 - `github-profile-trophy.vercel.app` for GitHub profile trophies
 
-**Important:** These default services are hosted by third parties and may not be available 100% of the time. For better reliability, privacy, and customization, you can self-host these services and configure your website to use your own instances.
+**Important:** These default services are hosted by third parties and may not be available 100% of the time.
+For better reliability, privacy, and customization, you can self-host these services and configure your website to use your own instances.
 
 To use your own instances of these services, configure the URLs in [\_config.yml](../_config.yml):
 
@@ -416,11 +450,17 @@ Once deployed, update the URLs above to point to your custom deployment.
 
 ## Creating new pages
 
-You can create new pages by adding new Markdown files in the [\_pages](../_pages/) directory. The easiest way to do this is to copy an existing page and modify it. You can choose the layout of the page by changing the [layout](https://jekyllrb.com/docs/layouts/) attribute in the [frontmatter](https://jekyllrb.com/docs/front-matter/) of the Markdown file, and also the path to access it by changing the [permalink](https://jekyllrb.com/docs/permalinks/) attribute.
+You can create new pages by adding new Markdown files in the [\_pages](../_pages/) directory.
+The easiest way to do this is to copy an existing page and modify it.
+You can choose the layout of the page by changing the [layout](https://jekyllrb.com/docs/layouts/) attribute in the [frontmatter](https://jekyllrb.com/docs/front-matter/) of the Markdown file, and also the path to access it by changing the [permalink](https://jekyllrb.com/docs/permalinks/) attribute.
 
-In `v1.x`, default layout implementations are gem-owned (primarily `al_folio_core` and feature gems). If you need custom layout behavior, create a local override file in your site (for example, create `_layouts/<name>.liquid` in your starter repo). If you want to improve shared runtime behavior for everyone, open a PR in the owning gem repo.
+In `v1.x`, default layout implementations are gem-owned (primarily `al_folio_core` and feature gems).
+If you need custom layout behavior, create a local override file in your site (for example, create `_layouts/<name>.liquid` in your starter repo).
+If you want to improve shared runtime behavior for everyone, open a PR in the owning gem repo.
 
-For a one-site customization, prefer a local override over a plugin fork. Fork or Git-pin a plugin only when the change belongs to that plugin's reusable behavior. For example:
+For a one-site customization, prefer a local override over a plugin fork.
+Fork or Git-pin a plugin only when the change belongs to that plugin's reusable behavior.
+For example:
 
 ```ruby
 gem "al_folio_core", git: "https://github.com/YOUR-USER/al-folio-core.git", branch: "my-fix"
@@ -429,29 +469,40 @@ gem "al_folio_core", path: "../al-folio-core"
 
 ## Creating new blog posts
 
-To create a new blog post, you can add a new Markdown file in the [\_posts](../_posts/) directory, which is the [default location for posts in Jekyll](https://jekyllrb.com/docs/posts/). The [name of the file must follow](https://jekyllrb.com/docs/posts/#creating-posts) the format `YYYY-MM-DD-title.md`. The easiest way to do this is to copy an existing blog post and modify it. Note that some blog posts have optional fields in the [frontmatter](https://jekyllrb.com/docs/front-matter/) that are used to enable specific behaviors or functions.
+To create a new blog post, you can add a new Markdown file in the [\_posts](../_posts/) directory, which is the [default location for posts in Jekyll](https://jekyllrb.com/docs/posts/).
+The [name of the file must follow](https://jekyllrb.com/docs/posts/#creating-posts) the format `YYYY-MM-DD-title.md`.
+The easiest way to do this is to copy an existing blog post and modify it.
+Note that some blog posts have optional fields in the [frontmatter](https://jekyllrb.com/docs/front-matter/) that are used to enable specific behaviors or functions.
 
 If you want to create blog posts that are not ready to be published, but you want to track it with git, you can create a [\_drafts](https://jekyllrb.com/docs/posts/#drafts) directory and store them there.
 
-Note that `posts` is also a collection, but it is a default collection created automatically by Jekyll. To access the posts, you can use the `site.posts` variable in your templates.
+Note that `posts` is also a collection, but it is a default collection created automatically by Jekyll.
+To access the posts, you can use the `site.posts` variable in your templates.
 
 ## Creating new projects
 
-You can create new projects by adding new Markdown files in the `_projects` directory. The easiest way to do this is to copy an existing project and modify it.
+You can create new projects by adding new Markdown files in the `_projects` directory.
+The easiest way to do this is to copy an existing project and modify it.
 
 ## Adding some news
 
-You can add news in the about page by adding new Markdown files in the [\_news](../_news/) directory. There are currently two types of news: inline news and news with a link. News with a link take you to a new page while inline news are displayed directly in the about page. The easiest way to create yours is to copy an existing news and modify it.
+You can add news in the about page by adding new Markdown files in the [\_news](../_news/) directory.
+There are currently two types of news: inline news and news with a link.
+News with a link take you to a new page while inline news are displayed directly in the about page.
+The easiest way to create yours is to copy an existing news and modify it.
 
 ## Adding Collections
 
-This Jekyll theme implements [collections](https://jekyllrb.com/docs/collections/) to let you break up your work into categories. The theme comes with three default collections: `news`, `projects`, and `books`. Items from the `news` collection are automatically displayed on the home page, while items from the `projects` collection are displayed on a responsive grid on the projects page, and items from the `books` collection are displayed on its own `bookshelf` page inside `submenus`.
+This Jekyll theme implements [collections](https://jekyllrb.com/docs/collections/) to let you break up your work into categories.
+The theme comes with three default collections: `news`, `projects`, and `books`.
+Items from the `news` collection are automatically displayed on the home page, while items from the `projects` collection are displayed on a responsive grid on the projects page, and items from the `books` collection are displayed on its own `bookshelf` page inside `submenus`.
 
 You can easily create your own collections for any type of content—teaching materials, courses, apps, short stories, or whatever suits your needs.
 
 ### Creating a new collection
 
-To create a new collection, follow these steps. We will create a `courses` collection, but you can replace `courses` with any name you prefer:
+To create a new collection, follow these steps.
+We will create a `courses` collection, but you can replace `courses` with any name you prefer:
 
 1. **Add the collection to `_config.yml`**
 
@@ -472,11 +523,13 @@ To create a new collection, follow these steps. We will create a `courses` colle
 
    - `output: true` makes the collection items accessible as separate pages
    - `permalink` defines the URL path for each collection item (`:path` is replaced with the filename)
-     - Note: You can customize the [permalink structure](https://jekyllrb.com/docs/permalinks/#collections) as needed. If not set, it uses `/COLLECTION_NAME/:name/`.
+     - Note: You can customize the [permalink structure](https://jekyllrb.com/docs/permalinks/#collections) as needed.
+       If not set, it uses `/COLLECTION_NAME/:name/`.
 
 2. **Create a folder for your collection items**
 
-   Create a new folder in the root directory with an underscore prefix, matching your collection name. For a `courses` collection, create `_courses/`:
+   Create a new folder in the root directory with an underscore prefix, matching your collection name.
+   For a `courses` collection, create `_courses/`:
 
    ```text
    _courses/
@@ -487,7 +540,8 @@ To create a new collection, follow these steps. We will create a `courses` colle
 
 3. **Create a landing page for your collection**
 
-   Add a Markdown file in `_pages/` (e.g., `courses.md`) that will serve as the main page for your collection. You can use `_pages/projects.md` or `_pages/books.md` as a template and adapt it for your needs.
+   Add a Markdown file in `_pages/` (e.g., `courses.md`) that will serve as the main page for your collection.
+   You can use `_pages/projects.md` or `_pages/books.md` as a template and adapt it for your needs.
 
    In your landing page, access your collection using the `site.COLLECTION_NAME` variable:
 
@@ -502,7 +556,8 @@ To create a new collection, follow these steps. We will create a `courses` colle
 
 4. **Add a navigation link to your collection page**
 
-   Update `_pages/dropdown.md` or the navigation configuration of your page. In the frontmatter of your collection landing page (e.g., `_pages/courses.md`), add:
+   Update `_pages/dropdown.md` or the navigation configuration of your page.
+   In the frontmatter of your collection landing page (e.g., `_pages/courses.md`), add:
 
    ```yaml
    nav: true
@@ -520,7 +575,8 @@ For more information regarding collections, check [Jekyll official documentation
 
 ### Using frontmatter fields in your collection
 
-When creating items in your collection, you can define custom frontmatter fields and use them in your landing page. For example:
+When creating items in your collection, you can define custom frontmatter fields and use them in your landing page.
+For example:
 
 ```markdown
 ---
@@ -543,7 +599,9 @@ Then in your landing page template:
 
 ### Creating a teachings collection
 
-The al-folio theme includes a pre-configured `_teachings/` collection for course pages. Each course is represented by a markdown file with frontmatter metadata. Here's how to add or modify courses:
+The al-folio theme includes a pre-configured `_teachings/` collection for course pages.
+Each course is represented by a markdown file with frontmatter metadata.
+Here's how to add or modify courses:
 
 #### Course file format
 
@@ -604,11 +662,14 @@ Additional course content, information, or resources can be added here as markdo
 
 ### Collections with categories and tags
 
-If you want to add category and tag support (like the blog posts have), you need to configure the `jekyll-archives` section in [\_config.yml](../_config.yml). See how this is done with the `books` collection for reference. For more details, check the [jekyll-archives-v2 documentation](https://george-gca.github.io/jekyll-archives-v2/).
+If you want to add category and tag support (like the blog posts have), you need to configure the `jekyll-archives` section in [\_config.yml](../_config.yml).
+See how this is done with the `books` collection for reference.
+For more details, check the [jekyll-archives-v2 documentation](https://george-gca.github.io/jekyll-archives-v2/).
 
 ### Creating custom metadata groups and archive pages
 
-Beyond the built-in `categories` and `tags` fields, you can create custom metadata fields for your collections to organize content in new ways. For example, if you have a book review collection, you might want to organize books by their **adaptations** (movies, TV shows, video games, etc.).
+Beyond the built-in `categories` and `tags` fields, you can create custom metadata fields for your collections to organize content in new ways.
+For example, if you have a book review collection, you might want to organize books by their **adaptations** (movies, TV shows, video games, etc.).
 
 #### Understanding Jekyll's special handling of fields
 
@@ -650,7 +711,8 @@ Custom fields (any field name you create) remain as **strings** and require expl
    {% endif %}
    ```
 
-   **Why the `split: ' '` filter?** Because `adaptations` is a custom field, Jekyll doesn't automatically convert it to an array like it does for `categories` and `tags`. The `split: ' '` filter breaks the space-separated string into individual items.
+   **Why the `split: ' '` filter?** Because `adaptations` is a custom field, Jekyll doesn't automatically convert it to an array like it does for `categories` and `tags`.
+   The `split: ' '` filter breaks the space-separated string into individual items.
 
 3. **Enable archive pages for your custom field**
 
@@ -752,13 +814,18 @@ After rebuilding, users can browse books by adaptation at `/books/adaptations/mo
 
 ## Adding a new publication
 
-To add publications create a new entry in the [\_bibliography/papers.bib](../_bibliography/papers.bib) file. You can find the BibTeX entry of a publication in Google Scholar by clicking on the quotation marks below the publication title, then clicking on "BibTeX", or also in the conference page itself. By default, the publications will be sorted by year and the most recent will be displayed first. You can change this behavior and more in the `Jekyll Scholar` section in [\_config.yml](../_config.yml) file.
+To add publications create a new entry in the [\_bibliography/papers.bib](../_bibliography/papers.bib) file.
+You can find the BibTeX entry of a publication in Google Scholar by clicking on the quotation marks below the publication title, then clicking on "BibTeX", or also in the conference page itself.
+By default, the publications will be sorted by year and the most recent will be displayed first.
+You can change this behavior and more in the `Jekyll Scholar` section in [\_config.yml](../_config.yml) file.
 
-You can add extra information to a publication, like a PDF file in the `assets/pdfs/` directory and add the path to the PDF file in the BibTeX entry with the `pdf` field. Some of the supported fields are: `abstract`, `altmetric`, `annotation`, `arxiv`, `bibtex_show`, `blog`, `code`, `dimensions`, `doi`, `eprint`, `hal`, `html`, `isbn`, `pdf`, `pmid`, `poster`, `slides`, `supp`, `video`, and `website`.
+You can add extra information to a publication, like a PDF file in the `assets/pdfs/` directory and add the path to the PDF file in the BibTeX entry with the `pdf` field.
+Some of the supported fields are: `abstract`, `altmetric`, `annotation`, `arxiv`, `bibtex_show`, `blog`, `code`, `dimensions`, `doi`, `eprint`, `hal`, `html`, `isbn`, `pdf`, `pmid`, `poster`, `slides`, `supp`, `video`, and `website`.
 
 ### Author annotation
 
-In publications, the author entry for yourself is identified by string array `scholar:last_name` and string array `scholar:first_name` in [\_config.yml](../_config.yml). For example, if you have the following entry in your [\_config.yml](../_config.yml):
+In publications, the author entry for yourself is identified by string array `scholar:last_name` and string array `scholar:first_name` in [\_config.yml](../_config.yml).
+For example, if you have the following entry in your [\_config.yml](../_config.yml):
 
 ```yaml
 scholar:
@@ -766,7 +833,9 @@ scholar:
   first_name: [Albert, A.]
 ```
 
-If the entry matches one form of the last names and the first names, it will be underlined. Keep meta-information about your co-authors in `_data/coauthors.yml` and Jekyll will insert links to their webpages automatically. The co-author data format is as follows, with the last names lower cased and without accents as the key:
+If the entry matches one form of the last names and the first names, it will be underlined.
+Keep meta-information about your co-authors in `_data/coauthors.yml` and Jekyll will insert links to their webpages automatically.
+The co-author data format is as follows, with the last names lower cased and without accents as the key:
 
 ```yaml
 "adams":
@@ -789,16 +858,20 @@ If the entry matches one form of the last names and the first names, it will be 
     url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
 ```
 
-If the entry matches one of the combinations of the last names and the first names, it will be highlighted and linked to the url provided. Note that the keys **MUST BE** lower cased and **MUST NOT** contain accents. This is because the keys are used to match the last names in the BibTeX entries, considering possible variations (see [related discussion](https://github.com/alshedivat/al-folio/discussions/2213)).
+If the entry matches one of the combinations of the last names and the first names, it will be highlighted and linked to the url provided.
+Note that the keys **MUST BE** lower cased and **MUST NOT** contain accents.
+This is because the keys are used to match the last names in the BibTeX entries, considering possible variations (see [related discussion](https://github.com/alshedivat/al-folio/discussions/2213)).
 
 ### Buttons (through custom bibtex keywords)
 
 There are several custom bibtex keywords that you can use to affect how the entries are displayed on the webpage:
 
-- `abbr`: Adds an abbreviation to the left of the entry. You can add links to these by creating a venue.yaml-file in the \_data folder and adding entries that match.
+- `abbr`: Adds an abbreviation to the left of the entry.
+  You can add links to these by creating a venue.yaml-file in the \_data folder and adding entries that match.
 - `abstract`: Adds an "Abs" button that expands a hidden text field when clicked to show the abstract text
 - `altmetric`: Adds an [Altmetric](https://www.altmetric.com/) badge (Note: if DOI is provided just use `true`, otherwise only add the altmetric identifier here - the link is generated automatically)
-- `annotation`: Adds a popover info message to the end of the author list that can potentially be used to clarify superscripts. HTML is allowed.
+- `annotation`: Adds a popover info message to the end of the author list that can potentially be used to clarify superscripts.
+  HTML is allowed.
 - `arxiv`: Adds a link to the Arxiv website (Note: only add the arxiv identifier here - the link is generated automatically)
 - `bibtex_show`: Adds a "Bib" button that expands a hidden text field with the full bibliography entry
 - `blog`: Adds a "Blog" button redirecting to the specified link
@@ -812,11 +885,14 @@ There are several custom bibtex keywords that you can use to affect how the entr
 - `supp`: Adds a "Supp" button to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
 - `website`: Adds a "Website" button redirecting to the specified link
 
-In `v1.x`, bibliography buttons/layout runtime is gem-owned (`al_citations` + `al_folio_core`). For local customization, add a local override `_layouts/bib.liquid` in your site; for upstream/shared behavior changes, open a PR in the owning gem repo.
+In `v1.x`, bibliography buttons/layout runtime is gem-owned (`al_citations` + `al_folio_core`).
+For local customization, add a local override `_layouts/bib.liquid` in your site; for upstream/shared behavior changes, open a PR in the owning gem repo.
 
 ## Changing theme color
 
-A variety of beautiful theme colors have been selected for you to choose from. In `v1.x`, theme tokens are gem-owned by default. To customize colors locally, either use `_config.yml` theme settings (for light/dark scheme selection) or create local `_sass/_themes.scss` and `_sass/_variables.scss` override files in your starter repo (these override gem defaults).
+A variety of beautiful theme colors have been selected for you to choose from.
+In `v1.x`, theme tokens are gem-owned by default.
+To customize colors locally, either use `_config.yml` theme settings (for light/dark scheme selection) or create local `_sass/_themes.scss` and `_sass/_variables.scss` override files in your starter repo (these override gem defaults).
 
 ## Customizing layout and UI
 
@@ -829,14 +905,20 @@ max_width: 930px
 navbar_fixed: true
 ```
 
-- `back_to_top`: Displays a "back to top" button in the footer. When clicked, it smoothly scrolls the page back to the top.
-- `footer_fixed`: When `true`, the footer remains fixed at the bottom of the viewport. When `false`, it appears at the end of the page content.
-- `max_width`: Controls the maximum width of the main content area in pixels. The default is `930px`. You can adjust this to make your content wider or narrower.
-- `navbar_fixed`: When `true`, the navigation bar stays fixed at the top of the page when scrolling. When `false`, it scrolls with the page content.
+- `back_to_top`: Displays a "back to top" button in the footer.
+  When clicked, it smoothly scrolls the page back to the top.
+- `footer_fixed`: When `true`, the footer remains fixed at the bottom of the viewport.
+  When `false`, it appears at the end of the page content.
+- `max_width`: Controls the maximum width of the main content area in pixels.
+  The default is `930px`.
+  You can adjust this to make your content wider or narrower.
+- `navbar_fixed`: When `true`, the navigation bar stays fixed at the top of the page when scrolling.
+  When `false`, it scrolls with the page content.
 
 ## Adding social media information
 
-Social media information is managed through the [`jekyll-socials` plugin](https://github.com/george-gca/jekyll-socials). To add your social media links:
+Social media information is managed through the [`jekyll-socials` plugin](https://github.com/george-gca/jekyll-socials).
+To add your social media links:
 
 1. Edit [`_data/socials.yml`](../_data/socials.yml) to add your social profiles
 2. The plugin will automatically display the social icons based on the order they are defined in the file (see the comments at the top of `_data/socials.yml`)
@@ -847,9 +929,11 @@ The template supports icons from:
 - [Font Awesome](https://fontawesome.com/)
 - [Scholar Icons](https://louisfacun.github.io/scholar-icons/)
 
-In `v1.x`, icon runtime ownership is provided by the `al_icons` plugin. Icon files are loaded from pinned CDN URLs via `third_party_libraries` in `_config.yml` (not from starter-local `assets/fonts` or `assets/webfonts` copies).
+In `v1.x`, icon runtime ownership is provided by the `al_icons` plugin.
+Icon files are loaded from pinned CDN URLs via `third_party_libraries` in `_config.yml` (not from starter-local `assets/fonts` or `assets/webfonts` copies).
 
-Social media links will appear at the bottom of the `About` page and in the search results by default. You can customize this behavior in [`_config.yml`](../_config.yml):
+Social media links will appear at the bottom of the `About` page and in the search results by default.
+You can customize this behavior in [`_config.yml`](../_config.yml):
 
 - `enable_navbar_social: true` – Display social links in the navigation bar
 - `socials_in_search: false` – Remove social links from search results
@@ -858,7 +942,9 @@ For more details, see the [`jekyll-socials` documentation](https://github.com/ge
 
 ## Adding a newsletter
 
-You can add a newsletter subscription form by adding the specified information at the `newsletter` section in the [\_config.yml](../_config.yml) file. To set up a newsletter, you can use a service like [Loops.so](https://loops.so/), which is the current supported solution. Once you have set up your newsletter, you can add the form [endpoint](https://loops.so/docs/forms/custom-form) to the `endpoint` field in the `newsletter` section of the [\_config.yml](../_config.yml) file.
+You can add a newsletter subscription form by adding the specified information at the `newsletter` section in the [\_config.yml](../_config.yml) file.
+To set up a newsletter, you can use a service like [Loops.so](https://loops.so/), which is the current supported solution.
+Once you have set up your newsletter, you can add the form [endpoint](https://loops.so/docs/forms/custom-form) to the `endpoint` field in the `newsletter` section of the [\_config.yml](../_config.yml) file.
 
 Depending on your specified footer behavior, the sign up form either will appear at the bottom of the `About` page and at the bottom of blogposts if `related_posts` are enabled, or in the footer at the bottom of each page.
 
@@ -873,12 +959,17 @@ search_enabled: true
 socials_in_search: true
 ```
 
-- `bib_search`: Enables search within your publications/bibliography. When enabled, a search box appears on the publications page, allowing visitors to filter publications by title, author, venue, or year.
-- `posts_in_search`: Includes blog posts in the search index. Users can search for posts by title, content, or tags.
-- `search_enabled`: Enables the site-wide search feature. When enabled, a search box appears in the navigation bar, allowing users to search across your site content.
-- `socials_in_search`: Includes your social media links and contact information in search results. This makes it easier for visitors to find ways to connect with you.
+- `bib_search`: Enables search within your publications/bibliography.
+  When enabled, a search box appears on the publications page, allowing visitors to filter publications by title, author, venue, or year.
+- `posts_in_search`: Includes blog posts in the search index.
+  Users can search for posts by title, content, or tags.
+- `search_enabled`: Enables the site-wide search feature.
+  When enabled, a search box appears in the navigation bar, allowing users to search across your site content.
+- `socials_in_search`: Includes your social media links and contact information in search results.
+  This makes it easier for visitors to find ways to connect with you.
 
-All these search features work in real-time and do not require a page reload. Search runtime assets are owned by the `al_search` plugin.
+All these search features work in real-time and do not require a page reload.
+Search runtime assets are owned by the `al_search` plugin.
 
 The navbar search button and the `Ctrl/Cmd + K` shortcut both open the same search modal.
 
@@ -932,7 +1023,8 @@ images:
 
 ## Social media previews
 
-**al-folio** supports Open Graph (OG) meta tags, which create rich preview objects when your pages are shared on social media platforms like Twitter, Facebook, LinkedIn, and others. These previews include your site's image, title, and description.
+**al-folio** supports Open Graph (OG) meta tags, which create rich preview objects when your pages are shared on social media platforms like Twitter, Facebook, LinkedIn, and others.
+These previews include your site's image, title, and description.
 
 ### How to enable
 
@@ -992,7 +1084,8 @@ When a page is shared on social media, the platform will display your configured
 
 ## Related posts
 
-The theme can automatically display related posts at the bottom of each blog post. These are selected by finding the most recent posts that share common tags with the current post.
+The theme can automatically display related posts at the bottom of each blog post.
+These are selected by finding the most recent posts that share common tags with the current post.
 
 ### How it works
 
@@ -1013,7 +1106,8 @@ related_blog_posts:
 - `enabled`: Set to `true` (default) to show related posts, or `false` to disable them site-wide
 - `max_related`: Maximum number of related posts to display (default: 5)
 
-The theme also uses tags to find related content. Make sure your blog posts include relevant tags in their frontmatter:
+The theme also uses tags to find related content.
+Make sure your blog posts include relevant tags in their frontmatter:
 
 ```yaml
 ---
@@ -1063,9 +1157,13 @@ max_author_limit: 3
 more_authors_animation_delay: 10
 ```
 
-- `enable_publication_thumbnails`: When `true`, displays preview images for publications (if specified in the BibTeX entry with the `preview` field). Set to `false` to disable thumbnails for all publications.
-- `max_author_limit`: Sets the maximum number of authors shown initially for each publication. If a publication has more authors, they are hidden behind a "more authors" link. Leave blank to always show all authors.
-- `more_authors_animation_delay`: Controls the animation speed (in milliseconds) when revealing additional authors. A smaller value means faster animation.
+- `enable_publication_thumbnails`: When `true`, displays preview images for publications (if specified in the BibTeX entry with the `preview` field).
+  Set to `false` to disable thumbnails for all publications.
+- `max_author_limit`: Sets the maximum number of authors shown initially for each publication.
+  If a publication has more authors, they are hidden behind a "more authors" link.
+  Leave blank to always show all authors.
+- `more_authors_animation_delay`: Controls the animation speed (in milliseconds) when revealing additional authors.
+  A smaller value means faster animation.
 
 To add a thumbnail to a publication, include a `preview` field in your BibTeX entry:
 
@@ -1096,7 +1194,8 @@ Add the following to your page's Markdown file (for example, in `_pages/teaching
 Replace:
 
 - `your-calendar-id@group.calendar.google.com` with your actual Google Calendar ID (found in Google Calendar Settings → Integrate calendar → Calendar ID)
-- `Your/Timezone` with your timezone (e.g., `UTC`, `Asia/Shanghai`, `America/New_York`). The default is `UTC`.
+- `Your/Timezone` with your timezone (e.g., `UTC`, `Asia/Shanghai`, `America/New_York`).
+  The default is `UTC`.
 
 ### Enable the calendar script for your page
 
@@ -1124,7 +1223,8 @@ The default style is `border:0; width:100%; height:600px;`.
 
 ## Updating third-party libraries
 
-The theme uses various third-party JavaScript and CSS libraries. You can manage these in the `third_party_libraries` section of [\_config.yml](../_config.yml):
+The theme uses various third-party JavaScript and CSS libraries.
+You can manage these in the `third_party_libraries` section of [\_config.yml](../_config.yml):
 
 ```yaml
 third_party_libraries:
@@ -1139,10 +1239,15 @@ third_party_libraries:
       js: "sha256-..."
 ```
 
-- `download`: When `false` (default), libraries are loaded from CDNs. When `true`, the specified library versions are downloaded during build and served from your site. This can improve performance but increases your repository size.
-- `version`: Specifies which version of each library to use. Update this to use a newer version.
-- `url`: Template URLs for loading the library. The `{{version}}` placeholder is replaced with the version number automatically.
-- `integrity`: [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) hashes ensure that the library hasn't been tampered with. When updating a library version, you should also update its integrity hash.
+- `download`: When `false` (default), libraries are loaded from CDNs.
+  When `true`, the specified library versions are downloaded during build and served from your site.
+  This can improve performance but increases your repository size.
+- `version`: Specifies which version of each library to use.
+  Update this to use a newer version.
+- `url`: Template URLs for loading the library.
+  The `{{version}}` placeholder is replaced with the version number automatically.
+- `integrity`: [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) hashes ensure that the library hasn't been tampered with.
+  When updating a library version, you should also update its integrity hash.
 - `v1.x` policy: use pinned CDN assets (with SRI where available) for standalone libraries; keep vendored release-time artifacts only in owning plugins when runtime/module graphs are complex (for example `al_search`, `al_folio_distill`).
 - `v1.x` policy: do not add install-time downloads in `gem install` / `bundle install`.
 - `al_math` uses CDN TikZJax assets configured in `third_party_libraries.tikzjax`.
@@ -1151,21 +1256,25 @@ third_party_libraries:
 To update a library:
 
 1. Change the `version` number
-2. Obtain the new integrity hash for the updated library version and update the `integrity` field with the new hash. You can:
-   - Check if the CDN provider (e.g., jsDelivr, cdnjs, unpkg) provides the SRI hash for the file. Many CDN sites display the SRI hash alongside the file URL.
+2. Obtain the new integrity hash for the updated library version and update the `integrity` field with the new hash.
+   You can:
+   - Check if the CDN provider (e.g., jsDelivr, cdnjs, unpkg) provides the SRI hash for the file.
+     Many CDN sites display the SRI hash alongside the file URL.
    - Generate the SRI hash yourself using a tool such as [SRI Hash Generator](https://www.srihash.org/) or by running the following command in your terminal:
 
      ```bash
      curl -sL [FILE_URL] | openssl dgst -sha384 -binary | openssl base64 -A
      ```
 
-     Replace `[FILE_URL]` with the URL of the library file. Then, prefix the result with `sha384-` and use it in the `integrity` field.
+     Replace `[FILE_URL]` with the URL of the library file.
+     Then, prefix the result with `sha384-` and use it in the `integrity` field.
      For icon-specific updates, see the FAQ:
      - [How can I update icon library versions on the template](FAQ.md#how-do-i-change-icon-library-versions)
 
 ## Plugin ecosystem (v1.x)
 
-`al-folio` is a thin starter in `v1.x`. Runtime ownership belongs to plugins/gems.
+`al-folio` is a thin starter in `v1.x`.
+Runtime ownership belongs to plugins/gems.
 
 ### Naming convention
 
@@ -1192,7 +1301,8 @@ The starter currently has no gemspec; plugin integration docs should reference t
 
 ## Bootstrap compatibility mode (v1.x)
 
-al-folio `v1.0` and newer are Tailwind-first. If your site still contains Bootstrap-marked content from older versions, use:
+al-folio `v1.0` and newer are Tailwind-first.
+If your site still contains Bootstrap-marked content from older versions, use:
 
 ```yaml
 al_folio:
@@ -1217,7 +1327,8 @@ bundle exec al-folio upgrade report
 
 ## Removing content
 
-Since this template has a lot of content, you may want to remove some of it. The easiest way to achieve this and avoid merge conflicts when updating your code (as [pointed by CheariX ](https://github.com/alshedivat/al-folio/pull/2933#issuecomment-2571271117)) is to add the unwanted files to the `exclude` section in your `_config.yml` file instead of actually deleting them, for example:
+Since this template has a lot of content, you may want to remove some of it.
+The easiest way to achieve this and avoid merge conflicts when updating your code (as [pointed by CheariX ](https://github.com/alshedivat/al-folio/pull/2933#issuecomment-2571271117)) is to add the unwanted files to the `exclude` section in your `_config.yml` file instead of actually deleting them, for example:
 
 ```yml
 exclude:
@@ -1228,7 +1339,8 @@ exclude:
   - assets/jupyter/blog.ipynb
 ```
 
-Here is a list of the main components that you may want to delete, and how to do it. Don't forget if you delete a page to update the `nav_order` of the remaining pages.
+Here is a list of the main components that you may want to delete, and how to do it.
+Don't forget if you delete a page to update the `nav_order` of the remaining pages.
 
 ### Removing the blog page
 
@@ -1295,7 +1407,9 @@ To remove the repositories, you can:
 
 ### You can also remove pages through commenting out front-matter blocks
 
-For `.md` files in [\_pages](../_pages/) directory, if you do not want to completely edit or delete them but save for later use, you can temporarily disable these variables. But be aware that Jekyll only recognizes front matter when it appears as uncommented. The layout, permalink, and other front-matter behavior are disabled for that file.
+For `.md` files in [\_pages](../_pages/) directory, if you do not want to completely edit or delete them but save for later use, you can temporarily disable these variables.
+But be aware that Jekyll only recognizes front matter when it appears as uncommented.
+The layout, permalink, and other front-matter behavior are disabled for that file.
 
 For example, books.md do:
 
@@ -1319,7 +1433,8 @@ collection: books
 
 > Not available in this fork: it needs a GitHub Actions workflow, and there are none here.
 
-To add secrets for [lighthouse-badger](https://github.com/alshedivat/al-folio/actions/workflows/lighthouse-badger.yml), create a [personal access token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) and add it as a [secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) named `LIGHTHOUSE_BADGER_TOKEN` to your repository. The [lighthouse-badger documentation](https://github.com/MyActionWay/lighthouse-badger-workflows#lighthouse-badger-easyyml) specifies using an environment variable, but using it as a secret is more secure and appropriate for a PAT.
+To add secrets for [lighthouse-badger](https://github.com/alshedivat/al-folio/actions/workflows/lighthouse-badger.yml), create a [personal access token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) and add it as a [secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) named `LIGHTHOUSE_BADGER_TOKEN` to your repository.
+The [lighthouse-badger documentation](https://github.com/MyActionWay/lighthouse-badger-workflows#lighthouse-badger-easyyml) specifies using an environment variable, but using it as a secret is more secure and appropriate for a PAT.
 
 Also In case you face the error: "Input required and not supplied: token" in the Lighthouse Badger action, this solution resolves it.
 
@@ -1332,7 +1447,8 @@ Due to the necessary permissions (PAT and others mentioned above), it is recomme
 
 ## Customizing fonts, spacing, and more
 
-In `v1.x`, base SCSS is gem-owned. For project-specific style customization, create local override files under `_sass/` in your starter repo and define only the variables/rules you want to change.
+In `v1.x`, base SCSS is gem-owned.
+For project-specific style customization, create local override files under `_sass/` in your starter repo and define only the variables/rules you want to change.
 
 Common override patterns:
 
@@ -1341,7 +1457,9 @@ Common override patterns:
 - **Colors and themes:** override token variables such as `--global-theme-color` and related palette variables.
 - **Components:** override cards, projects, publications, and utility classes used by your content.
 
-The easiest way to preview changes in advance is by using [Chrome dev tools](https://developer.chrome.com/docs/devtools/css) or [Firefox dev tools](https://firefox-source-docs.mozilla.org/devtools-user/). Inspect elements to see which styles apply and experiment with changes before editing the SCSS files. For more information on how to use these tools, check [Chrome](https://developer.chrome.com/docs/devtools/css) and [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) how-tos, and [this tutorial](https://www.youtube.com/watch?v=l0sgiwJyEu4).
+The easiest way to preview changes in advance is by using [Chrome dev tools](https://developer.chrome.com/docs/devtools/css) or [Firefox dev tools](https://firefox-source-docs.mozilla.org/devtools-user/).
+Inspect elements to see which styles apply and experiment with changes before editing the SCSS files.
+For more information on how to use these tools, check [Chrome](https://developer.chrome.com/docs/devtools/css) and [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) how-tos, and [this tutorial](https://www.youtube.com/watch?v=l0sgiwJyEu4).
 
 ## Scheduled Posts
 
@@ -1349,7 +1467,10 @@ The easiest way to preview changes in advance is by using [Chrome dev tools](htt
 
 > The site also has no blog: `_posts/` is empty and news items live in `_news/`.
 
-`al-folio` contains a workflow which automatically publishes all posts scheduled at a specific day, at the end of the day (23:30). By default the action is disabled, and to enable it you need to go to `.github/workflows/` and find the file called `schedule-posts.txt`. This is the workflow file. For GitHub to recognize it as one (or to enable the action), you need to rename it to `schedule-posts.yml`.
+`al-folio` contains a workflow which automatically publishes all posts scheduled at a specific day, at the end of the day (23:30).
+By default the action is disabled, and to enable it you need to go to `.github/workflows/` and find the file called `schedule-posts.txt`.
+This is the workflow file.
+For GitHub to recognize it as one (or to enable the action), you need to rename it to `schedule-posts.yml`.
 
 In order to use this you need to save all of your "Completed" blog posts which are scheduled to be uploaded on a specific date, in a folder named `_scheduled/` in the root directory.
 
@@ -1377,7 +1498,8 @@ In this folder you need to store your file in the same format as you would in `_
 
 ## GDPR Cookie Consent Dialog
 
-**al-folio** supports a GDPR-compliant cookie consent dialog via the `al_cookie` plugin to help you respect visitor privacy and comply with privacy regulations (GDPR, CCPA, etc.). The feature is powered by [Vanilla Cookie Consent](https://cookieconsent.orestbida.com/) and integrates with all analytics providers.
+**al-folio** supports a GDPR-compliant cookie consent dialog via the `al_cookie` plugin to help you respect visitor privacy and comply with privacy regulations (GDPR, CCPA, etc.).
+The feature is powered by [Vanilla Cookie Consent](https://cookieconsent.orestbida.com/) and integrates with all analytics providers.
 
 ### How it works
 
@@ -1427,14 +1549,16 @@ In this folder you need to store your file in the same format as you would in `_
 
 ### Customizing the consent dialog
 
-The consent dialog configuration and messages are now owned by `al_cookie` (`lib/templates/cookie_consent_setup.js.liquid` in that gem). To customize behavior, override cookie consent scripts in your site templates or fork/pin `al_cookie` and adjust the template there.
+The consent dialog configuration and messages are now owned by `al_cookie` (`lib/templates/cookie_consent_setup.js.liquid` in that gem).
+To customize behavior, override cookie consent scripts in your site templates or fork/pin `al_cookie` and adjust the template there.
 
 - Dialog titles and button labels
 - Cookie categories and descriptions
 - Contact information links (points to `#contact` by default)
 - Language translations
 
-To modify the dialog, edit the `language.translations.en` section in the plugin template. For example, to change the consent dialog title:
+To modify the dialog, edit the `language.translations.en` section in the plugin template.
+For example, to change the consent dialog title:
 
 ```javascript
 consentModal: {
@@ -1499,7 +1623,8 @@ In order to deploy the changes from `main`, you can manually trigger the `deploy
 
 > [!TIP]
 > To ensure that these commits can trigger further GitHub Actions workflows (such as site rebuilds), you can use a Personal Access Token (PAT) instead of the default GitHub Actions token.
-> If you have set up a PAT, citation updates will trigger further workflows (such as site rebuilds) after committing changes. In order to run the action with a PAT, you need to uncomment the following lines from the workflow file (`update-citations.yml`):
+> If you have set up a PAT, citation updates will trigger further workflows (such as site rebuilds) after committing changes.
+> In order to run the action with a PAT, you need to uncomment the following lines from the workflow file (`update-citations.yml`):
 >
 > ```yaml
 > with:
@@ -1508,7 +1633,8 @@ In order to deploy the changes from `main`, you can manually trigger the `deploy
 
 ### Why is a PAT required?
 
-GitHub restricts the default `GITHUB_TOKEN` from triggering other workflows when a commit is made from within a workflow. Using a PAT overcomes this limitation and allows for full automation.
+GitHub restricts the default `GITHUB_TOKEN` from triggering other workflows when a commit is made from within a workflow.
+Using a PAT overcomes this limitation and allows for full automation.
 
 ### How to set up the PAT
 

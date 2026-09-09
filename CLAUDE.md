@@ -69,11 +69,11 @@ This site is published to Oxford web space, not to GitHub Pages, and **nothing d
 
 Confirm the result against the live URL rather than `_site/`, e.g. `curl -fsS https://www.robots.ox.ac.uk/~mosb/bgl/people/`. Note that `deploy.sh` runs no purgecss step, whatever `purgecss.config.js` and `docs/INSTALL.md` still imply.
 
-## Docker (upstream leftover, does not work here)
+## Docker (removed)
 
-`Dockerfile`, `docker-compose.yml` and `docker-compose-slim.yml` are inherited from upstream al-folio and are **broken in this fork**. `bin/` was deleted in `78cae42` (19 June 2026) with the rest of the al-folio demo material, and both Docker paths depend on it: the `Dockerfile` does `COPY bin/entry_point.sh`, so `build: .` fails outright, and `docker-compose.yml`'s `command: /srv/jekyll/bin/entry_point.sh` cannot resolve even against the prebuilt `amirpourmand/al-folio` image, because the `.:/srv/jekyll` bind mount shadows the image's own `bin/` with the host tree, which has none.
+There is no Docker path here. `Dockerfile`, `docker-compose.yml`, `docker-compose-slim.yml` and `.dockerignore` were deleted, because all of them depended on `bin/entry_point.sh`, which went with the rest of the al-folio demo material in `78cae42` (19 June 2026): the `Dockerfile` did `COPY bin/entry_point.sh`, and the compose `command` could not resolve even against the prebuilt image, since the `.:/srv/jekyll` bind mount shadowed the image's own `bin/` with the host tree.
 
-Serve locally with `bundle exec jekyll serve` instead. Either restore `bin/entry_point.sh` or delete these three files; leaving them in place keeps sending agents down a path that cannot work.
+Serve locally with `bundle exec jekyll serve`. Note that `docs/INSTALL.md`, `docs/TROUBLESHOOTING.md` and the other upstream pages under `docs/` still describe the Docker install path, as does `.devcontainer/devcontainer.json`, whose `postAttachCommand` runs the same deleted script.
 
 ## Checks and the style contract
 

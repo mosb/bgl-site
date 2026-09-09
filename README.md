@@ -35,8 +35,6 @@ bundle exec jekyll serve
 
 then open <http://localhost:4000/~mosb/bgl/> (the site lives under the `/~mosb/bgl` base path, so the bare `localhost:4000` root will 404).
 
-If you would rather not install Ruby, `docker compose up` serves the same thing on port 8080.
-
 A local preview is nice but not required for a profile PR; the YAML file is forgiving, and it gets checked before deployment anyway.
 
 ## Deployment
@@ -45,4 +43,6 @@ The live site is served from `www.robots.ox.ac.uk/~mosb/bgl` and deployed by `de
 
 ## Theme
 
-Built on [al-folio](https://github.com/alshedivat/al-folio), MIT licence. `docs/` contains the theme's own documentation, which is the place to look for customisation beyond ordinary content edits.
+Built on [al-folio](https://github.com/alshedivat/al-folio), MIT licence.
+[`docs/`](docs/) covers both: [INSTALL.md](docs/INSTALL.md) and [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) describe this site, while [CUSTOMIZE.md](docs/CUSTOMIZE.md) is the theme's own customisation guide.
+Note that this fork is not on GitHub Pages and has no CI, so upstream material about Actions, `gh-pages` and Docker does not apply; [docs/README.md](docs/README.md) lists the differences.

@@ -1,111 +1,43 @@
-# Quick Start Guide
+# Quick Start
 
-**Get your al-folio site running in 5 minutes.** This guide is for users who just want a working website quickly without deep customization.
+For lab members who want to appear on the site, or to change something small.
+You do not need Ruby, Jekyll, or any local setup for this.
 
-> **Video Tutorial:** Watch a walkthrough of these steps [here](../assets/video/tutorial_al_folio.mp4)
+## Add yourself to the people page
 
-<!--ts-->
+1. **Edit [`_data/members.yml`](../_data/members.yml).**
+   Copy the commented template block at the bottom of the file and fill it in.
+   The fields (`name`, `role`, `status`, `group`, `image`, `blurb`, `links`) are documented at the top of the same file.
+   List order is display order.
 
-- [Quick Start Guide](#quick-start-guide)
-  - [Step 1: Create Your Repository (1 min)](#step-1-create-your-repository-1-min)
-  - [Step 2: Configure Deployment (1 min)](#step-2-configure-deployment-1-min)
-  - [Step 3: Personalize (2 min)](#step-3-personalize-2-min)
-  - [Step 4: View Your Site (1 min)](#step-4-view-your-site-1-min)
-  - [What's Next?](#whats-next)
-    - [Add Your Content](#add-your-content)
-    - [Customize Appearance](#customize-appearance)
-    - [Learn More](#learn-more)
-    - [Get Help from AI](#get-help-from-ai)
+2. **Add a photo to [`assets/img/`](../assets/img/).**
+   A square JPEG or PNG crops best, and 600x600 px is plenty.
+   Browsers cannot display HEIC, so export from Apple Photos as JPEG first.
+   Set `image` to the bare filename.
+   Omit it and you get a tile with your initials instead, which is a perfectly good option.
 
-<!--te-->
+3. **Open a pull request** with both changes.
+   Maike reviews, merges, and deploys.
 
-## Step 1: Create Your Repository (1 min)
+Your blurb should be one to three sentences on what you work on.
+Write it in the third person without pronouns, as the existing entries do, and it will read consistently with the rest of the page.
 
-**⚠️ Important:** Use the **"Use this template"** button, NOT the fork button. This ensures your site is independent and you won't accidentally submit your personal changes back to the al-folio project.
+## Change something else
 
-1. Go to the [al-folio repository](https://github.com/alshedivat/al-folio)
-2. Click the green **"Use this template"** button (top right), then select **"Create a new repository"**
-3. Name your repository:
-   - **Personal/Organization site (if you want your site to be at `username.github.io`):** `username.github.io` (replace `username` with your GitHub username)
-   - **Project site (if you want your site to be at `username.github.io/project-name`):** Any name (e.g., `my-research-website`)
-4. Click **"Create repository from template"**
+| What                | Where                                                                                              |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| Publications        | [`_bibliography/papers.bib`](../_bibliography/papers.bib), following the style of existing entries |
+| News items          | [`_news/`](../_news/), as short markdown files shown on the front page                             |
+| Pages (about, join) | [`_pages/`](../_pages/)                                                                            |
 
-**Already forked by mistake?** No problem. Your fork will work fine—just be careful when making changes. Create a new branch for your updates (e.g., `git checkout -b my-site-updates`) and make sure you push to **your own repository**, not the main al-folio project.
+For publications, keep given names initialised, include the abstract, and add `arxiv`, `doi` or `url` links where they exist.
 
-## Step 2: Configure Deployment (1 min)
+## When will it appear?
 
-1. Go to your new repository → **Settings** → **Actions** → **General** → **Workflow permissions**
-2. Select **Read and write permissions**
-3. Click **Save**
+Not at merge time.
+Deployment is manual, so a merged change reaches the live site the next time Maike runs `./deploy.sh`.
 
-## Step 3: Personalize (2 min)
+## If you want to preview locally
 
-1. Open `_config.yml` in your repository
-2. Update these fields:
-   ```yaml
-   title: My Website
-   first_name: Your
-   last_name: Name
-   url: https://your-username.github.io # or your custom domain
-   baseurl: # Leave this empty (do NOT delete it)
-   ```
-3. Click **Commit changes** (at the bottom of the page)
-
-## Step 4: View Your Site (1 min)
-
-1. Go to your repository → **Actions** tab
-2. Wait for the "Deploy site" workflow to complete (look for a green checkmark, ~4 minutes)
-3. Go to **Settings** → **Pages** → **Build and deployment**
-4. Make sure **Source** is set to **Deploy from a branch**
-5. Set the branch to **gh-pages** (NOT main)
-6. Wait for the "pages-build-deployment" workflow to complete (~45 seconds)
-7. Visit `https://your-username.github.io` in your browser
-
-**That's it!** Your site is live. You now have a working al-folio website.
-
----
-
-## What's Next?
-
-Once your site is running, explore these customization options:
-
-### Add Your Content
-
-- **Profile picture:** Replace `assets/img/prof_pic.jpg` with your photo
-- **About page:** Edit `_pages/about.md` to write your bio
-- **Publications:** Add entries to `_bibliography/papers.bib`
-- **Blog posts:** Create files in `_posts/` with format `YYYY-MM-DD-title.md`
-
-### Customize Appearance
-
-- **Theme color:** Edit `_config.yml`, search for `theme_color`
-- **Enable/disable sections:** In `_config.yml`, look for `enabled: false/true` options
-- **Social media links:** Edit `_data/socials.yml`
-
-### Learn More
-
-- Installation and local setup options: [INSTALL.md](INSTALL.md)
-- Full customization guide: [CUSTOMIZE.md](CUSTOMIZE.md)
-- Frequently asked questions: [FAQ.md](FAQ.md)
-- Troubleshooting: [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
-
-### Get Help from AI
-
-Use the **GitHub Copilot Customization Agent** (if you have Copilot) to:
-
-- Get step-by-step help with customizations
-- Understand how to modify specific features
-- Apply changes directly to your site
-
-See [CUSTOMIZE.md § GitHub Copilot Customization Agent](CUSTOMIZE.md#github-copilot-customization-agent) for details.
-
----
-
-**Common first steps:**
-
-- Change the theme color in `_config.yml`
-- Add your social media links in `_data/socials.yml`
-- Upload your profile picture to `assets/img/prof_pic.jpg`
-- Write a short bio in `_pages/about.md`
-
-Happy customizing! 🎉
+See [INSTALL.md](INSTALL.md).
+It is not required for a profile change: YAML is forgiving, and the build is checked before deployment anyway.

@@ -1,34 +1,29 @@
-# al-folio Documentation
+# Documentation
 
-These guides cover the `al-folio` v1.x starter and its pluginized runtime.
+Guides for the Bayesian Governance Lab website.
+The site is a customised fork of the [al-folio](https://github.com/alshedivat/al-folio) v1.x starter, so some pages here describe the theme rather than this site; each says which it is.
 
-## User Guides
+## This site
 
-- [Quick Start](QUICKSTART.md): create a site from the template and get it live quickly.
-- [Installing and Deploying](INSTALL.md): Docker, local setup, GitHub Pages, Netlify, and upgrade guidance.
-- [Customizing](CUSTOMIZE.md): content, CVs, publications, layouts, local overrides, and feature configuration.
-- [FAQ](FAQ.md): common deployment, upgrade, plugin, and troubleshooting questions.
-- [Troubleshooting](TROUBLESHOOTING.md): build, deployment, styling, and content debugging.
-- [Analytics](ANALYTICS.md): analytics provider setup.
-- [SEO](SEO.md): search-engine and social preview setup.
+- [Quick Start](QUICKSTART.md): add yourself to the people page, or make a small content change.
+- [Installing and Deploying](INSTALL.md): local setup, the production build, and `deploy.sh`.
+- [Troubleshooting](TROUBLESHOOTING.md): what actually goes wrong here, and how to tell.
+- [FAQ](FAQ.md): shorter answers to the same.
+- [Contributing](CONTRIBUTING.md): how a lab member gets a change onto the site.
 
-## Maintainer Guides
+## The theme
 
-- [Ownership Boundaries](BOUNDARIES.md): starter-vs-plugin ownership, PR routing, and release responsibilities.
-- [Contributing](CONTRIBUTING.md): contributor workflow, validation, and agent guidance.
-- [Bootstrap skill](../.agents/skills/al-folio-bootstrap/SKILL.md): agent workflow for new v1 sites.
-- [Migration skill](../.agents/skills/al-folio-v1-migration/SKILL.md): agent workflow for customized fork migrations and override audits.
+- [Customizing](CUSTOMIZE.md): feature configuration, layouts, publications, CVs.
+  This is upstream's guide, lightly corrected; treat its GitHub Pages and Actions material as not applicable here.
+- [Analytics](ANALYTICS.md) and [SEO](SEO.md): provider setup, both optional and mostly unused on this site.
+- [Ownership Boundaries](BOUNDARIES.md): which repository owns what, starter versus plugin gems.
 
-## v1 Plugin System
+## How this fork differs from upstream al-folio
 
-`al-folio` v1.x is a thin starter. It owns site wiring, example content, documentation, integration tests, and visual tests.
-Runtime behavior belongs in Ruby gems maintained under the [`al-org-dev`](https://github.com/al-org-dev) organization.
+Worth knowing before following any theme documentation:
 
-When changing feature behavior, route the work to the owning plugin repo first. Update this starter only when the change affects:
-
-- `Gemfile` dependency pins,
-- `_config.yml` plugin activation or feature flags,
-- `_data/featured_plugins.yml` catalog metadata,
-- documentation, examples, integration tests, or visual parity coverage.
-
-See [Ownership Boundaries](BOUNDARIES.md) for the full routing table.
+- **The site is not on GitHub Pages.** It is served from Oxford web space at `https://www.robots.ox.ac.uk/~mosb/bgl/`, and `baseurl` is `/~mosb/bgl`.
+- **Nothing deploys automatically.** There are no GitHub Actions workflows in this repository; `./deploy.sh` is the only thing that changes the live site.
+- **There is no Docker path.** The `Dockerfile`, compose files and devcontainer were removed, along with the `bin/` scripts they depended on.
+- **`_posts` is empty.** The site has no blog; news items live in `_news/`.
+- **The starter style contract fails by design**, because this site owns `_includes` and `_sass` locally. See `.al-folio-overrides.yml`.

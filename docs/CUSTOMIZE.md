@@ -1,6 +1,10 @@
 # Customize
 
-Here we will give you some tips on how to customize the website. One important thing to note is that **ALL** the changes you make should be done on the **main** branch of your repository. The `gh-pages` branch is automatically overwritten every time you make a change to the main branch.
+Upstream al-folio's customisation guide, kept for its feature reference and lightly corrected where it contradicts this fork.
+
+> **This site is not a stock al-folio install.** It is served from Oxford web space rather than GitHub Pages, has no Actions workflows, and has no Docker path. Wherever this guide describes deployment, CI, `gh-pages` or containers, [INSTALL.md](INSTALL.md) is the accurate account. Work on `main`, and remember that nothing is live until `./deploy.sh` runs.
+
+> It also documents features this site does not use, among them the CV page, projects, books, repositories and the blog. Links here to `_data/cv.yml`, `_projects/`, `_pages/blog.md` and their like point at demo content the fork does not carry, so they will not resolve.
 
 > **Note for users without coding experience:** You do **not** need to understand the technology stack or have any coding background to create and customize your own website with al-folio. This template was specifically designed to be accessible to academics and researchers from all backgrounds. You can create a fully functional website by simply editing configuration files and adding content in Markdown, no coding required.
 
@@ -152,7 +156,7 @@ The configuration file [\_config.yml](../_config.yml) contains the main configur
 
 > Note that the `url` and `baseurl` settings are used to generate the links of the website, as explained in the [install instructions](INSTALL.md).
 
-All changes made to this file are only visible after you rebuild the website. That means that you need to run `bundle exec jekyll serve` again if you are running the website locally or push your changes to GitHub if you are using GitHub Pages. All other changes are visible immediately, you only need to refresh the page.
+All changes made to this file are only visible after you rebuild the website, so restart `bundle exec jekyll serve`. All other changes are visible immediately, you only need to refresh the page.
 
 For `v1.x` starter sites, no local npm style build is required. Core CSS/runtime assets are shipped by the owning gems.
 
@@ -213,7 +217,7 @@ The agent is designed to be patient and helpful, explaining each step clearly so
 **The customization agent can make mistakes or produce incorrect information.** Always review and verify the agent's suggestions and changes before applying them to your repository:
 
 - **Review all changes** – Before applying any modifications, carefully read what the agent suggests and ensure it makes sense for your needs
-- **Test locally first** – Before pushing changes to GitHub, test them locally using Docker or native setup (see the [Installation instructions](INSTALL.md))
+- **Test locally first** – Before opening a pull request, build and serve the site locally (see the [Installation instructions](INSTALL.md))
 - **Check syntax** – Make sure any YAML, Markdown, or BibTeX files have correct syntax. Incorrect syntax can break your website
 - **Verify configuration** – If the agent modifies `_config.yml` or other configuration files, check that the changes align with your intentions
 - **Preview on your site** – Run your site locally and navigate through it to ensure everything displays correctly and works as expected
@@ -300,20 +304,12 @@ Understanding al-folio's technology stack will help you better customize and ext
   - `jemoji`: Converts emoji shortcodes to emoji images
   - Other utilities: `jekyll-link-attributes`, `jekyll-imagemagick`, `jekyll-twitter-plugin`, `jekyll-get-json`, and more
 
-- **Python**: Used for utility scripts like citation updates via Google Scholar (located in `bin/`)
+- **Python**: An optional toolchain listed in `requirements.txt`, for notebook conversion and Google Scholar citation counts
 
 ### Build and Deployment
 
-- **GitHub Actions**: Automated workflows for building, testing, and deploying your site. Workflows are defined in `.github/workflows/`:
-  - **Deploy**: Automatically builds and deploys your site to GitHub Pages when you push changes to the main branch
-  - **Link checking**: Validates that all links in your site are not broken
-  - **Code formatting**: Ensures code follows the Prettier code style
-  - **Accessibility testing**: Checks for accessibility issues using Axe
-  - **Lighthouse**: Measures site performance and best practices
-  - **Citation updates**: Automatically fetches citation counts from Google Scholar
-
-- **GitHub Pages**: Free hosting for your static website built by Jekyll
-- **Docker**: Optional containerization for local development (provides a consistent environment across different machines)
+- **`./deploy.sh`**: The only thing that publishes. It builds with `JEKYLL_ENV=production` and rsyncs `_site/` to the Oxford web space, after a dry run you confirm by hand.
+- **No GitHub Actions**: This fork has no `.github/workflows`, so nothing builds, tests, checks links, or deploys on push. Upstream's workflow features (link checking, Axe, Lighthouse, scheduled posts, RenderCV PDF generation, automatic citation updates) are all unavailable here; anything you want run, run locally.
 - **Prettier**: Code formatter for Markdown, YAML, and Liquid files to maintain consistent formatting
 
 ### Key Integration Points
@@ -325,7 +321,7 @@ Understanding how these technologies work together will help you customize al-fo
 3. **Styling**: Tailwind generates core styles, while SCSS variables/tokens provide stable theme configuration
 4. **Bibliography**: BibTeX files are processed by jekyll-scholar to generate publication pages
 5. **Static Site Generation**: Jekyll builds all files into static HTML
-6. **Deployment**: GitHub Actions automatically deploys the built site to GitHub Pages
+6. **Deployment**: `./deploy.sh` rsyncs the built site to `www.robots.ox.ac.uk/~mosb/bgl`, when run by hand
 
 ## Modifying the CV information
 
@@ -367,6 +363,8 @@ cv_format: rendercv # options: rendercv or jsonresume
 Change `rendercv` to `jsonresume` to display the JSONResume format instead.
 
 ### Automatic PDF Generation (RenderCV only)
+
+> Not available in this fork: it needs a GitHub Actions workflow, and there are none here.
 
 If you use the RenderCV format, a GitHub Actions workflow can automatically generate a PDF version of your CV whenever you push changes to [`_data/cv.yml`](../_data/cv.yml). The PDF is saved to `assets/rendercv/rendercv_output/`.
 
@@ -683,8 +681,8 @@ Custom fields (any field name you create) remain as **strings** and require expl
    After configuration, rebuild your site:
 
    ```bash
-   docker compose down
-   docker compose up
+   # restart the local server
+   bundle exec jekyll serve
    ```
 
    Your archive pages will be generated at:
@@ -948,7 +946,7 @@ To enable social media previews:
 
 2. Rebuild your site:
    ```bash
-   docker compose down && docker compose up
+   # restart the local server: bundle exec jekyll serve
    # or
    bundle exec jekyll serve
    ```
@@ -1163,7 +1161,7 @@ To update a library:
 
      Replace `[FILE_URL]` with the URL of the library file. Then, prefix the result with `sha384-` and use it in the `integrity` field.
      For icon-specific updates, see the FAQ:
-     - [How can I update icon library versions on the template](FAQ.md#how-can-i-update-icon-library-versions-on-the-template)
+     - [How can I update icon library versions on the template](FAQ.md#how-do-i-change-icon-library-versions)
 
 ## Plugin ecosystem (v1.x)
 
@@ -1319,6 +1317,8 @@ collection: books
 
 ## Adding Token for Lighthouse Badger
 
+> Not available in this fork: it needs a GitHub Actions workflow, and there are none here.
+
 To add secrets for [lighthouse-badger](https://github.com/alshedivat/al-folio/actions/workflows/lighthouse-badger.yml), create a [personal access token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) and add it as a [secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) named `LIGHTHOUSE_BADGER_TOKEN` to your repository. The [lighthouse-badger documentation](https://github.com/MyActionWay/lighthouse-badger-workflows#lighthouse-badger-easyyml) specifies using an environment variable, but using it as a secret is more secure and appropriate for a PAT.
 
 Also In case you face the error: "Input required and not supplied: token" in the Lighthouse Badger action, this solution resolves it.
@@ -1344,6 +1344,10 @@ Common override patterns:
 The easiest way to preview changes in advance is by using [Chrome dev tools](https://developer.chrome.com/docs/devtools/css) or [Firefox dev tools](https://firefox-source-docs.mozilla.org/devtools-user/). Inspect elements to see which styles apply and experiment with changes before editing the SCSS files. For more information on how to use these tools, check [Chrome](https://developer.chrome.com/docs/devtools/css) and [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) how-tos, and [this tutorial](https://www.youtube.com/watch?v=l0sgiwJyEu4).
 
 ## Scheduled Posts
+
+> Not available in this fork: it needs a GitHub Actions workflow, and there are none here.
+
+> The site also has no blog: `_posts/` is empty and news items live in `_news/`.
 
 `al-folio` contains a workflow which automatically publishes all posts scheduled at a specific day, at the end of the day (23:30). By default the action is disabled, and to enable it you need to go to `.github/workflows/` and find the file called `schedule-posts.txt`. This is the workflow file. For GitHub to recognize it as one (or to enable the action), you need to rename it to `schedule-posts.yml`.
 
@@ -1414,7 +1418,7 @@ In this folder you need to store your file in the same format as you would in `_
 4. Rebuild your site:
 
    ```bash
-   docker compose down && docker compose up
+   # restart the local server: bundle exec jekyll serve
    # or
    bundle exec jekyll serve
    ```
@@ -1485,8 +1489,7 @@ For more API details, see [Vanilla Cookie Consent documentation](https://cookiec
 
 ## Setting up a Personal Access Token (PAT) for Google Scholar Citation Updates
 
-> [!TIP]
-> After setting up al-folio you may want to run `python3 bin/update_citations.py` to fill the `_data/citations.yml` file with your Google Scholar citation counts.
+> Not available in this fork: the citation workflow and the `bin/` script it drives were both removed. `scholarly` is still listed in `requirements.txt` if you want to fetch counts by hand.
 
 This project includes an automated workflow to update the citation counts for your publications using Google Scholar.
 The workflow commits changes to `_data/citations.yml` directly to the `main` branch.

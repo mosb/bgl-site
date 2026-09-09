@@ -56,7 +56,7 @@ Plugin releases are versioned and published independently on RubyGems. A plugin 
 - `featured`: listed in docs/catalog with metadata and compatibility, but not required in starter dependencies.
 - `bundled`: included in starter wiring (`Gemfile` + `_config.yml` plugin list) and shipped by default.
 
-Use [`_data/featured_plugins.yml`](../_data/featured_plugins.yml) as the catalog source of truth.
+Upstream uses `_data/featured_plugins.yml` as the catalog source of truth; this fork does not carry that file, since it features no plugins of its own.
 
 ## Minified asset policy
 

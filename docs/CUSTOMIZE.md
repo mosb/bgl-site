@@ -329,29 +329,29 @@ Your CV can be created using one of two formats. Choose the format that works be
 
 ### RenderCV Format (Recommended)
 
-[`_data/cv.yml`](../_data/cv.yml) uses the [RenderCV](https://rendercv.com/) YAML format, which is human-readable and designed specifically for generating professional resumes. This format also enables optional automatic PDF generation via GitHub Actions.
+`_data/cv.yml` uses the [RenderCV](https://rendercv.com/) YAML format, which is human-readable and designed specifically for generating professional resumes. This format also enables optional automatic PDF generation via GitHub Actions.
 
 **If you choose this format:**
 
-1. Edit your CV data in [`_data/cv.yml`](../_data/cv.yml)
+1. Edit your CV data in `_data/cv.yml`
 2. Optionally customize how the PDF is styled by editing:
-   - [`assets/rendercv/design.yaml`](../assets/rendercv/design.yaml) — Design and styling
-   - [`assets/rendercv/locale.yaml`](../assets/rendercv/locale.yaml) — Localization and formatting
-   - [`assets/rendercv/settings.yaml`](../assets/rendercv/settings.yaml) — RenderCV settings
-3. To display only this format, delete [`assets/json/resume.json`](../assets/json/resume.json) (optional)
+   - `assets/rendercv/design.yaml` — Design and styling
+   - `assets/rendercv/locale.yaml` — Localization and formatting
+   - `assets/rendercv/settings.yaml` — RenderCV settings
+3. To display only this format, delete `assets/json/resume.json` (optional)
 
 ### JSONResume Format
 
-[`assets/json/resume.json`](../assets/json/resume.json) uses the [JSONResume](https://jsonresume.org/) standard format, which is compatible with other tools and services.
+`assets/json/resume.json` uses the [JSONResume](https://jsonresume.org/) standard format, which is compatible with other tools and services.
 
 **If you choose this format:**
 
-1. Edit your CV data in [`assets/json/resume.json`](../assets/json/resume.json)
-2. To display only this format, delete [`_data/cv.yml`](../_data/cv.yml) (optional)
+1. Edit your CV data in `assets/json/resume.json`
+2. To display only this format, delete `_data/cv.yml` (optional)
 
 ### Using Both Formats Simultaneously
 
-You can keep both [`_data/cv.yml`](../_data/cv.yml) and [`assets/json/resume.json`](../assets/json/resume.json) in your repository and switch between them on your website by setting the `cv_format` frontmatter variable in [`_pages/cv.md`](../_pages/cv.md):
+You can keep both `_data/cv.yml` and `assets/json/resume.json` in your repository and switch between them on your website by setting the `cv_format` frontmatter variable in `_pages/cv.md`:
 
 ```yaml
 ---
@@ -366,11 +366,11 @@ Change `rendercv` to `jsonresume` to display the JSONResume format instead.
 
 > Not available in this fork: it needs a GitHub Actions workflow, and there are none here.
 
-If you use the RenderCV format, a GitHub Actions workflow can automatically generate a PDF version of your CV whenever you push changes to [`_data/cv.yml`](../_data/cv.yml). The PDF is saved to `assets/rendercv/rendercv_output/`.
+If you use the RenderCV format, a GitHub Actions workflow can automatically generate a PDF version of your CV whenever you push changes to `_data/cv.yml`. The PDF is saved to `assets/rendercv/rendercv_output/`.
 
 **To link the auto-generated PDF to your CV page:**
 
-Set the `cv_pdf` variable in the frontmatter of [`_pages/cv.md`](../_pages/cv.md) to point to the generated PDF:
+Set the `cv_pdf` variable in the frontmatter of `_pages/cv.md` to point to the generated PDF:
 
 ```yaml
 ---
@@ -384,11 +384,11 @@ This will add a download button on your CV page that links to the PDF. (The exac
 
 **To disable automatic PDF generation:**
 
-Delete or comment out the [`.github/workflows/render-cv.yml`](../.github/workflows/render-cv.yml) workflow file.
+Delete or comment out the `.github/workflows/render-cv.yml` workflow file.
 
 ## Modifying the user and repository information
 
-The user and repository information is defined in [\_data/repositories.yml](../_data/repositories.yml). You can add as many users and repositories as you want. Both informations are used in the `repositories` section.
+The user and repository information is defined in `_data/repositories.yml`. You can add as many users and repositories as you want. Both informations are used in the `repositories` section.
 
 ### Configuring external service URLs
 
@@ -437,7 +437,7 @@ Note that `posts` is also a collection, but it is a default collection created a
 
 ## Creating new projects
 
-You can create new projects by adding new Markdown files in the [\_projects](../_projects/) directory. The easiest way to do this is to copy an existing project and modify it.
+You can create new projects by adding new Markdown files in the `_projects` directory. The easiest way to do this is to copy an existing project and modify it.
 
 ## Adding some news
 
@@ -487,7 +487,7 @@ To create a new collection, follow these steps. We will create a `courses` colle
 
 3. **Create a landing page for your collection**
 
-   Add a Markdown file in `_pages/` (e.g., `courses.md`) that will serve as the main page for your collection. You can use [\_pages/projects.md](../_pages/projects.md) or [\_pages/books.md](../_pages/books.md) as a template and adapt it for your needs.
+   Add a Markdown file in `_pages/` (e.g., `courses.md`) that will serve as the main page for your collection. You can use `_pages/projects.md` or `_pages/books.md` as a template and adapt it for your needs.
 
    In your landing page, access your collection using the `site.COLLECTION_NAME` variable:
 
@@ -502,7 +502,7 @@ To create a new collection, follow these steps. We will create a `courses` colle
 
 4. **Add a navigation link to your collection page**
 
-   Update [\_pages/dropdown.md](../_pages/dropdown.md) or the navigation configuration of your page. In the frontmatter of your collection landing page (e.g., `_pages/courses.md`), add:
+   Update `_pages/dropdown.md` or the navigation configuration of your page. In the frontmatter of your collection landing page (e.g., `_pages/courses.md`), add:
 
    ```yaml
    nav: true
@@ -766,7 +766,7 @@ scholar:
   first_name: [Albert, A.]
 ```
 
-If the entry matches one form of the last names and the first names, it will be underlined. Keep meta-information about your co-authors in [\_data/coauthors.yml](../_data/coauthors.yml) and Jekyll will insert links to their webpages automatically. The co-author data format is as follows, with the last names lower cased and without accents as the key:
+If the entry matches one form of the last names and the first names, it will be underlined. Keep meta-information about your co-authors in `_data/coauthors.yml` and Jekyll will insert links to their webpages automatically. The co-author data format is as follows, with the last names lower cased and without accents as the key:
 
 ```yaml
 "adams":
@@ -1235,8 +1235,8 @@ Here is a list of the main components that you may want to delete, and how to do
 To remove the blog, you have to:
 
 - delete [\_posts](../_posts/) directory
-- delete blog page [\_pages/blog.md](../_pages/blog.md)
-- remove reference to blog page in our [\_pages/dropdown.md](../_pages/dropdown.md)
+- delete blog page `_pages/blog.md`
+- remove reference to blog page in our `_pages/dropdown.md`
 - remove the `latest_posts` part in [\_pages/about.md](../_pages/about.md)
 - remove the `Blog` section in the [\_config.yml](../_config.yml) file and the related parts, like the `jekyll-archives`
 
@@ -1261,9 +1261,9 @@ To remove the news section, you can:
 
 To remove the projects, you can:
 
-- delete the [\_projects](../_projects/) directory
-- delete the projects page [\_pages/projects.md](../_pages/projects.md)
-- remove reference to projects page in our [\_pages/dropdown.md](../_pages/dropdown.md)
+- delete the `_projects` directory
+- delete the projects page `_pages/projects.md`
+- remove reference to projects page in our `_pages/dropdown.md`
 - remove projects part in the `Collections` section in the [\_config.yml](../_config.yml) file
 
 You can also:
@@ -1276,7 +1276,7 @@ To remove the publications, you can:
 
 - delete the [\_bibliography](../_bibliography/) directory
 - delete the publications page [\_pages/publications.md](../_pages/publications.md)
-- remove reference to publications page in our [\_pages/dropdown.md](../_pages/dropdown.md)
+- remove reference to publications page in our `_pages/dropdown.md`
 - remove `Jekyll Scholar` section in the [\_config.yml](../_config.yml) file
 
 You can also:
@@ -1290,7 +1290,7 @@ You can also:
 
 To remove the repositories, you can:
 
-- delete the repositories page [\_pages/repositories.md](../_pages/repositories.md)
+- delete the repositories page `_pages/repositories.md`
 - in `v1.x`, repository rendering includes are gem-owned and not present as starter-local files to delete
 
 ### You can also remove pages through commenting out front-matter blocks

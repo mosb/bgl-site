@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-The **Bayesian Governance Lab** website is live. More on our research,
-people, and openings soon.
+The **Bayesian Governance Lab** website is live.
+More on our research, people, and openings soon.

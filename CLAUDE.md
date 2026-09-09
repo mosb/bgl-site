@@ -69,9 +69,11 @@ This site is published to Oxford web space, not to GitHub Pages, and **nothing d
 
 Confirm the result against the live URL rather than `_site/`, e.g. `curl -fsS https://www.robots.ox.ac.uk/~mosb/bgl/people/`. Note that `deploy.sh` runs no purgecss step, whatever `purgecss.config.js` and `docs/INSTALL.md` still imply.
 
-## Docker serving model (v1-specific)
+## Docker (upstream leftover, does not work here)
 
-`docker compose up -d` bind-mounts the repo to `/srv/jekyll` and runs `bin/entry_point.sh`, which serves with `--force_polling --destination /tmp/_site`. The build output deliberately goes to **container-local `/tmp/_site`, not the bind-mounted `_site`** — writing `_site` back across the host bind mount caused write deadlocks. The container also `inotifywait`s `_config.yml` and restarts Jekyll on change (config edits aren't hot-reloaded by `--watch`). Verify with the `/al-folio` baseurl: `curl -fsS http://127.0.0.1:8080/al-folio/`. `docker-compose-slim.yml` pulls a prebuilt `:slim` image instead of building locally.
+`Dockerfile`, `docker-compose.yml` and `docker-compose-slim.yml` are inherited from upstream al-folio and are **broken in this fork**. `bin/` was deleted in `78cae42` (19 June 2026) with the rest of the al-folio demo material, and both Docker paths depend on it: the `Dockerfile` does `COPY bin/entry_point.sh`, so `build: .` fails outright, and `docker-compose.yml`'s `command: /srv/jekyll/bin/entry_point.sh` cannot resolve even against the prebuilt `amirpourmand/al-folio` image, because the `.:/srv/jekyll` bind mount shadows the image's own `bin/` with the host tree, which has none.
+
+Serve locally with `bundle exec jekyll serve` instead. Either restore `bin/entry_point.sh` or delete these three files; leaving them in place keeps sending agents down a path that cannot work.
 
 ## Checks and the style contract
 

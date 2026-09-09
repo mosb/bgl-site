@@ -178,9 +178,10 @@
   role: 2025 entry
   image: lucas-irwin.jpg
   blurb: >-
-    Works on AI governance and on how far safety training in language models
-    generalises, including to prompts that are semantically close to those it
-    was trained against.
+    Researches the social, economic, and political impacts of AI. Author of
+    *Position: Token Taxes Can Mitigate AI's Economic Risks* (ICML 2026),
+    ex-GovAI summer fellow, and has had his work featured in Bloomberg and
+    Just Security.
   links:
     website: https://aigi.ox.ac.uk/people/lucas-irwin/
     email: lucas.irwin@stcatz.ox.ac.uk

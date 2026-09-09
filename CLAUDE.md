@@ -73,7 +73,7 @@ Confirm the result against the live URL rather than `_site/`, e.g. `curl -fsS ht
 
 There is no Docker path here. `Dockerfile`, `docker-compose.yml`, `docker-compose-slim.yml` and `.dockerignore` were deleted, because all of them depended on `bin/entry_point.sh`, which went with the rest of the al-folio demo material in `78cae42` (19 June 2026): the `Dockerfile` did `COPY bin/entry_point.sh`, and the compose `command` could not resolve even against the prebuilt image, since the `.:/srv/jekyll` bind mount shadowed the image's own `bin/` with the host tree.
 
-Serve locally with `bundle exec jekyll serve`. Note that `docs/INSTALL.md`, `docs/TROUBLESHOOTING.md` and the other upstream pages under `docs/` still describe the Docker install path, as does `.devcontainer/devcontainer.json`, whose `postAttachCommand` runs the same deleted script.
+Serve locally with `bundle exec jekyll serve`. `.devcontainer/` went too, being unused. Note that `docs/INSTALL.md`, `docs/TROUBLESHOOTING.md` and the other upstream pages under `docs/` still describe the Docker install path.
 
 ## Checks and the style contract
 

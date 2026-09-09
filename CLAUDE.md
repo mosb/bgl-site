@@ -49,20 +49,32 @@ Architectural facts that span repos:
 
 ```bash
 bundle install                                # ruby gems
-bundle exec jekyll serve                      # dev server → http://localhost:4000/al-folio/  (NOTE baseurl)
-bundle exec jekyll build --baseurl /al-folio  # production-style build to _site/
-bash test/integration_distill.sh             # run ONE integration test (any of the five)
+bundle exec jekyll serve                      # dev server → http://localhost:4000/~mosb/bgl/ (NOTE baseurl)
+JEKYLL_ENV=production bundle exec jekyll build # production build to _site/ (no --baseurl flag)
+bash test/integration_distill.sh             # run ONE integration test (any of test/integration_*.sh)
 npm run test:visual:update                    # refresh playwright snapshots after intentional UI change
 bundle exec al-folio upgrade apply --safe     # deterministic codemods (font-weight-* → font-*, remote→local URLs)
 bundle exec al-folio upgrade overrides diff <path>    # then `overrides accept <path>` to acknowledge an override
 ```
 
-`bin/setup-python-deps` installs the optional Python toolchain in `requirements.txt` (`nbconvert` for `jekyll-jupyter-notebook`, `rendercv[full]` for CV rendering, `scholarly` for `bin/update_scholar_citations.py`). Responsive-image generation (`imagemagick.enabled: true`) needs ImageMagick `convert` on PATH. `bin/deploy` is the manual `gh-pages` build+purgecss+force-push path (CI normally deploys).
+`requirements.txt` holds the optional Python toolchain (`nbconvert` for `jekyll-jupyter-notebook`, `pyyaml`, `scholarly`); install it yourself, as this fork carries no `bin/` directory and so none of upstream's `bin/*` helpers. Responsive-image generation (`imagemagick.enabled: true`) needs ImageMagick `convert` on PATH.
+
+## Building and deploying
+
+This site is published to Oxford web space, not to GitHub Pages, and **nothing deploys automatically**. There are no `.github/workflows` here, so a push to `origin` stores the commits and changes the live site not at all. Publishing is `./deploy.sh`, which:
+
+- builds with `JEKYLL_ENV=production bundle exec jekyll build`. Pass no `--baseurl`: `_config.yml` already sets `url: https://www.robots.ox.ac.uk` and `baseurl: /~mosb/bgl`, and overriding either breaks every asset link.
+- rsyncs `_site/` to `mosb@login.robots.ox.ac.uk:~/WWW/bgl` with `-rtvz --delete --chmod=D755,F644`, through Homebrew's `/opt/homebrew/bin/rsync` (the system rsync on macOS is too old for `--iconv`).
+- shows a dry run and waits for a `y` before writing anything. That prompt needs a TTY, so an agent running non-interactively should invoke the same rsync twice instead: once with `--dry-run`, to check the file list and any deletions, then for real.
+
+Confirm the result against the live URL rather than `_site/`, e.g. `curl -fsS https://www.robots.ox.ac.uk/~mosb/bgl/people/`. Note that `deploy.sh` runs no purgecss step, whatever `purgecss.config.js` and `docs/INSTALL.md` still imply.
 
 ## Docker serving model (v1-specific)
 
 `docker compose up -d` bind-mounts the repo to `/srv/jekyll` and runs `bin/entry_point.sh`, which serves with `--force_polling --destination /tmp/_site`. The build output deliberately goes to **container-local `/tmp/_site`, not the bind-mounted `_site`** — writing `_site` back across the host bind mount caused write deadlocks. The container also `inotifywait`s `_config.yml` and restarts Jekyll on change (config edits aren't hot-reloaded by `--watch`). Verify with the `/al-folio` baseurl: `curl -fsS http://127.0.0.1:8080/al-folio/`. `docker-compose-slim.yml` pulls a prebuilt `:slim` image instead of building locally.
 
-## CI gates and the style contract
+## Checks and the style contract
 
-`npm run lint:style-contract` (`test/style_contract.js`) is the automated enforcement of the thin-starter boundary, and it will fail CI if you cross it: the starter must **not** define `build:css`/`build:tailwind` npm scripts, must **not** own `_includes`/`_layouts`/`_sass`/`_scripts`/`assets/tailwind`/`tailwind.config.js`/icon-font artifacts, must keep `theme: al_folio_core` and the required plugins in `_config.yml`, and must keep the `third_party_libraries` SRI pins and `al_math` Gemfile pin. Other gates: `unit-tests.yml` (style contract + the five integration scripts), `visual-regression.yml` (Playwright chromium+webkit, diffs candidate against a v0.16.3 baseline served on :4100 via `BASELINE_URL`), `upgrade-check.yml` (`al-folio upgrade audit`), `prettier.yml`. Prettier uses `@shopify/prettier-plugin-liquid` with `printWidth: 150`; run `npm run lint:prettier` before pushing.
+There is no CI in this fork. Upstream al-folio gates every push with `unit-tests.yml`, `visual-regression.yml`, `upgrade-check.yml` and `prettier.yml`; none of those workflows exist here, so **whatever you do not run by hand does not get run**. Before deploying: `npm run lint:prettier`, `npm run lint:style-contract`, the `test/integration_*.sh` scripts, and `npm run test:visual` for a UI change.
+
+`npm run lint:style-contract` (`test/style_contract.js`) is the check that enforces the thin-starter boundary: the starter must **not** define `build:css`/`build:tailwind` npm scripts, must **not** own `_includes`/`_layouts`/`_sass`/`_scripts`/`assets/tailwind`/`tailwind.config.js`/icon-font artifacts, must keep `theme: al_folio_core` and the required plugins in `_config.yml`, and must keep the `third_party_libraries` SRI pins and `al_math` Gemfile pin. Note that this repo does own `_includes` and `_sass` locally (see `.al-folio-overrides.yml`), so read what the script actually reports rather than assuming a clean run. Prettier uses `@shopify/prettier-plugin-liquid` with `printWidth: 150`.

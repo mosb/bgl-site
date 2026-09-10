@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-The lab's reading group kicks off in Michaelmas term, meeting fortnightly from 15 October on uncertainty quantification for AI assurance.
+The lab will be meeting roughly fortnightly through Michaelmas term.
 Write to [maike.osborne@eng.ox.ac.uk](mailto:maike.osborne@eng.ox.ac.uk) if you would like to join us.

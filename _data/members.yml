@@ -80,6 +80,20 @@
     github: Ptisni
     email: peter.tisnikar@eng.ox.ac.uk
 
+- name: Aurelio Carlucci
+  role: Postdoctoral Researcher
+  image: aurelio-carlucci.jpg
+  blurb: >-
+    Algebraic geometer turned AI researcher, working on the use of
+    categorical statistics and graphical calculus to make the evaluation of
+    AI systems more sample-efficient, and on the documentation of deployed
+    AI. He holds a DPhil in Mathematics from Oxford, on enumerative geometry
+    of Calabi–Yau manifolds, and is a Lecturer in Mathematics at Pembroke
+    College.
+  links:
+    website: https://www.pmb.ox.ac.uk/person/dr-aurelio-carlucci
+    email: aurelio.carlucci@pmb.ox.ac.uk
+
 # The student blurbs below were drafted from public sources, and deliberately
 # use no pronouns. Each student should be given the chance to correct or
 # replace their own.

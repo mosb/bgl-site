@@ -81,15 +81,19 @@
     email: peter.tisnikar@eng.ox.ac.uk
 
 - name: Aurelio Carlucci
-  role: Postdoctoral Researcher
+  role: Stipendiary Lecturer
   image: aurelio-carlucci.jpg
   blurb: >-
-    Algebraic geometer turned AI researcher, working on the use of
-    categorical statistics and graphical calculus to make the evaluation of
-    AI systems more sample-efficient, and on the documentation of deployed
-    AI. He holds a DPhil in Mathematics from Oxford, on enumerative geometry
-    of Calabi–Yau manifolds, and is a Lecturer in Mathematics at Pembroke
-    College.
+    Algebraic geometer turned AI safety researcher. He is working on the use
+    of categorical statistics and graphical calculus to make the evaluation
+    of AI systems more sample-efficient, on compute governance via verifiable
+    auditing, and on the risk analysis of deployed AI. He is also interested
+    in world models and the mathematical accounts of learning and agency,
+    wherever precise statements about reduction, decomposition, minimality,
+    and existence can be made. He holds a DPhil in Mathematics from Oxford,
+    on enumerative geometry of moduli spaces of sheaves on Calabi–Yau
+    manifolds, and tutors Mathematics at Mansfield, Oriel, and Pembroke
+    Colleges.
   links:
     website: https://www.pmb.ox.ac.uk/person/dr-aurelio-carlucci
     email: aurelio.carlucci@pmb.ox.ac.uk

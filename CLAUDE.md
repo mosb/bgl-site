@@ -83,9 +83,12 @@ Publishing is `./deploy.sh`, which:
 
 - builds with `JEKYLL_ENV=production bundle exec jekyll build`.
   Pass no `--baseurl`: `_config.yml` already sets `url: https://www.robots.ox.ac.uk` and `baseurl: /~mosb/bgl`, and overriding either breaks every asset link.
-- rsyncs `_site/` to `mosb@login.robots.ox.ac.uk:~/WWW/bgl` with `-rtvz --delete --chmod=D755,F644`, through Homebrew's `/opt/homebrew/bin/rsync` (the system rsync on macOS is too old for `--iconv`).
+- rsyncs `_site/` to `mosb@login.robots.ox.ac.uk:~/WWW/bgl` with `-rtvz --delete-delay --perms --chmod=D755,F644`, through Homebrew's `/opt/homebrew/bin/rsync` (the system rsync on macOS is too old for `--iconv`).
+  `--perms` matters: without it `--chmod` shapes only newly created files, and an existing remote file keeps whatever mode it had, which is how a 0600 source asset can end up as a 403 on the live site.
 - shows a dry run and waits for a `y` before writing anything.
-  That prompt needs a TTY, so an agent running non-interactively should invoke the same rsync twice instead: once with `--dry-run`, to check the file list and any deletions, then for real.
+  That prompt needs a TTY, so pass `-y` (or `--yes`) when running non-interactively; the dry run is still printed.
+- then, over ssh, makes the whole remote tree world-readable (`chmod -R u+rwX,go+rX WWW/bgl`) whatever rsync did, and finally fetches every sitemap URL plus a stylesheet, a font and an image, retrying each for up to 30 s, and exits non-zero if any fails to return 200.
+  The retry exists because the web server reads the tree over NFS, whose attribute cache can lag a just-replaced file by some seconds and surface as a transient 403 Forbidden.
 
 Confirm the result against the live URL rather than `_site/`, e.g. `curl -fsS https://www.robots.ox.ac.uk/~mosb/bgl/people/`.
 Note that `deploy.sh` runs no purgecss step, whatever `purgecss.config.js` and `docs/INSTALL.md` still imply.

@@ -87,6 +87,7 @@ Publishing is `./deploy.sh`, which:
   `--perms` matters: without it `--chmod` shapes only newly created files, and an existing remote file keeps whatever mode it had, which is how a 0600 source asset can end up as a 403 on the live site.
 - shows a dry run and waits for a `y` before writing anything.
   That prompt needs a TTY, so pass `-y` (or `--yes`) when running non-interactively; the dry run is still printed.
+  If rsync cannot reach the server (any exit code other than 0 or 23, typically 255 when the VPN is down), the script stops with exit 1 before or during the transfer; only partial-transfer errors (23) are tolerated with a warning. On 23 October 2026 a deploy run without the VPN printed "Done" after transferring nothing, which is why.
 - then, over ssh, makes the whole remote tree world-readable (`chmod -R u+rwX,go+rX WWW/bgl`) whatever rsync did, and finally fetches every sitemap URL plus a stylesheet, a font and an image, retrying each for up to 30 s, and exits non-zero if any fails to return 200.
   The retry exists because the web server reads the tree over NFS, whose attribute cache can lag a just-replaced file by some seconds and surface as a transient 403 Forbidden.
 

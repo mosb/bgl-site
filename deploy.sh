@@ -54,8 +54,14 @@ echo
 echo "Dry run — these changes WOULD be made (nothing written yet):"
 # rsync exit 23 (e.g. an undeletable excluded dir) must not abort before the
 # prompt under set -e
-"${RSYNC}" "${RSYNC_FLAGS[@]}" --dry-run _site/ "${TARGET}" ||
+DRY_RC=0
+"${RSYNC}" "${RSYNC_FLAGS[@]}" --dry-run _site/ "${TARGET}" || DRY_RC=$?
+if [[ "${DRY_RC}" -ne 0 && "${DRY_RC}" -ne 23 ]]; then
+  echo "ERROR: dry run failed (rsync exit ${DRY_RC}); nothing written. Is the VPN connected?" >&2
+  exit 1
+elif [[ "${DRY_RC}" -eq 23 ]]; then
   echo "WARNING: dry run reported errors (see above); review before proceeding."
+fi
 
 echo
 if [[ "${ASSUME_YES}" -eq 1 ]]; then
@@ -68,8 +74,14 @@ else
   fi
 fi
 
-"${RSYNC}" "${RSYNC_FLAGS[@]}" _site/ "${TARGET}" ||
-  echo "WARNING: rsync reported errors; the deploy may be incomplete."
+RSYNC_RC=0
+"${RSYNC}" "${RSYNC_FLAGS[@]}" _site/ "${TARGET}" || RSYNC_RC=$?
+if [[ "${RSYNC_RC}" -ne 0 && "${RSYNC_RC}" -ne 23 ]]; then
+  echo "ERROR: rsync failed (exit ${RSYNC_RC}); the live site is unchanged. Is the VPN connected?" >&2
+  exit 1
+elif [[ "${RSYNC_RC}" -eq 23 ]]; then
+  echo "WARNING: rsync reported partial-transfer errors; the deploy may be incomplete."
+fi
 
 # Belt and braces on the server side. The web server runs as www-data on
 # another host and reads the tree over NFS, so it needs search permission on

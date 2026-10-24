@@ -214,9 +214,25 @@ a.bgl-alumnus-name:hover { color: var(--global-hover-color); }
 /* Print (and the PDFs we make from the page): fixed chrome repeats on
    every printed page in Chromium and stamps itself over the text, so drop
    the navbar and the pinned footer entirely. */
+@page { size: A4; margin: 12mm; }
 @media print {
   footer.fixed-bottom, #navbar, .navbar { display: none !important; }
   html body { padding-bottom: 0 !important; padding-top: 0 !important; }
+  /* Cards two abreast and two deep on A4, so a section of four fills a
+     page; no card split across pages; each section after the first starts
+     on a fresh page, so no heading is stranded at the foot of one. */
+  .bgl-members { grid-template-columns: 1fr 1fr; align-items: start; gap: 4mm; margin: 4mm 0; }
+  .bgl-member-card { break-inside: avoid; padding: 4mm 5mm; gap: 4mm; }
+  .bgl-member-card:hover { transform: none; box-shadow: none; }
+  .bgl-member-photo { width: 64px; height: 64px; }
+  .bgl-member-photo--blank { font-size: 1.2rem; }
+  .bgl-member-name { font-size: 1rem; }
+  .bgl-member-role { font-size: 0.7rem; margin-bottom: .35rem; }
+  .bgl-member-blurb { font-size: 0.8rem; line-height: 1.4; }
+  .bgl-member-links { font-size: 0.72rem; margin-top: .4rem; gap: .1rem .7rem; }
+  .bgl-member-group { break-after: avoid; }
+  h2.bgl-member-group ~ h2.bgl-member-group { break-before: page; margin-top: 0; }
+  .bgl-alumni { columns: 2; }
   /* Spell every person's link out, so a PDF sent for checking shows where
      each name and link actually points. */
   .bgl-member-links a[href]::after,

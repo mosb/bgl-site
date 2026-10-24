@@ -204,12 +204,29 @@ a.bgl-alumnus-name:hover { color: var(--global-hover-color); }
   font-size: 0.78rem;
 }
 
+/* One-line explanation under a list heading, e.g. what an affiliate is. */
+.bgl-list-intro {
+  margin: .75rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
 /* Print (and the PDFs we make from the page): fixed chrome repeats on
    every printed page in Chromium and stamps itself over the text, so drop
    the navbar and the pinned footer entirely. */
 @media print {
   footer.fixed-bottom, #navbar, .navbar { display: none !important; }
   html body { padding-bottom: 0 !important; padding-top: 0 !important; }
+  /* Spell every person's link out, so a PDF sent for checking shows where
+     each name and link actually points. */
+  .bgl-member-links a[href]::after,
+  a.bgl-alumnus-name[href]::after {
+    content: " " attr(href);
+    font-size: 0.72rem;
+    font-weight: normal;
+    word-break: break-all;
+    color: var(--global-text-color-light);
+  }
 }
 
 @media (max-width: 420px) {

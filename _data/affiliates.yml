@@ -1,0 +1,47 @@
+# Bayesian Governance Lab – affiliates
+# Rendered as a compact list on the People page (/people/), between the
+# member cards and the alumni. Affiliates are researchers whose home is
+# another group but who take part in the lab's meetings and tutorials.
+# The page sorts them by surname when it renders.
+#
+# The source of truth for who is an affiliate is the register:
+#
+#     ~/Documents/AIGI_BGL/members/affiliates.csv
+#
+# Only people whose Status there is Active AND whose Website column says Yes
+# belong in this file: nobody is listed without having agreed to it. When an
+# affiliation lapses, remove the entry. Affiliates do not move to alumni.yml,
+# which is for former students and postdocs of the lab.
+#
+# Fields:
+#   name         (required)  Full name, as it should display.
+#   role         (required)  DPhil student, Postdoctoral researcher, 4YP
+#                            student, and so on.
+#   affiliation  (required)  Home department or institute, and the group or
+#                            supervisor if we have it, in one short phrase.
+#   start                    Year the affiliation began. Omit if it reads
+#                            oddly; the list says "from 2026" when set.
+#   end                      Year it ended. In practice, remove the entry.
+#   website                  One link, and only if it has been checked
+#                            recently. A dead link is worse than none.
+
+- name: Emma Finn
+  role: DPhil student
+  affiliation: Department of Statistics, with Yee Whye Teh and Patrick Rebeschini
+  website: https://emmafinn314.github.io/
+
+- name: Karolina Korgul
+  role: DPhil student
+  affiliation: Oxford Internet Institute, Oxford Responsible ML lab
+
+- name: Rahul Marchand
+  role: 4YP student
+  affiliation: Department of Engineering Science, 2026–27
+
+- name: Matthew (Matt) Sharp
+  role: Postdoctoral researcher
+  affiliation: Oxford Martin School
+
+- name: Teodora Reu
+  role: DPhil student
+  affiliation: Department of Computer Science

@@ -1,7 +1,12 @@
 {%- comment -%}
-Compact list of past members. Sorted by surname here rather than in the data
-file, so alumni.yml can stay in the order people arrived and nobody has to
-re-sort it by hand. The surname is taken as the last word of the name.
+Compact list of people shown without cards: alumni and affiliates. Sorted by
+surname here rather than in the data file, so the data files can stay in the
+order people arrived and nobody has to re-sort them by hand. The surname is
+taken as the last word of the name.
+
+Parameters: heading (required), people (required), intro (optional sentence
+shown under the heading). Each person has name, role, and optionally
+affiliation, start, end and website.
 {%- endcomment -%}
 {%- assign keyed = "" -%}
 {%- for a in include.people -%}
@@ -10,6 +15,7 @@ re-sort it by hand. The surname is taken as the last word of the name.
 {%- endfor -%}
 {%- assign pairs = keyed | split: "," | sort_natural -%}
 <h2 class="bgl-member-group">{{ include.heading }}</h2>
+{% if include.intro %}<p class="bgl-list-intro">{{ include.intro }}</p>{% endif %}
 <ul class="bgl-alumni">
 {%- for pair in pairs -%}
 {%- assign bits = pair | split: "~" -%}
@@ -22,7 +28,7 @@ re-sort it by hand. The surname is taken as the last word of the name.
       <span class="bgl-alumnus-name">{{ a.name }}</span>
     {% endif %}
     <span class="bgl-alumnus-meta">
-      {{ a.role }}{% if a.start %}{% if a.end %}, {{ a.start }}–{{ a.end }}{% else %}, from {{ a.start }}{% endif %}{% endif %}
+      {{ a.role }}{% if a.affiliation %}, {{ a.affiliation }}{% endif %}{% if a.start %}{% if a.end %}, {{ a.start }}–{{ a.end }}{% else %}, from {{ a.start }}{% endif %}{% endif %}
     </span>
   </li>
 {%- endfor %}

@@ -1,8 +1,8 @@
 # Bayesian Governance Lab – affiliates
-# Rendered as a compact list on the People page (/people/), between the
-# member cards and the alumni. Affiliates are researchers whose home is
-# another group but who take part in the lab's meetings and tutorials.
-# The page sorts them by surname when it renders.
+# Rendered as cards on the People page (/people/), in the same style as the
+# members, under their own heading between the members and the alumni.
+# Affiliates are researchers whose home is another group but who take part in
+# the lab's meetings and tutorials. List order is display order.
 #
 # The source of truth for who is an affiliate is the register:
 #
@@ -13,35 +13,76 @@
 # affiliation lapses, remove the entry. Affiliates do not move to alumni.yml,
 # which is for former students and postdocs of the lab.
 #
-# Fields:
-#   name         (required)  Full name, as it should display.
-#   role         (required)  DPhil student, Postdoctoral researcher, 4YP
-#                            student, and so on.
-#   affiliation  (required)  Home department or institute, and the group or
-#                            supervisor if we have it, in one short phrase.
-#   start                    Year the affiliation began. Omit if it reads
-#                            oddly; the list says "from 2026" when set.
-#   end                      Year it ended. In practice, remove the entry.
-#   website                  One link, and only if it has been checked
-#                            recently. A dead link is worse than none.
+# Fields are those of members.yml (name, role, status, image, blurb, links),
+# plus:
+#   affiliation  (required)  Home department or institute, shown after the
+#                            role. Name the group or supervisor in the blurb.
+#
+# The blurbs below were drafted from public pages in October 2026 and use no
+# pronouns. Each affiliate is asked to correct or replace their own before
+# the entry goes live.
 
 - name: Emma Finn
   role: DPhil student
-  affiliation: Department of Statistics, with Yee Whye Teh and Patrick Rebeschini
-  website: https://emmafinn314.github.io/
+  affiliation: Department of Statistics
+  image: emma-finn.jpg
+  blurb: >-
+    Works on the mathematics of diffusion models and on interpretable
+    generative models, with the aim of understanding generative AI well enough
+    to make it safer. Supervised by Yee Whye Teh and Patrick Rebeschini; a
+    Rhodes Scholar, with degrees in Mathematics, Classics and Statistics from
+    Harvard.
+  links:
+    website: https://emmafinn314.github.io/
+    email: emma.finn@sjc.ox.ac.uk
 
 - name: Karolina Korgul
   role: DPhil student
-  affiliation: Oxford Internet Institute, Oxford Responsible ML lab
+  affiliation: Oxford Internet Institute
+  blurb: >-
+    Works on the evaluation of AI agents, in particular manipulation,
+    deception and strategic behaviour in human–AI and multi-agent settings,
+    and on what such evaluations can and cannot establish for governance.
+    First author of TRAP, a benchmark of persuasion-based attacks on web
+    agents. Supervised by Chris Russell and Adam Mahdi; a Clarendon Scholar.
+  links:
+    scholar: https://scholar.google.com/citations?user=utwvtyEAAAAJ
+    email: karolina.korgul@keble.ox.ac.uk
 
 - name: Rahul Marchand
-  role: 4YP student
-  affiliation: Department of Engineering Science, 2026–27
+  role: Fourth-year project student
+  affiliation: Department of Engineering Science
+  blurb: >-
+    Undergraduate in Engineering Science at New College, doing a fourth-year
+    project with Maike Osborne in 2026–27, and opening the lab's tutorial
+    series with a session on how research problems get chosen.
+  links:
+    email: rahul.marchand@new.ox.ac.uk
 
-- name: Matthew (Matt) Sharp
+- name: Matthew Sharp
   role: Postdoctoral researcher
   affiliation: Oxford Martin School
+  image: matthew-sharp.jpg
+  blurb: >-
+    Economist working on how AI is changing work and human agency, and on how
+    AI can be developed, financed and governed fairly. Previously at McKinsey
+    and the World Bank; holds a PhD from the London School of Economics.
+  links:
+    website: https://sites.google.com/view/matthewsharp/home
+    scholar: https://scholar.google.com/citations?user=NMXMgNUAAAAJ
+    email: matthew.sharp@oxfordmartin.ox.ac.uk
 
 - name: Teodora Reu
   role: DPhil student
   affiliation: Department of Computer Science
+  image: teodora-reu.jpg
+  blurb: >-
+    Works on the theory of generative models: diffusion, flow matching and
+    optimal transport, and geometric deep learning, with a growing interest in
+    AI policy and governance. Supervised by Michael Bronstein, with papers at
+    NeurIPS and UAI.
+  links:
+    website: https://teoreu.github.io/
+    scholar: https://scholar.google.com/citations?user=2jJ0s38AAAAJ
+    github: TeoReu
+    email: teodora.reu@balliol.ox.ac.uk

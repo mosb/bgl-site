@@ -1,5 +1,16 @@
+{%- comment -%}
+Cards for a list of people. With no parameters it renders site.data.members,
+split into sections by each person's `group` field. Pass people=... and
+heading="..." (and optionally intro="...") to render another list, such as
+the affiliates, as one section under that heading.
+{%- endcomment -%}
+{% assign people = include.people | default: site.data.members %}
 {% assign current_group = "" %}
-{% for m in site.data.members %}
+{% if include.heading %}
+<h2 class="bgl-member-group">{{ include.heading }}</h2>
+{% if include.intro %}<p class="bgl-list-intro">{{ include.intro }}</p>{% endif %}
+{% endif %}
+{% for m in people %}
 {% if m.group and m.group != current_group %}
 {% unless forloop.first %}</div>{% endunless %}
 <h2 class="bgl-member-group">{{ m.group }}</h2>
@@ -24,6 +35,7 @@
     {% if m.role or m.status %}
       <p class="bgl-member-role">
         {%- if m.role %}{{ m.role }}{% endif -%}
+        {%- if m.affiliation %}, {{ m.affiliation }}{% endif -%}
         {%- if m.status %} <span class="bgl-member-status">{{ m.status }}</span>{% endif -%}
       </p>
     {% endif %}

@@ -50,20 +50,6 @@
     scholar: https://scholar.google.com/citations?user=iTNcAakAAAAJ
     email: maike.osborne@eng.ox.ac.uk
 
-- name: Rivka MacLaine Mitchell
-  role: Postdoctoral Researcher
-  image: rivka.jpg
-  blurb: >-
-    Postdoctoral researcher bringing probability theory to the assurance and
-    governance of AI. Her background is in random processes on graphs and
-    Markov chain Monte Carlo, developed through a DPhil in Mathematics at
-    Oxford, and now directed towards modelling the causal structure and
-    behaviour of AI systems.
-  links:
-    website: https://rivkamitchell.github.io/
-    scholar: https://scholar.google.com/citations?user=NCFdDyUAAAAJ
-    email: rivka.mitchell@oxfordmartin.ox.ac.uk
-
 - name: Peter Tisnikar
   role: Postdoctoral Researcher
   image: peter-tisnikar.jpg

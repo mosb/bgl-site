@@ -232,7 +232,8 @@ a.bgl-alumnus-name:hover { color: var(--global-hover-color); }
   .bgl-member-links { font-size: 0.72rem; margin-top: .4rem; gap: .1rem .7rem; }
   .bgl-member-group { break-after: avoid; }
   h2.bgl-member-group ~ h2.bgl-member-group { break-before: page; margin-top: 0; }
-  .bgl-alumni { columns: 2; }
+  .bgl-alumni { columns: 3; column-gap: 5mm; font-size: 0.9rem; }
+  .bgl-alumnus { margin-bottom: .5rem; }
   /* Spell every person's link out, so a PDF sent for checking shows where
      each name and link actually points. */
   .bgl-member-links a[href]::after,

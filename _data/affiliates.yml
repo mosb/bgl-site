@@ -22,6 +22,20 @@
 # pronouns. Each affiliate is asked to correct or replace their own before
 # the entry goes live.
 
+- name: Emma Finn
+  role: DPhil student
+  affiliation: Department of Statistics
+  image: emma-finn.jpg
+  blurb: >-
+    Works on the mathematics of diffusion models and on interpretable
+    generative models, with the aim of understanding generative AI well enough
+    to make it safer. Supervised by Yee Whye Teh and Patrick Rebeschini; a
+    Rhodes Scholar, with degrees in Mathematics, Classics and Statistics from
+    Harvard.
+  links:
+    website: https://emmafinn314.github.io/
+    email: emma.finn@sjc.ox.ac.uk
+
 - name: Teodora Reu
   role: DPhil student
   affiliation: Department of Computer Science

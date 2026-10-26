@@ -22,56 +22,6 @@
 # pronouns. Each affiliate is asked to correct or replace their own before
 # the entry goes live.
 
-- name: Emma Finn
-  role: DPhil student
-  affiliation: Department of Statistics
-  image: emma-finn.jpg
-  blurb: >-
-    Works on the mathematics of diffusion models and on interpretable
-    generative models, with the aim of understanding generative AI well enough
-    to make it safer. Supervised by Yee Whye Teh and Patrick Rebeschini; a
-    Rhodes Scholar, with degrees in Mathematics, Classics and Statistics from
-    Harvard.
-  links:
-    website: https://emmafinn314.github.io/
-    email: emma.finn@sjc.ox.ac.uk
-
-- name: Karolina Korgul
-  role: DPhil student
-  affiliation: Oxford Internet Institute
-  blurb: >-
-    Works on the evaluation of AI agents, in particular manipulation,
-    deception and strategic behaviour in human–AI and multi-agent settings,
-    and on what such evaluations can and cannot establish for governance.
-    First author of TRAP, a benchmark of persuasion-based attacks on web
-    agents. Supervised by Chris Russell and Adam Mahdi; a Clarendon Scholar.
-  links:
-    scholar: https://scholar.google.com/citations?user=utwvtyEAAAAJ
-    email: karolina.korgul@keble.ox.ac.uk
-
-- name: Rahul Marchand
-  role: Fourth-year project student
-  affiliation: Department of Engineering Science
-  blurb: >-
-    Undergraduate in Engineering Science at New College, doing a fourth-year
-    project with Maike Osborne in 2026–27, and opening the lab's tutorial
-    series with a session on how research problems get chosen.
-  links:
-    email: rahul.marchand@new.ox.ac.uk
-
-- name: Matthew Sharp
-  role: Postdoctoral researcher
-  affiliation: Oxford Martin School
-  image: matthew-sharp.jpg
-  blurb: >-
-    Economist working on how AI is changing work and human agency, and on how
-    AI can be developed, financed and governed fairly. Previously at McKinsey
-    and the World Bank; holds a PhD from the London School of Economics.
-  links:
-    website: https://sites.google.com/view/matthewsharp/home
-    scholar: https://scholar.google.com/citations?user=NMXMgNUAAAAJ
-    email: matthew.sharp@oxfordmartin.ox.ac.uk
-
 - name: Teodora Reu
   role: DPhil student
   affiliation: Department of Computer Science

@@ -36,6 +36,22 @@
     website: https://emmafinn314.github.io/
     email: emma.finn@sjc.ox.ac.uk
 
+- name: Rahul Marchand
+  role: Fourth-year project student
+  affiliation: Department of Engineering Science
+  image: rahul-marchand.jpg
+  blurb: >-
+    Works on understanding the internal structures that implement
+    goal-directed behaviour in AI agents. Earlier first-author work includes a
+    benchmark of container sandbox escapes for LLM agents, built with the UK AI
+    Security Institute (ICML 2026 oral), and machine learning for quantum
+    device tuning in Natalia Ares's group.
+  links:
+    website: https://rahulmarchand.com
+    scholar: https://scholar.google.com/citations?user=BFRvnQEAAAAJ
+    github: rahul-marchand
+    email: rahul.marchand@new.ox.ac.uk
+
 - name: Teodora Reu
   role: DPhil student
   affiliation: Department of Computer Science

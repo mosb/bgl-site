@@ -88,20 +88,9 @@
 # use no pronouns. Each student should be given the chance to correct or
 # replace their own.
 
-- name: Juliusz Ziomek
-  role: 2023 entry
-  group: Research students
-  image: juliusz-ziomek.jpg
-  blurb: >-
-    Works on Bayesian optimisation, and in particular on what to do when the
-    structure of the objective or the kernel hyperparameters are not known in
-    advance. Came to Oxford from Huawei's London research lab.
-  links:
-    website: https://juliuszziomek.github.io/
-    email: juliusz.ziomek@univ.ox.ac.uk
-
 - name: Lucas Schorling
   role: 2023 entry
+  group: Research students
   image: lucas-schorling.jpg
   blurb: >-
     Works at the intersection of machine learning and quantum systems. Several

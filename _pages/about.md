@@ -9,7 +9,7 @@ profile:
   align: right
   image: group_lunch.jpg
   image_circular: false
-  more_info: 
+  more_info:
 
 selected_papers: true
 social: true
@@ -40,4 +40,3 @@ It fed into the Committee's [interim report](https://publications.parliament.uk/
 This evidence sits within a wider record of advising on the societal effects of AI and automation, from briefings to the Cabinet Office and HM Treasury through to contributions to European policy forums.
 
 See our [research]({{ '/research/' | relative_url }}), [people]({{ '/people/' | relative_url }}), and [publications]({{ '/publications/' | relative_url }}), or [get in touch](mailto:mosb@robots.ox.ac.uk).
-

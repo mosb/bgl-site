@@ -3,20 +3,20 @@
 # -----------------------------------------------------------------------------
 
 # --- Site identity ---
-title: Bayesian Governance Lab     # ~line 5; navbar brand + tab title
-first_name:                        # ~line 6; blank the person-name fields
+title: Bayesian Governance Lab # ~line 5; navbar brand + tab title
+first_name: # ~line 6; blank the person-name fields
 middle_name:
-last_name:                         # ~line 8
-description: >                     # ~line 11
+last_name: # ~line 8
+description: > # ~line 11
   Bayesian Governance Lab, University of Oxford. Probabilistic machine
   learning for the assurance, monitoring, and governance of AI systems.
-keywords: bayesian machine learning, ai governance, uncertainty, oxford  # ~line 17
-icon: ⚖️                            # emoji favicon (kills the favicon 404s); optional
+keywords: bayesian machine learning, ai governance, uncertainty, oxford # ~line 17
+icon: ⚖️ # emoji favicon (kills the favicon 404s); optional
 lang: en
 
 # --- Served location: www.robots.ox.ac.uk/~mosb/bgl ---
 url: "https://www.robots.ox.ac.uk"
-baseurl: "/~mosb/bgl"                        # asset links break if this is wrong
+baseurl: "/~mosb/bgl" # asset links break if this is wrong
 
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -121,10 +121,10 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 # ── Turn off demo/blog features ──────────────────────────────────────────
-blog_name:                         # ~line 125; blank (no blog)
+blog_name: # ~line 125; blank (no blog)
 blog_description:
-disqus_shortname:                  # ~line 155; blank to disable Disqus
-external_sources:                  # ~line 162; empty the list (stops Medium/Google fetches)
+disqus_shortname: # ~line 155; blank to disable Disqus
+external_sources: # ~line 162; empty the list (stops Medium/Google fetches)
 # giscus: leave the block but it stays inert unless you set a repo (~line 140)
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts

@@ -284,13 +284,13 @@
   role: 2026 entry
   image: amirabbas-afzali.jpg
   blurb: >-
-    Works on alignment, safety, and generalisation guarantees for LLMs. 
+    Works on alignment, safety, and generalisation guarantees for LLMs.
   links:
     website: https://amirabbas-afzali.github.io/
     scholar: https://scholar.google.com/citations?user=uBk9UgoAAAAJ
     github: Amirabbas-Afzali
     email: amirabbas.afzali@eng.ox.ac.uk
-    
+
 #
 # --- copy from here for each new member -------------------------------------
 
